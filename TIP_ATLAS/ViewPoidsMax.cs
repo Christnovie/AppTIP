@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TIP_ATLAS
 {
-    public partial class Form1 : Form
+    public partial class ViewPoidsMax : Form
     {
-        public Form1()
+        public ViewPoidsMax()
         {
             InitializeComponent();
         }

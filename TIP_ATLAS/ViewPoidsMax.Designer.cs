@@ -1,6 +1,6 @@
 ﻿namespace TIP_ATLAS
 {
-    partial class Form1
+    partial class ViewPoidsMax
     {
         /// <summary>
         /// Required designer variable.
