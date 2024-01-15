@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace TIP_ATLAS
 {
-    public partial class ViewPoidsMax : Form
+    public partial class ViewWeightMax : Form
     {
-        public ViewPoidsMax()
+        public ViewWeightMax()
         {
             InitializeComponent();
+        }
+
+        private void ViewWeightMax_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

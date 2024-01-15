@@ -60,11 +60,11 @@
     <Compile Include="ViewHome.Designer.cs">
       <DependentUpon>ViewHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewPoidsMax.cs">
+    <Compile Include="ViewWeightMax.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewPoidsMax.Designer.cs">
-      <DependentUpon>ViewPoidsMax.cs</DependentUpon>
+    <Compile Include="ViewWeightMax.Designer.cs">
+      <DependentUpon>ViewWeightMax.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Canvas.resx">
       <DependentUpon>Canvas.cs</DependentUpon>
@@ -81,8 +81,8 @@
     <EmbeddedResource Include="ViewHome.resx">
       <DependentUpon>ViewHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewPoidsMax.resx">
-      <DependentUpon>ViewPoidsMax.cs</DependentUpon>
+    <EmbeddedResource Include="ViewWeightMax.resx">
+      <DependentUpon>ViewWeightMax.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
