@@ -12,9 +12,25 @@ namespace TIP_ATLAS
 {
     public partial class CanevasMain : Form
     {
+        private ViewHome homePage;
         public CanevasMain()
         {
             InitializeComponent();
+            showAccueil();
         }
+        public void showAccueil()
+        {
+            homePage = new ViewHome(this) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            this.panel1.Controls.Add(homePage);
+            homePage.Show();
+        }
+        
+        public void ShowMaxWeightView()
+        {
+            ViewWeightMax screen = new ViewWeightMax(this) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            this.panel1.Controls.Add(screen);
+            screen.Show();
+        }
+        
     }
 }

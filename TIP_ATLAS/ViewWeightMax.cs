@@ -12,14 +12,34 @@ namespace TIP_ATLAS
 {
     public partial class ViewWeightMax : Form
     {
-        public ViewWeightMax()
+        private CanevasMain canevas;
+        public ViewWeightMax(CanevasMain canevas)
         {
             InitializeComponent();
+            this.canevas = canevas;
         }
 
         private void ViewWeightMax_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBack_MouseEnter(object sender, EventArgs e)
+        {
+            btnBack.BackColor = Color.LightCyan;
+            btnBack.Focus();
+        }
+
+        private void btnBack_MouseLeave(object sender, EventArgs e)
+        {
+            btnBack.BackColor = Color.WhiteSmoke;
+
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            canevas.showAccueil();
         }
     }
 }
