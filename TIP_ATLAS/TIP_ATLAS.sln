@@ -5,7 +5,7 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIP_ATLAS_view", "TIP_ATLAS_view.csproj", "{2232EF09-0361-45C7-A584-29196B1AC86C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATLAS_Model", "..\ATLAS_Model\ATLAS_Model.csproj", "{6D482E29-DE74-4111-9731-2E8B570E74C0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATLAS_Models", "..\ATLAS_Models\ATLAS_Models.csproj", "{251D3244-CFC5-4D3D-A0ED-BCF4DDDA352C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{2232EF09-0361-45C7-A584-29196B1AC86C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2232EF09-0361-45C7-A584-29196B1AC86C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2232EF09-0361-45C7-A584-29196B1AC86C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6D482E29-DE74-4111-9731-2E8B570E74C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6D482E29-DE74-4111-9731-2E8B570E74C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6D482E29-DE74-4111-9731-2E8B570E74C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6D482E29-DE74-4111-9731-2E8B570E74C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{251D3244-CFC5-4D3D-A0ED-BCF4DDDA352C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{251D3244-CFC5-4D3D-A0ED-BCF4DDDA352C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{251D3244-CFC5-4D3D-A0ED-BCF4DDDA352C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{251D3244-CFC5-4D3D-A0ED-BCF4DDDA352C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

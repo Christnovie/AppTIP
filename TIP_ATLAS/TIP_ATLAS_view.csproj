@@ -84,6 +84,8 @@
     <EmbeddedResource Include="ViewWeightMax.resx">
       <DependentUpon>ViewWeightMax.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DatabaseSoftwood.json" />
+    <None Include="Properties\DataSources\ATLAS_Model.ImportCassData.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -96,6 +98,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ATLAS_Models\ATLAS_Models.csproj">
+      <Project>{251d3244-cfc5-4d3d-a0ed-bcf4ddda352c}</Project>
+      <Name>ATLAS_Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
