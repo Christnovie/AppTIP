@@ -32,7 +32,7 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.lsbTypebois = new System.Windows.Forms.ListBox();
             this.importCassDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.txtTest = new System.Windows.Forms.TextBox();
+            this.txtTypebois = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.importCassDataBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,54 +51,19 @@
             // lsbTypebois
             // 
             this.lsbTypebois.FormattingEnabled = true;
-            this.lsbTypebois.Items.AddRange(new object[] {
-            "_C14",
-            "",
-            "_C16",
-            "",
-            "_C18",
-            "",
-            "_C20",
-            "",
-            "_C24",
-            "",
-            "_C30",
-            "",
-            "_C35",
-            "",
-            "_C40",
-            "",
-            "_C45",
-            "",
-            "_C50",
-            "",
-            "_D18",
-            "",
-            "_D24",
-            "",
-            "_D30",
-            "",
-            "_D35",
-            "",
-            "_D40",
-            "",
-            "_D50",
-            "",
-            "_D60",
-            "",
-            "_D70 "});
-            this.lsbTypebois.Location = new System.Drawing.Point(142, 118);
+            this.lsbTypebois.Location = new System.Drawing.Point(28, 107);
             this.lsbTypebois.Name = "lsbTypebois";
-            this.lsbTypebois.Size = new System.Drawing.Size(120, 17);
+            this.lsbTypebois.Size = new System.Drawing.Size(75, 212);
             this.lsbTypebois.TabIndex = 1;
             this.lsbTypebois.SelectedIndexChanged += new System.EventHandler(this.lsbTypebois_SelectedIndexChanged);
             // 
-            // txtTest
+            // txtTypebois
             // 
-            this.txtTest.Location = new System.Drawing.Point(324, 180);
-            this.txtTest.Name = "txtTest";
-            this.txtTest.Size = new System.Drawing.Size(201, 20);
-            this.txtTest.TabIndex = 2;
+            this.txtTypebois.Location = new System.Drawing.Point(28, 81);
+            this.txtTypebois.Name = "txtTypebois";
+            this.txtTypebois.Size = new System.Drawing.Size(201, 20);
+            this.txtTypebois.TabIndex = 2;
+            this.txtTypebois.TextChanged += new System.EventHandler(this.txtTypeBois_TextChanged);
             // 
             // ViewWeightMax
             // 
@@ -107,7 +72,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(882, 511);
             this.ControlBox = false;
-            this.Controls.Add(this.txtTest);
+            this.Controls.Add(this.txtTypebois);
             this.Controls.Add(this.lsbTypebois);
             this.Controls.Add(this.btnBack);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -125,6 +90,6 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.ListBox lsbTypebois;
         private System.Windows.Forms.BindingSource importCassDataBindingSource;
-        private System.Windows.Forms.TextBox txtTest;
+        private System.Windows.Forms.TextBox txtTypebois;
     }
 }

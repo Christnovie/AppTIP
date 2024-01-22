@@ -19,8 +19,18 @@ namespace TIP_ATLAS
             InitializeComponent();
             this.canevas = canevas;
             importClassData = new ImportClassData();
-        }
+            // no smaller than design time size
+            this.MinimumSize = new System.Drawing.Size(this.Width, this.Height);
 
+            this.AutoSize = true;
+            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+
+            List<string> keyList = new List<string>(importClassData.Collection.CollectionWood.Keys);
+
+            foreach (var oneKeyList in keyList)
+                lsbTypebois.Items.Add((oneKeyList));
+        }
+        
         private void ViewWeightMax_Load(object sender, EventArgs e)
         {
             
@@ -49,7 +59,29 @@ namespace TIP_ATLAS
         {
             WoodClass result;
             result = ImportClassData.GetSoftwoodDataValueTarget(importClassData.Collection,lsbTypebois.Text);
-            txtTest.Text = result.ToString();
+           // txtTypebois.Text = result.ToString();
+        }
+
+        private void txtTypeBois_TextChanged(object sender, EventArgs e)
+        {
+
+            List<string> keyList = new List<string>(importClassData.Collection.CollectionWood.Keys);
+            var itemList = lsbTypebois.Items.Cast<string>().ToList();
+            if (keyList.Count > 0)
+            {
+                //clear the items from the list
+                lsbTypebois.Items.Clear();
+
+                //filter the items and add them to the list
+                lsbTypebois.Items.AddRange(
+                    keyList.Where(i => i.Contains(txtTypebois.Text)).ToArray());
+            }
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
