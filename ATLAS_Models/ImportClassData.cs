@@ -22,8 +22,7 @@ namespace ATLAS_Models
             WoodClass woodClass = new WoodClass();
             if (classData.CollectionWood.ContainsKey(classVal))
             {
-                woodClass = classData.CollectionWood[classVal];
-             
+                woodClass = classData.CollectionWood[classVal];                  
             }
         
             return woodClass;
@@ -32,6 +31,7 @@ namespace ATLAS_Models
         {
             collection = new ClasseCollection();
             collection = JsonConvert.DeserializeObject<ClasseCollection>(File.ReadAllText(System.Environment.CurrentDirectory + "\\..\\..\\DatabaseSoftwood.json"));
+            collection.KmodClass = JsonConvert.DeserializeObject<Dictionary<string, KmodClass>>(System.Environment.CurrentDirectory + "\\..\\..\\DatabaseKmod.json");
         }
         public ClasseCollection Collection
         {

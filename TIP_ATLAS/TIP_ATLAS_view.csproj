@@ -84,6 +84,7 @@
     <EmbeddedResource Include="ViewWeightMax.resx">
       <DependentUpon>ViewWeightMax.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DatabaseKmod.json" />
     <None Include="DatabaseSoftwood.json" />
     <None Include="Properties\DataSources\ATLAS_Model.ImportCassData.datasource" />
     <None Include="Properties\Settings.settings">
