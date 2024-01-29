@@ -9,7 +9,7 @@ namespace ATLAS_Models
     public class CompressionAxiale
     {
         private const double CoefPartYm = 1.3;
-		private const double ConstBeta = 0.2;
+		private const double ConstBetaRextitude = 0.2;
         double flamby; 
         double flambz;
         WoodClass curentlywood;
@@ -27,8 +27,8 @@ namespace ATLAS_Models
         public double NedValcal { get { return Ned_Valcal; } set { Ned_Valcal = value; } }
         public string ServiceClass { get { return serviceClass; } set { serviceClass = value; } }
         public string CumulateChargClass { get { return cumulateChargClass; } set { cumulateChargClass = value; } }
-  		public double Flamby{get {return flamby;}set {flamby = value}}       
-  		public double Flambz{get {return flambz;}set {flambz = value}}       
+  		public double Flamby{get {return flamby;}set { flamby = value; }}       
+  		public double Flambz{get {return flambz;}set { flambz = value; }}       
 		public WoodClass CurrentWood
         {
             get { return curentlywood; }
@@ -53,7 +53,7 @@ namespace ATLAS_Models
             }
         }
         public KmodClass KmodClass { get { return kmodClass; }set { kmodClass = value; } }
-
+        //Calcution of all 
         //Construct for instance Calculator class (CompressionAxiale)
         public CompressionAxiale()
         {
@@ -85,9 +85,68 @@ namespace ATLAS_Models
         {
             get { return (Stransb * Math.Pow(stransb, 3)) / 12; }
         }
-        //Elancement mécanique par rapport à l’axe y (γy) 
+        //Elancement mécanique par rapport à l’axe y (γy)
+        public double CalMecanicElancementY
+        {
+            get { return Flamby*Math.Sqrt(CalAire / CalInercyMomentY); }
+        }
+        //Elancement mécanique par rapport à l’axe z (γz) 
+        public double CalMecanicElancementZ
+        {
+            get { return Flamby * Math.Sqrt( CalAire/ CalInercyMomentZ); }
+        }
+        //Elancement relatif par rapport à l’axe y (λrel,y) 
+        public double CalRelatifElancementY
+        {
+            get { return (CalMecanicElancementY/Math.PI) * Math.Sqrt(CurrentWood.fc0k / CurrentWood.E005); }
 
-        //Coefficient de flambement et resultat
+        }
+        //Elancement relatif par rapport à l’axe z (λrel,z) 
+        public double CalRelatifElancementZ
+        {
+            get { return (CalMecanicElancementZ / Math.PI) * Math.Sqrt(CurrentWood.fc0k / CurrentWood.E005); }
 
-    }  
+        }
+        //Coefficient (ky) 
+        public double CoefficentKy 
+        {
+            get { return 0.5 * (1 + ConstBetaRextitude * (CalRelatifElancementY - 0.3) + Math.Pow(CalRelatifElancementY, 2)); }
+        }
+        //Coefficient (ky) 
+        public double CoefficentKz 
+        {
+            get { return 0.5 * (1 + ConstBetaRextitude * (CalRelatifElancementZ - 0.3) + Math.Pow(CalRelatifElancementZ, 2)); }
+        }
+        //Coefficient de flambement par rapport à l’axe y(kc, y)
+        public double CoefficentFlambY
+        {
+            get { return 1 / (CoefficentKy + Math.Sqrt(Math.Pow(CoefficentKy, 2) - Math.Pow(CoefficentKy, 2))); }
+        }
+        //Coefficient de flambement par rapport à l’axe z (kc,z) 
+        public double CoefficentFlambZ
+        {
+            get { return 1 / (CoefficentKz + Math.Sqrt(Math.Pow(CoefficentKz, 2) - Math.Pow(CoefficentKz, 2))); }
+        }
+        //Coefficient de flambement (kc)
+        public double CoefficentFlamb
+        {
+            get
+            {
+                if (CalRelatifElancementY<=0.3 && CalRelatifElancementZ <= 0.3)
+                {
+                    return 1.00;
+                }
+                else
+                {
+                    return Math.Min(CoefficentFlambY, CoefficentFlambZ);
+                }
+            }
+        }
+        //Vérification de la résistance à la compression axiale
+        public double VerifResAxialCompress
+        {
+            get { return ContrainteAxialCal / (CoefficentFlamb * ResitanceAxeCompress); }
+        }
+
+    }
 }

@@ -29,9 +29,11 @@ namespace ATLAS_Models
         }
         public void  GetSoftwoodDataValue()
         {
-            collection = new ClasseCollection();
-            collection = JsonConvert.DeserializeObject<ClasseCollection>(File.ReadAllText(System.Environment.CurrentDirectory + "\\..\\..\\DatabaseSoftwood.json"));
-            collection.KmodClass = JsonConvert.DeserializeObject<Dictionary<string, KmodClass>>(System.Environment.CurrentDirectory + "\\..\\..\\DatabaseKmod.json");
+            ClasseCollection collection = new ClasseCollection();
+            this.collection = new ClasseCollection();
+            this.collection = JsonConvert.DeserializeObject<ClasseCollection>(File.ReadAllText(System.Environment.CurrentDirectory + "\\..\\..\\DatabaseSoftwood.json"));
+            collection = JsonConvert.DeserializeObject<ClasseCollection>(File.ReadAllText( System.Environment.CurrentDirectory + "\\..\\..\\DatabaseKmod.json"));
+            this.collection.KmodClass = collection.KmodClass;
         }
         public ClasseCollection Collection
         {

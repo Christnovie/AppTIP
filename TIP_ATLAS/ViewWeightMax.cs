@@ -47,9 +47,30 @@ namespace TIP_ATLAS
 
         private void lsbTypebois_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
+        }
+
+        private void txtTest_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dUpDClassResistance_SelectedItemChanged(object sender, EventArgs e)
+        {
             WoodClass result;
-            result = ImportClassData.GetSoftwoodDataValueTarget(importClassData.Collection,lsbTypebois.Text);
+            result = ImportClassData.GetSoftwoodDataValueTarget(importClassData.Collection, lsbTypebois.Text);
             txtTest.Text = result.ToString();
+        }
+        private void DownloadItem()
+        {
+            foreach(string wood in importClassData.Collection.CollectionWood.Keys)
+            {
+                dUpDResitanceClass.Items.Add(wood);
+            }
+            foreach (string wood in importClassData.Collection.KmodClass.Keys)
+            {
+                dUpDResitanceClass.Items.Add(wood);
+            }
         }
     }
 }
