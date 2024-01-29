@@ -51,7 +51,7 @@
             // lsbTypebois
             // 
             this.lsbTypebois.FormattingEnabled = true;
-            this.lsbTypebois.Location = new System.Drawing.Point(28, 107);
+
             this.lsbTypebois.Name = "lsbTypebois";
             this.lsbTypebois.Size = new System.Drawing.Size(75, 212);
             this.lsbTypebois.TabIndex = 1;

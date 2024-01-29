@@ -45,7 +45,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClasseCollection.cs" />
+    <Compile Include="CompressionAxiale.cs" />
     <Compile Include="ImportClassData.cs" />
+    <Compile Include="KmodClass.cs" />
+    <Compile Include="TypeResistanceKmod.cs" />
     <Compile Include="TypeWoodClass.cs" />
     <Compile Include="WoodClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
