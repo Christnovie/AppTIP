@@ -58,7 +58,7 @@ namespace TIP_ATLAS
         private void dUpDClassResistance_SelectedItemChanged(object sender, EventArgs e)
         {
             WoodClass result;
-            result = ImportClassData.GetSoftwoodDataValueTarget(importClassData.Collection, lsbTypebois.Text);
+            result = ImportClassData.GetSoftwoodDataValueTarget(importClassData.Collection, dUpDResitanceClass.Text);
             txtTest.Text = result.ToString();
         }
         private void DownloadItem()
@@ -71,6 +71,12 @@ namespace TIP_ATLAS
             {
                 dUpDResitanceClass.Items.Add(wood);
             }
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

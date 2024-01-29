@@ -42,7 +42,7 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.lbl_Base = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_baseh = new System.Windows.Forms.Label();
             this.lbl_Lfy = new System.Windows.Forms.Label();
             this.lbl_Lfz = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -145,21 +145,21 @@
             // lbl_Base
             // 
             this.lbl_Base.AutoSize = true;
-            this.lbl_Base.Location = new System.Drawing.Point(445, 109);
+            this.lbl_Base.Location = new System.Drawing.Point(476, 109);
             this.lbl_Base.Name = "lbl_Base";
-            this.lbl_Base.Size = new System.Drawing.Size(44, 13);
+            this.lbl_Base.Size = new System.Drawing.Size(13, 13);
             this.lbl_Base.TabIndex = 13;
-            this.lbl_Base.Text = "Surface";
+            this.lbl_Base.Text = "b";
             this.lbl_Base.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label2
+            // lbl_baseh
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(639, 113);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "label2";
+            this.lbl_baseh.AutoSize = true;
+            this.lbl_baseh.Location = new System.Drawing.Point(639, 113);
+            this.lbl_baseh.Name = "lbl_baseh";
+            this.lbl_baseh.Size = new System.Drawing.Size(13, 13);
+            this.lbl_baseh.TabIndex = 14;
+            this.lbl_baseh.Text = "h";
             // 
             // lbl_Lfy
             // 
@@ -197,6 +197,7 @@
             this.label6.Size = new System.Drawing.Size(35, 13);
             this.label6.TabIndex = 18;
             this.label6.Text = "label6";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // ViewWeightMax
             // 
@@ -209,7 +210,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lbl_Lfz);
             this.Controls.Add(this.lbl_Lfy);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbl_baseh);
             this.Controls.Add(this.lbl_Base);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox5);
@@ -247,7 +248,7 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label lbl_Base;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_baseh;
         private System.Windows.Forms.Label lbl_Lfy;
         private System.Windows.Forms.Label lbl_Lfz;
         private System.Windows.Forms.Label label5;

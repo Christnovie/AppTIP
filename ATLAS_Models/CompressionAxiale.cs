@@ -65,7 +65,6 @@ namespace ATLAS_Models
             get { return stransb * stransh; }
         }
         //Valeur de calcul de la contrainte axiale (σc,0,d)
-
         public double ContrainteAxialCal
         {
             get {return Ned_Valcal*CalAire; }
@@ -147,6 +146,35 @@ namespace ATLAS_Models
         {
             get { return ContrainteAxialCal / (CoefficentFlamb * ResitanceAxeCompress); }
         }
-
+        //Retrouver la force max au point de rupture 
+        public double CalcMaxRuputureForce
+        {
+            get { return CalAire * CoefficentFlamb * ResitanceAxeCompress; }
+        }
+        //Retrouver la force recommandé au point de rupture 
+        public double CalcRecomandedForce
+        {
+            get { return CalAire * CoefficentFlamb * ResitanceAxeCompress*0.85; }
+        }
+        //Retrouver Aire minimal depuis une force point de rupture
+        public double CalcMinAire
+        {
+            get { return Ned_Valcal/(CoefficentFlamb * ResitanceAxeCompress); }
+        }
+        //Retrouver Aire minimal recomandée depuis une force 
+        public double CalcMinRecomandedAire
+        {
+            get { return Ned_Valcal / (CoefficentFlamb * ResitanceAxeCompress*0.85); }
+        }
+        //Retouver les dimension du poto au point de rupture pour une surface carré
+        public double CalcSiseH_B
+        {
+            get { return Math.Sqrt(CalcMinAire); }
+        }
+        //Retouver les dimension recommandée du poto pour une surface carré
+        public double CalcSiseRecomandedH_B
+        {
+            get { return Math.Sqrt(CalcMinAire); }
+        }
     }
 }
