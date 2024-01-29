@@ -27,8 +27,8 @@ namespace ATLAS_Models
         public double NedValcal { get { return Ned_Valcal; } set { Ned_Valcal = value; } }
         public string ServiceClass { get { return serviceClass; } set { serviceClass = value; } }
         public string CumulateChargClass { get { return cumulateChargClass; } set { cumulateChargClass = value; } }
-  		public double Flamby{get {return flamby;}set {flamby = value}}       
-  		public double Flambz{get {return flambz;}set {flambz = value}}       
+  		public double Flamby{get {return flamby;}set { flamby = value; }}       
+  		public double Flambz{get {return flambz;}set { flambz = value; }}       
 		public WoodClass CurrentWood
         {
             get { return curentlywood; }

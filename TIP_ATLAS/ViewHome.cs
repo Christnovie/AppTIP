@@ -54,5 +54,10 @@ namespace TIP_ATLAS
             this.Close();
             canevas.ShowMaxWeightView();
         }
+
+        private void ViewHome_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

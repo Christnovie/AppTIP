@@ -82,6 +82,7 @@
             this.Name = "ViewHome";
             this.Text = "7";
             this.UseWaitCursor = true;
+            this.Load += new System.EventHandler(this.ViewHome_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

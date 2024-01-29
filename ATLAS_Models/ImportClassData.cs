@@ -11,6 +11,7 @@ namespace ATLAS_Models
     public class ImportClassData
     {
         private ClasseCollection collection;
+        private ClasseCollection collectionKmod;
         List<WoodClass> classList = new List<WoodClass>();
         public ImportClassData()
         {
@@ -30,13 +31,18 @@ namespace ATLAS_Models
         public void  GetSoftwoodDataValue()
         {
             collection = new ClasseCollection();
+            collectionKmod = new ClasseCollection();
             collection = JsonConvert.DeserializeObject<ClasseCollection>(File.ReadAllText(System.Environment.CurrentDirectory + "\\..\\..\\DatabaseSoftwood.json"));
-            collection.KmodClass = JsonConvert.DeserializeObject<Dictionary<string, KmodClass>>(System.Environment.CurrentDirectory + "\\..\\..\\DatabaseKmod.json");
+            collectionKmod = JsonConvert.DeserializeObject<ClasseCollection>(File.ReadAllText(System.Environment.CurrentDirectory + "\\..\\..\\DatabaseKmod.json"));
+         //   collectionKmod = JsonConvert.DeserializeObject<Dictionary<string, KmodClass>>(System.Environment.CurrentDirectory + "\\..\\..\\DatabaseKmod.json");
         }
         public ClasseCollection Collection
         {
             get { return collection; }
         }
-
+        public ClasseCollection CollectionKmod
+        {
+            get { return collectionKmod; }
+        }
     }
 }

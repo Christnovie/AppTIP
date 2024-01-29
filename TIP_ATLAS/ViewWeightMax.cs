@@ -26,6 +26,8 @@ namespace TIP_ATLAS
             this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
 
             List<string> keyList = new List<string>(importClassData.Collection.CollectionWood.Keys);
+            
+
 
             foreach (var oneKeyList in keyList)
                 lsbTypebois.Items.Add((oneKeyList));
@@ -59,7 +61,8 @@ namespace TIP_ATLAS
         {
             WoodClass result;
             result = ImportClassData.GetSoftwoodDataValueTarget(importClassData.Collection,lsbTypebois.Text);
-           // txtTypebois.Text = result.ToString();
+            txtTypebois.Text = lsbTypebois.Text;
+          //  txtTypebois.Text = result.ToString();
         }
 
         private void txtTypeBois_TextChanged(object sender, EventArgs e)
