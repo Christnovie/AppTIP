@@ -112,5 +112,33 @@ namespace TIP_ATLAS
                 txt_Validation.Text = "OK";
             }
         }
+
+        private void btn_Validate_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtLfz_Validating(object sender, CancelEventArgs e)
+        {
+            NumercValidation(txtLfz.Text);
+        }
+        private void NumercValidation(string toValidate)
+        {
+            int numberEntered;
+
+            if (int.TryParse(toValidate, out numberEntered))
+            {
+                if (numberEntered < 1)
+                {
+                    MessageBox.Show("Les valeurs peuvent pas être négatives ");
+                    toValidate = 5.ToString();
+                }
+            }
+            else
+            {
+                MessageBox.Show("You need to enter an integer");
+                toValidate = 5.ToString();
+            }
+        }
     }
 }

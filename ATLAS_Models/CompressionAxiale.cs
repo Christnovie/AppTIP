@@ -106,7 +106,7 @@ namespace ATLAS_Models
         {
             get { return 0.5 * (1 + ConstBetaRextitude * (CalRelatifElancementY - 0.3) + Math.Pow(CalRelatifElancementY, 2)); }
         }
-        //Coefficient (ky) 
+        //Coefficient (kz) 
         public double CoefficentKz 
         {
             get { return 0.5 * (1 + ConstBetaRextitude * (CalRelatifElancementZ - 0.3) + Math.Pow(CalRelatifElancementZ, 2)); }
@@ -144,12 +144,12 @@ namespace ATLAS_Models
         //Retrouver la force max au point de rupture 
         public double CalcMaxRuputureForce
         {
-            get { return CalAire * CoefficentFlamb * ResitanceAxeCompress; }
+            get { return (CalAire * CoefficentFlamb * ResitanceAxeCompress)/1000; }
         }
         //Retrouver la force recommandé au point de rupture 
         public double CalcRecomandedForce
         {
-            get { return CalAire * CoefficentFlamb * ResitanceAxeCompress*0.85; }
+            get { return (CalAire * CoefficentFlamb * ResitanceAxeCompress*0.85)/1000; }
         }
         //Retrouver Aire minimal depuis une force point de rupture
         public double CalcMinAire

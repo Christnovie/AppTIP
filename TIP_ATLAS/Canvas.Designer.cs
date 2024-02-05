@@ -33,9 +33,9 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(1, 0);
+            this.panel1.Location = new System.Drawing.Point(2, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(882, 511);
+            this.panel1.Size = new System.Drawing.Size(1319, 624);
             this.panel1.TabIndex = 0;
             // 
             // CanevasMain
@@ -43,11 +43,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(884, 511);
+            this.ClientSize = new System.Drawing.Size(1324, 630);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.IsMdiContainer = true;
+            this.MaximizeBox = false;
             this.Name = "CanevasMain";
             this.Text = "A.T.L.A.S.";
+            this.TopMost = true;
             this.ResumeLayout(false);
 
         }

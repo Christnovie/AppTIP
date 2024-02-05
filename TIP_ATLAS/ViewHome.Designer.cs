@@ -49,7 +49,7 @@
             this.dimMax_btn.BackColor = System.Drawing.SystemColors.GrayText;
             this.dimMax_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dimMax_btn.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.dimMax_btn.Location = new System.Drawing.Point(90, 217);
+            this.dimMax_btn.Location = new System.Drawing.Point(142, 277);
             this.dimMax_btn.Name = "dimMax_btn";
             this.dimMax_btn.Size = new System.Drawing.Size(169, 69);
             this.dimMax_btn.TabIndex = 1;
@@ -67,7 +67,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(882, 511);
+            this.ClientSize = new System.Drawing.Size(1319, 624);
             this.Controls.Add(this.dimMax_btn);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
