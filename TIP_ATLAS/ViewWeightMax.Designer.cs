@@ -38,7 +38,7 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(12, 12);
+            this.btnBack.Location = new System.Drawing.Point(247, 143);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(115, 40);
             this.btnBack.TabIndex = 0;
@@ -51,18 +51,19 @@
             // lsbTypebois
             // 
             this.lsbTypebois.FormattingEnabled = true;
-
+            this.lsbTypebois.Location = new System.Drawing.Point(0, 0);
             this.lsbTypebois.Name = "lsbTypebois";
-            this.lsbTypebois.Size = new System.Drawing.Size(75, 212);
+            this.lsbTypebois.Size = new System.Drawing.Size(0, 4);
             this.lsbTypebois.TabIndex = 1;
             this.lsbTypebois.SelectedIndexChanged += new System.EventHandler(this.lsbTypebois_SelectedIndexChanged);
             // 
             // txtTypebois
             // 
-            this.txtTypebois.Location = new System.Drawing.Point(28, 81);
+            this.txtTypebois.Location = new System.Drawing.Point(112, 267);
             this.txtTypebois.Name = "txtTypebois";
             this.txtTypebois.Size = new System.Drawing.Size(201, 20);
             this.txtTypebois.TabIndex = 2;
+            this.txtTypebois.Click += new System.EventHandler(this.txtTypebois_Click);
             this.txtTypebois.TextChanged += new System.EventHandler(this.txtTypeBois_TextChanged);
             // 
             // ViewWeightMax

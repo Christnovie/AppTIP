@@ -14,6 +14,8 @@ namespace TIP_ATLAS
     {
         private CanevasMain canevas;
         private ImportClassData importClassData;
+        
+       
         public ViewWeightMax(CanevasMain canevas)
         {
             InitializeComponent();
@@ -26,11 +28,21 @@ namespace TIP_ATLAS
             this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
 
             List<string> keyList = new List<string>(importClassData.Collection.CollectionWood.Keys);
-            
+            TypeResistanceKmod typeKmod = new TypeResistanceKmod();
+
+            Dictionary<string, string> data = new Dictionary<string, string>();
+           
+         //   data.Add("abc", );
+         //   data.Add("def", 456);
+
+      
+
 
 
             foreach (var oneKeyList in keyList)
                 lsbTypebois.Items.Add((oneKeyList));
+            lsbTypebois.Height = lsbTypebois.ItemHeight * (lsbTypebois.Items.Count + 1);
+            lsbTypebois.Width = 70;
         }
         
         private void ViewWeightMax_Load(object sender, EventArgs e)
@@ -78,13 +90,20 @@ namespace TIP_ATLAS
                 //filter the items and add them to the list
                 lsbTypebois.Items.AddRange(
                     keyList.Where(i => i.Contains(txtTypebois.Text)).ToArray());
+               var lsbZy = lsbTypebois.Items.Cast<string>().ToList();
+                lsbTypebois.Height = lsbTypebois.ItemHeight * (lsbTypebois.Items.Count + 1);
             }
-
+            
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtTypebois_Click(object sender, EventArgs e)
+        {
+            lsbTypebois.Height = lsbTypebois.ItemHeight * (lsbTypebois.Items.Count + 1);
         }
     }
 }
