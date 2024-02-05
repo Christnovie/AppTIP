@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewHome));
             this.label1 = new System.Windows.Forms.Label();
             this.dimMax_btn = new System.Windows.Forms.Button();
-            this.btn_Verifmode = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -46,36 +46,28 @@
             // 
             // dimMax_btn
             // 
-            this.dimMax_btn.Location = new System.Drawing.Point(213, 272);
+            this.dimMax_btn.BackColor = System.Drawing.SystemColors.GrayText;
+            this.dimMax_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dimMax_btn.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.dimMax_btn.Location = new System.Drawing.Point(90, 217);
             this.dimMax_btn.Name = "dimMax_btn";
-            this.dimMax_btn.Size = new System.Drawing.Size(121, 55);
+            this.dimMax_btn.Size = new System.Drawing.Size(169, 69);
             this.dimMax_btn.TabIndex = 1;
-            this.dimMax_btn.Text = "Dimention Max";
-            this.dimMax_btn.UseVisualStyleBackColor = true;
+            this.dimMax_btn.Text = "Dimention Max Et Verifications";
+            this.dimMax_btn.UseVisualStyleBackColor = false;
             this.dimMax_btn.UseWaitCursor = true;
             this.dimMax_btn.Click += new System.EventHandler(this.dimMax_btn_Click);
             this.dimMax_btn.MouseEnter += new System.EventHandler(this.dimMax_btn_MouseEnter);
             this.dimMax_btn.MouseLeave += new System.EventHandler(this.dimMax_btn_MouseLeave);
             // 
-            // btn_Verifmode
-            // 
-            this.btn_Verifmode.Location = new System.Drawing.Point(529, 272);
-            this.btn_Verifmode.Name = "btn_Verifmode";
-            this.btn_Verifmode.Size = new System.Drawing.Size(121, 55);
-            this.btn_Verifmode.TabIndex = 2;
-            this.btn_Verifmode.Text = "Verfication";
-            this.btn_Verifmode.UseVisualStyleBackColor = true;
-            this.btn_Verifmode.UseWaitCursor = true;
-            this.btn_Verifmode.MouseEnter += new System.EventHandler(this.btn_Verifmode_MouseEnter);
-            this.btn_Verifmode.MouseLeave += new System.EventHandler(this.btn_Verifmode_MouseLeave);
-            // 
             // ViewHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(882, 511);
-            this.Controls.Add(this.btn_Verifmode);
             this.Controls.Add(this.dimMax_btn);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -91,6 +83,5 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button dimMax_btn;
-        private System.Windows.Forms.Button btn_Verifmode;
     }
 }

@@ -14,11 +14,14 @@ namespace TIP_ATLAS
     {
         private CanevasMain canevas;
         private ImportClassData importClassData;
+        private CompressionAxiale DataCalculator;
         public ViewWeightMax(CanevasMain canevas)
         {
             InitializeComponent();
             this.canevas = canevas;
             importClassData = new ImportClassData();
+            DataCalculator = new CompressionAxiale();
+            DownloadItem();
         }
 
         private void ViewWeightMax_Load(object sender, EventArgs e)
@@ -59,7 +62,7 @@ namespace TIP_ATLAS
         {
             WoodClass result;
             result = ImportClassData.GetSoftwoodDataValueTarget(importClassData.Collection, dUpDResitanceClass.Text);
-            txtTest.Text = result.ToString();
+            DataCalculator.CurrentWood = result;
         }
         private void DownloadItem()
         {
@@ -69,7 +72,7 @@ namespace TIP_ATLAS
             }
             foreach (string wood in importClassData.Collection.KmodClass.Keys)
             {
-                dUpDResitanceClass.Items.Add(wood);
+                dUpDResisatnce.Items.Add(wood);
             }
 
         }
@@ -77,6 +80,37 @@ namespace TIP_ATLAS
         private void label6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dUpDResisatnce_SelectedItemChanged(object sender, EventArgs e)
+        {
+            DataCalculator.KmodClass =  importClassData.Collection.KmodClass[dUpDResisatnce.Text];
+            DataCalculator.CumulateChargClass = dUpDResisatnce.Text;
+        }
+        public void UpdateCalc()
+        {
+
+        }
+
+        private void txt_Validate_TextChanged(object sender, EventArgs e)
+        {
+            if(Convert.ToDouble(txt_Validate.Text)>=1.000000|| Convert.ToDouble(txt_Validate.Text) <= 0)
+            {
+                txt_Validation.Text = "Non";
+            }else
+            {
+                txt_Validation.Text = "OK";
+            }
         }
     }
 }

@@ -19,7 +19,6 @@ namespace ATLAS_Models
         string cumulateChargClass;
         double Ned_Valcal;
         KmodClass kmodClass;
-        string kmodname;
 
         //Variable edit and getter value 
         public double Stransb { get { return stransb; } set { stransb = value; } }
@@ -34,15 +33,11 @@ namespace ATLAS_Models
             get { return curentlywood; }
             set { curentlywood = value; }
         }
-        public string KmodName
-        {
-            get { return kmodname; }set { kmodname = value; } 
-        }
         public double Kmod
         {
             get
             {
-                switch (KmodName)
+                switch (CumulateChargClass)
                 {
                     default : return KmodClass.P; 
                     case "LT": return KmodClass.LT;
@@ -174,7 +169,7 @@ namespace ATLAS_Models
         //Retouver les dimension recommandée du poto pour une surface carré
         public double CalcSiseRecomandedH_B
         {
-            get { return Math.Sqrt(CalcMinAire); }
+            get { return Math.Sqrt(CalcMinRecomandedAire); }
         }
     }
 }

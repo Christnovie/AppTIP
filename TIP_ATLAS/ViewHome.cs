@@ -25,7 +25,7 @@ namespace TIP_ATLAS
 
         }
 
-
+/*
         private void btn_Verifmode_MouseEnter(object sender, EventArgs e)
         {
             btnDefaultcolor = btn_Verifmode.BackColor;
@@ -37,16 +37,19 @@ namespace TIP_ATLAS
         {
             btn_Verifmode.BackColor = Color.WhiteSmoke;
         }
-
+*/
         private void dimMax_btn_MouseEnter(object sender, EventArgs e)
-        { 
+        {
+            btnDefaultcolor = dimMax_btn.BackColor;
             dimMax_btn.BackColor = Color.LightCyan;
+            dimMax_btn.ForeColor = btnDefaultcolor;
             dimMax_btn.Focus();
         }
 
         private void dimMax_btn_MouseLeave(object sender, EventArgs e)
         {
-            dimMax_btn.BackColor = Color.WhiteSmoke;
+            dimMax_btn.BackColor = btnDefaultcolor;
+            dimMax_btn.ForeColor = Color.White;
         }
 
         private void dimMax_btn_Click(object sender, EventArgs e)
