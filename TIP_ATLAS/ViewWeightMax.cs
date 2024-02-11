@@ -77,45 +77,41 @@ namespace TIP_ATLAS
 
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void dUpDResisatnce_SelectedItemChanged(object sender, EventArgs e)
         {
             DataCalculator.KmodClass =  importClassData.Collection.KmodClass[dUpDResisatnce.Text];
             DataCalculator.CumulateChargClass = dUpDResisatnce.Text;
+            dUpDKmod.Enabled = true;
         }
         public void UpdateCalc()
         {
-
+            txt_Aire.Text = DataCalculator.CalAire.ToString();
+            txt_oc0d.Text = DataCalculator.ContrainteAxialCal.ToString();
+            txt_Verif.Text = DataCalculator.VerifResAxialCompress.ToString();
+            txt_fc0d.Text = DataCalculator.ResitanceAxeCompress.ToString();
+            txt_ly.Text = DataCalculator.CalInercyMomentY.ToString();
+            txt_lz.Text = DataCalculator.CalInercyMomentZ.ToString();
+            txt_ky.Text = DataCalculator.CoefficentKy.ToString();
+            txt_Yy.Text = DataCalculator.CalMecanicElancementY.ToString();
+            txt_Yz.Text = DataCalculator.CalMecanicElancementZ.ToString();
+            txt_kz.Text = DataCalculator.CoefficentKz.ToString();
+            txt_Arely.Text = DataCalculator.CalRelatifElancementY.ToString();
+            txt_Arelz.Text = DataCalculator.CalRelatifElancementZ.ToString();
+            txt_kcy.Text = DataCalculator.CoefficentFlambY.ToString();
+            txt_kcz.Text = DataCalculator.CoefficentFlambZ.ToString();
+            txt_kc.Text = DataCalculator.CoefficentFlamb.ToString();
+            txt_Rup_Force.Text = DataCalculator.CalcMaxRuputureForce.ToString();
+            txt_AireMax.Text = DataCalculator.CalcMinAire.ToString();
+            txt_Aire_Rup.Text = DataCalculator.CalcSiseH_B.ToString();
         }
-
         private void txt_Validate_TextChanged(object sender, EventArgs e)
         {
-            if(Convert.ToDouble(txt_Validate.Text)>=1.000000|| Convert.ToDouble(txt_Validate.Text) <= 0)
-            {
-                txt_Validation.Text = "Non";
-            }else
-            {
-                txt_Validation.Text = "OK";
-            }
+            
         }
 
         private void btn_Validate_Click(object sender, EventArgs e)
         {
-            
+            UpdateCalc();          
         }
 
         private void txtLfz_Validating(object sender, CancelEventArgs e)
@@ -139,6 +135,48 @@ namespace TIP_ATLAS
                 MessageBox.Show("You need to enter an integer");
                 toValidate = 5.ToString();
             }
+        }
+
+        private void txtB_TextChanged(object sender, EventArgs e)
+        {
+            if (txtB.Text.Length != 0)
+                DataCalculator.Stransb = Convert.ToDouble(txtB.Text);
+        }
+
+        private void txtH_TextChanged(object sender, EventArgs e)
+        {
+            if(txtH.Text.Length !=0)
+                DataCalculator.Stransh = Convert.ToDouble(txtH.Text);
+        }
+
+        private void txtCoef_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCoef.Text.Length != 0)
+                DataCalculator.CoefYM = Convert.ToDouble(txtCoef.Text);
+        }
+
+        private void txtNed_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNed.Text.Length != 0)
+                DataCalculator.NedValcal = Convert.ToDouble(txtNed.Text);
+        }
+
+        private void txtLfy_TextChanged(object sender, EventArgs e)
+        {
+            if (txtLfy.Text.Length != 0)
+                DataCalculator.Flamby = Convert.ToDouble(txtLfy.Text);
+        }
+
+        private void txtLfz_TextChanged(object sender, EventArgs e)
+        {
+            if (txtLfz.Text.Length != 0)
+                DataCalculator.Flambz = Convert.ToDouble(txtLfz.Text);
+        }
+
+        private void dUpDKmod_SelectedItemChanged(object sender, EventArgs e)
+        {
+            DataCalculator.KmodClass = importClassData.Collection.KmodClass[dUpDResisatnce.Text];
+            DataCalculator.CumulateChargClass = dUpDResisatnce.Text;
         }
     }
 }

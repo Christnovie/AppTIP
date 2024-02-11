@@ -8,19 +8,20 @@ namespace ATLAS_Models
 {
     public class CompressionAxiale
     {
-        private const double CoefPartYm = 1.3;
+        private double CoefPartYm = 1.3;
 		private const double ConstBetaRextitude = 0.2;
-        double flamby; 
-        double flambz;
+        double flamby=50; 
+        double flambz=50;
         WoodClass curentlywood;
-        double stransb;
-        double stransh;
+        double stransb=0;
+        double stransh=0;
         string serviceClass;
         string cumulateChargClass;
-        double Ned_Valcal;
+        double Ned_Valcal=0;
         KmodClass kmodClass;
 
-        //Variable edit and getter value 
+        //Variable edit and getter value
+        public double CoefYM { get {return CoefPartYm; } set { CoefPartYm = value; } }
         public double Stransb { get { return stransb; } set { stransb = value; } }
         public double Stransh { get { return stransh; } set { stransh = value; } }
         public double NedValcal { get { return Ned_Valcal; } set { Ned_Valcal = value; } }
@@ -57,12 +58,12 @@ namespace ATLAS_Models
         //Aire de la section (A)
         public  double CalAire
         {
-            get { return stransb * stransh; }
+            get { return (stransb * stransh)/100; }
         }
         //Valeur de calcul de la contrainte axiale (σc,0,d)
         public double ContrainteAxialCal
         {
-            get {return Ned_Valcal*CalAire; }
+            get {return (Ned_Valcal/CalAire)*10; }
         }
         //Valeur de calcul de la résistance en compression axiale (fc,0,d) 
         public double ResitanceAxeCompress
@@ -72,12 +73,12 @@ namespace ATLAS_Models
         //Moment d’inertie de flexion par rapport à l’axe y (Iy)
         public double CalInercyMomentY
         {
-            get { return (Stransb * Math.Pow(stransh, 3))/12; }
+            get { return (Stransb * Math.Pow(stransh, 3))/120000; }
         }
         //Moment d’inertie de flexion par rapport à l’axe z (Iz)
         public double CalInercyMomentZ
         {
-            get { return (Stransb * Math.Pow(stransb, 3)) / 12; }
+            get { return (Stransb * Math.Pow(stransb, 3)) / 120000; }
         }
         //Elancement mécanique par rapport à l’axe y (γy)
         public double CalMecanicElancementY
@@ -92,13 +93,13 @@ namespace ATLAS_Models
         //Elancement relatif par rapport à l’axe y (λrel,y) 
         public double CalRelatifElancementY
         {
-            get { return (CalMecanicElancementY/Math.PI) * Math.Sqrt(CurrentWood.fc0k / CurrentWood.E005); }
+            get { return (CalMecanicElancementY/Math.PI) * Math.Sqrt(CurrentWood.fc0k / (CurrentWood.E005 * 10))/10; }
 
         }
         //Elancement relatif par rapport à l’axe z (λrel,z) 
         public double CalRelatifElancementZ
         {
-            get { return (CalMecanicElancementZ / Math.PI) * Math.Sqrt(CurrentWood.fc0k / CurrentWood.E005); }
+            get { return (CalMecanicElancementZ / Math.PI) * Math.Sqrt(CurrentWood.fc0k / (CurrentWood.E005*10))/10; }
 
         }
         //Coefficient (ky) 
@@ -114,12 +115,12 @@ namespace ATLAS_Models
         //Coefficient de flambement par rapport à l’axe y(kc, y)
         public double CoefficentFlambY
         {
-            get { return 1 / (CoefficentKy + Math.Sqrt(Math.Pow(CoefficentKy, 2) - Math.Pow(CoefficentKy, 2))); }
+            get { return 1 / (CoefficentKy + Math.Sqrt(Math.Pow(CoefficentKy, 2) - Math.Pow(CalRelatifElancementY, 2))); }
         }
         //Coefficient de flambement par rapport à l’axe z (kc,z) 
         public double CoefficentFlambZ
         {
-            get { return 1 / (CoefficentKz + Math.Sqrt(Math.Pow(CoefficentKz, 2) - Math.Pow(CoefficentKz, 2))); }
+            get { return 1 / (CoefficentKz + Math.Sqrt(Math.Pow(CoefficentKz, 2) - Math.Pow(CalRelatifElancementZ, 2))); }
         }
         //Coefficient de flambement (kc)
         public double CoefficentFlamb
@@ -144,32 +145,32 @@ namespace ATLAS_Models
         //Retrouver la force max au point de rupture 
         public double CalcMaxRuputureForce
         {
-            get { return (CalAire * CoefficentFlamb * ResitanceAxeCompress)/1000; }
+            get { return (CalAire * CoefficentFlamb * ResitanceAxeCompress)/10; }
         }
         //Retrouver la force recommandé au point de rupture 
         public double CalcRecomandedForce
         {
-            get { return (CalAire * CoefficentFlamb * ResitanceAxeCompress*0.85)/1000; }
+            get { return (CalAire * CoefficentFlamb * ResitanceAxeCompress*0.85)/10; }
         }
         //Retrouver Aire minimal depuis une force point de rupture
         public double CalcMinAire
         {
-            get { return Ned_Valcal/(CoefficentFlamb * ResitanceAxeCompress); }
+            get { return 10*Ned_Valcal/(CoefficentFlamb * ResitanceAxeCompress); }
         }
         //Retrouver Aire minimal recomandée depuis une force 
         public double CalcMinRecomandedAire
         {
-            get { return Ned_Valcal / (CoefficentFlamb * ResitanceAxeCompress*0.85); }
+            get { return 10*Ned_Valcal / (CoefficentFlamb * ResitanceAxeCompress*0.85); }
         }
         //Retouver les dimension du poto au point de rupture pour une surface carré
         public double CalcSiseH_B
         {
-            get { return Math.Sqrt(CalcMinAire); }
+            get { return Math.Sqrt(CalcMinAire)*10; }
         }
         //Retouver les dimension recommandée du poto pour une surface carré
         public double CalcSiseRecomandedH_B
         {
-            get { return Math.Sqrt(CalcMinRecomandedAire); }
+            get { return Math.Sqrt(CalcMinRecomandedAire)*10; }
         }
     }
 }
