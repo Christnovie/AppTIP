@@ -172,5 +172,11 @@ namespace ATLAS_Models
         {
             get { return Math.Sqrt(CalcMinRecomandedAire)*10; }
         }
+        //Retouver les dimension recommandée du poto pour une surface Rectangulaire
+        public double CalcSiseRecomandedB_Rectangle
+        {
+            get { return Math.Sqrt(CalcMinRecomandedAire)*10; }
+        }
+        
     }
 }
