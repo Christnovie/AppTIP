@@ -7,20 +7,25 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIP_ATLAS_view", "TIP_ATLAS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATLAS_Models", "..\ATLAS_Models\ATLAS_Models.csproj", "{251D3244-CFC5-4D3D-A0ED-BCF4DDDA352C}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ATLAS_Setup", "..\ATLAS_Setup\ATLAS_Setup.vdproj", "{94DCD05C-1923-4D7A-9B67-A6C13545D8E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2232EF09-0361-45C7-A584-29196B1AC86C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2232EF09-0361-45C7-A584-29196B1AC86C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2232EF09-0361-45C7-A584-29196B1AC86C}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{2232EF09-0361-45C7-A584-29196B1AC86C}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{2232EF09-0361-45C7-A584-29196B1AC86C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2232EF09-0361-45C7-A584-29196B1AC86C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{251D3244-CFC5-4D3D-A0ED-BCF4DDDA352C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{251D3244-CFC5-4D3D-A0ED-BCF4DDDA352C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{251D3244-CFC5-4D3D-A0ED-BCF4DDDA352C}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{251D3244-CFC5-4D3D-A0ED-BCF4DDDA352C}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{251D3244-CFC5-4D3D-A0ED-BCF4DDDA352C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{251D3244-CFC5-4D3D-A0ED-BCF4DDDA352C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94DCD05C-1923-4D7A-9B67-A6C13545D8E5}.Debug|Any CPU.ActiveCfg = Release
+		{94DCD05C-1923-4D7A-9B67-A6C13545D8E5}.Debug|Any CPU.Build.0 = Release
+		{94DCD05C-1923-4D7A-9B67-A6C13545D8E5}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -31,8 +31,8 @@ namespace ATLAS_Models
         {
             ClasseCollection collection = new ClasseCollection();
             this.collection = new ClasseCollection();
-            this.collection = JsonConvert.DeserializeObject<ClasseCollection>(File.ReadAllText(System.Environment.CurrentDirectory + "\\..\\..\\DatabaseSoftwood.json"));
-            collection = JsonConvert.DeserializeObject<ClasseCollection>(File.ReadAllText( System.Environment.CurrentDirectory + "\\..\\..\\DatabaseKmod.json"));
+            this.collection = JsonConvert.DeserializeObject<ClasseCollection>(File.ReadAllText(System.Environment.CurrentDirectory + "\\DatabaseSoftwood.json"));
+            collection = JsonConvert.DeserializeObject<ClasseCollection>(File.ReadAllText( System.Environment.CurrentDirectory + "\\DatabaseKmod.json"));
             this.collection.KmodClass = collection.KmodClass;
         }
         public ClasseCollection Collection
