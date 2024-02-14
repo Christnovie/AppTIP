@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.btnBack = new System.Windows.Forms.Button();
-            this.importCassDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txt_AireMax = new System.Windows.Forms.TextBox();
             this.dUpDResitanceClass = new System.Windows.Forms.DomainUpDown();
             this.dUpDKmod = new System.Windows.Forms.DomainUpDown();
@@ -121,11 +120,12 @@
             this.txt_Rec_HRec = new System.Windows.Forms.RichTextBox();
             this.txt_Rec_DimSquare_round = new System.Windows.Forms.RichTextBox();
             this.txt_Rec_Aire = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.importCassDataBindingSource)).BeginInit();
+            this.errorInput = new System.Windows.Forms.ErrorProvider(this.components);
             this.grpResult.SuspendLayout();
             this.grpUsers.SuspendLayout();
             this.grpResultInter.SuspendLayout();
             this.gpbRecommanded.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorInput)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBack
@@ -149,7 +149,6 @@
             this.txt_AireMax.Size = new System.Drawing.Size(97, 21);
             this.txt_AireMax.TabIndex = 2;
             this.txt_AireMax.Text = "0";
-            this.txt_AireMax.TextChanged += new System.EventHandler(this.txtTest_TextChanged);
             // 
             // dUpDResitanceClass
             // 
@@ -202,7 +201,7 @@
             this.txtH.Size = new System.Drawing.Size(100, 20);
             this.txtH.TabIndex = 6;
             this.txtH.TextChanged += new System.EventHandler(this.txtH_TextChanged);
-            this.txtH.Validating += new System.ComponentModel.CancelEventHandler(this.txtLfz_Validating);
+            this.txtH.Validating += new System.ComponentModel.CancelEventHandler(this.txtH_Validating);
             // 
             // txtLfy
             // 
@@ -214,7 +213,7 @@
             this.txtLfy.TabIndex = 7;
             this.txtLfy.Text = "50";
             this.txtLfy.TextChanged += new System.EventHandler(this.txtLfy_TextChanged);
-            this.txtLfy.Validating += new System.ComponentModel.CancelEventHandler(this.txtLfz_Validating);
+            this.txtLfy.Validating += new System.ComponentModel.CancelEventHandler(this.txtLfy_Validating);
             // 
             // txtNed
             // 
@@ -224,7 +223,7 @@
             this.txtNed.Size = new System.Drawing.Size(100, 20);
             this.txtNed.TabIndex = 8;
             this.txtNed.TextChanged += new System.EventHandler(this.txtNed_TextChanged);
-            this.txtNed.Validating += new System.ComponentModel.CancelEventHandler(this.txtLfz_Validating);
+            this.txtNed.Validating += new System.ComponentModel.CancelEventHandler(this.txtNed_Validating);
             // 
             // txtCoef
             // 
@@ -235,7 +234,7 @@
             this.txtCoef.TabIndex = 9;
             this.txtCoef.Text = "1,3";
             this.txtCoef.TextChanged += new System.EventHandler(this.txtCoef_TextChanged);
-            this.txtCoef.Validating += new System.ComponentModel.CancelEventHandler(this.txtLfz_Validating);
+            this.txtCoef.Validating += new System.ComponentModel.CancelEventHandler(this.txtCoef_Validating);
             // 
             // txtLfz
             // 
@@ -592,7 +591,7 @@
             this.txtB.Size = new System.Drawing.Size(100, 20);
             this.txtB.TabIndex = 12;
             this.txtB.TextChanged += new System.EventHandler(this.txtB_TextChanged);
-            this.txtB.Validating += new System.ComponentModel.CancelEventHandler(this.txtLfz_Validating);
+            this.txtB.Validating += new System.ComponentModel.CancelEventHandler(this.txtB_Validating);
             // 
             // grpResultInter
             // 
@@ -1166,11 +1165,15 @@
             this.txt_Rec_Aire.TabIndex = 2;
             this.txt_Rec_Aire.Text = "0";
             // 
+            // errorInput
+            // 
+            this.errorInput.ContainerControl = this;
+            // 
             // ViewWeightMax
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackColor = System.Drawing.Color.LightSlateGray;
             this.ClientSize = new System.Drawing.Size(1319, 624);
             this.ControlBox = false;
             this.Controls.Add(this.gpbRecommanded);
@@ -1182,7 +1185,6 @@
             this.Name = "ViewWeightMax";
             this.Text = "ViewWeightMax";
             this.Load += new System.EventHandler(this.ViewWeightMax_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.importCassDataBindingSource)).EndInit();
             this.grpResult.ResumeLayout(false);
             this.grpResult.PerformLayout();
             this.grpUsers.ResumeLayout(false);
@@ -1191,6 +1193,7 @@
             this.grpResultInter.PerformLayout();
             this.gpbRecommanded.ResumeLayout(false);
             this.gpbRecommanded.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorInput)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1198,7 +1201,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.BindingSource importCassDataBindingSource;
         private System.Windows.Forms.TextBox txt_AireMax;
         private System.Windows.Forms.DomainUpDown dUpDResitanceClass;
         private System.Windows.Forms.DomainUpDown dUpDKmod;
@@ -1289,5 +1291,6 @@
         private System.Windows.Forms.RichTextBox txt_Rec_HRec;
         private System.Windows.Forms.RichTextBox txt_Rec_DimSquare_round;
         private System.Windows.Forms.TextBox txt_Rec_Aire;
+        private System.Windows.Forms.ErrorProvider errorInput;
     }
 }
