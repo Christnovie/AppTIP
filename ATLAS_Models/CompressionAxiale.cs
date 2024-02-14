@@ -126,14 +126,14 @@ namespace ATLAS_Models
         public double CoefficentFlamb
         {
             get
-            {
-                if (CalRelatifElancementY<=0.3 && CalRelatifElancementZ <= 0.3)
-                {
-                    return 1.00;
-                }
-                else
+            {   
+                if (CalRelatifElancementY>0.3 && CalRelatifElancementZ > 0.3)
                 {
                     return Math.Min(CoefficentFlambY, CoefficentFlambZ);
+                }
+                else
+                {                    
+                    return 1.00;
                 }
             }
         }
@@ -142,12 +142,14 @@ namespace ATLAS_Models
         {
             get { return ContrainteAxialCal / (CoefficentFlamb * ResitanceAxeCompress); }
         }
+
+        //Resultat point rupture et recommandation
         //Retrouver la force max au point de rupture 
         public double CalcMaxRuputureForce
         {
             get { return (CalAire * CoefficentFlamb * ResitanceAxeCompress)/10; }
         }
-        //Retrouver la force recommandé au point de rupture 
+        //Retrouver la force max recommandé 
         public double CalcRecomandedForce
         {
             get { return (CalAire * CoefficentFlamb * ResitanceAxeCompress*0.85)/10; }
@@ -162,6 +164,8 @@ namespace ATLAS_Models
         {
             get { return 10*Ned_Valcal / (CoefficentFlamb * ResitanceAxeCompress*0.85); }
         }
+
+        //Dimmentions carrées
         //Retouver les dimension du poto au point de rupture pour une surface carré
         public double CalcSiseH_B
         {
@@ -172,11 +176,26 @@ namespace ATLAS_Models
         {
             get { return Math.Sqrt(CalcMinRecomandedAire)*10; }
         }
+
+        //Dimmention Rectangle
         //Retouver les dimension recommandée du poto pour une surface Rectangulaire
+        public double CalcSiseRecomandedH_Rectangle
+        {
+            get { return Math.Sqrt(CalcMinRecomandedAire*3/2)*10; }
+        }
         public double CalcSiseRecomandedB_Rectangle
         {
-            get { return Math.Sqrt(CalcMinRecomandedAire)*10; }
+            get { return CalcSiseRecomandedH_Rectangle*2/3  ; }
         }
-        
+
+        //Retrouver la force recommandé au point de rupture 
+        public double CalcSiseRupH_Rectangle
+        {
+            get { return Math.Sqrt(CalcMinAire * 3 / 2) * 10; }
+        }
+        public double CalcSiseRupB_Rectangle
+        {
+            get { return CalcSiseRupH_Rectangle*2/3; }
+        }
     }
 }

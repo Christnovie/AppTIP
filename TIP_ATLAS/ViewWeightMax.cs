@@ -100,9 +100,38 @@ namespace TIP_ATLAS
             txt_kcy.Text = DataCalculator.CoefficentFlambY.ToString();
             txt_kcz.Text = DataCalculator.CoefficentFlambZ.ToString();
             txt_kc.Text = DataCalculator.CoefficentFlamb.ToString();
+            updateCalcRecommanded();
+            updateCalcRupture();
+        }
+       //Update Result recommanded
+        public void updateCalcRecommanded()
+        {
+            txt_Rec_Force.Text = DataCalculator.CalcRecomandedForce.ToString();
+            txt_Rec_Aire.Text = DataCalculator.CalcMinRecomandedAire.ToString();
+            txt_Rec_DimSquare.Text = DataCalculator.CalcSiseRecomandedH_B.ToString();
+            txt_Rec_BRec.Text = DataCalculator.CalcSiseRecomandedB_Rectangle.ToString();
+            txt_Rec_HRec.Text = DataCalculator.CalcSiseRecomandedH_Rectangle.ToString();
+            
+            txt_Rec_Force_round.Text = RoundNumeberView(DataCalculator.CalcRecomandedForce);
+            txt_Rec_Aire_round.Text = RoundNumeberView(DataCalculator.CalcMinRecomandedAire);
+            txt_Rec_DimSquare_round.Text = RoundNumeberView(DataCalculator.CalcSiseRecomandedH_B);
+            txt_Rec_BRec_round.Text =  RoundNumeberView(DataCalculator.CalcSiseRecomandedB_Rectangle);
+            txt_Rec_HRec_round.Text = RoundNumeberView(DataCalculator.CalcSiseRecomandedH_Rectangle);
+        } 
+        public void updateCalcRupture()
+        {
             txt_Rup_Force.Text = DataCalculator.CalcMaxRuputureForce.ToString();
             txt_AireMax.Text = DataCalculator.CalcMinAire.ToString();
             txt_Aire_Rup.Text = DataCalculator.CalcSiseH_B.ToString();
+            Txt_h_Rectangle.Text = DataCalculator.CalcSiseRupH_Rectangle.ToString();
+            Txt_b_Rectangle.Text = DataCalculator.CalcSiseRupB_Rectangle.ToString();
+            
+            txt_Rup_F_round.Text = RoundNumeberView(DataCalculator.CalcMaxRuputureForce);
+            txt_AireMax_round.Text = RoundNumeberView(DataCalculator.CalcMinAire);
+            txt_Aire_Rup_round.Text = RoundNumeberView(DataCalculator.CalcSiseH_B);
+            Txt_h_Rectangle_round.Text = RoundNumeberView(DataCalculator.CalcSiseRupH_Rectangle);
+            Txt_b_Rectangle_round.Text = RoundNumeberView(DataCalculator.CalcSiseRupB_Rectangle);
+            
         }
         private void txt_Validate_TextChanged(object sender, EventArgs e)
         {
@@ -141,12 +170,14 @@ namespace TIP_ATLAS
         {
             if (txtB.Text.Length != 0)
                 DataCalculator.Stransb = Convert.ToDouble(txtB.Text);
+            dUpDKmod_Validating(sender, new CancelEventArgs());
         }
 
         private void txtH_TextChanged(object sender, EventArgs e)
         {
             if(txtH.Text.Length !=0)
                 DataCalculator.Stransh = Convert.ToDouble(txtH.Text);
+            dUpDKmod_Validating(sender, new CancelEventArgs());
         }
 
         private void txtCoef_TextChanged(object sender, EventArgs e)
@@ -159,6 +190,7 @@ namespace TIP_ATLAS
         {
             if (txtNed.Text.Length != 0)
                 DataCalculator.NedValcal = Convert.ToDouble(txtNed.Text);
+            dUpDKmod_Validating(sender, new CancelEventArgs());
         }
 
         private void txtLfy_TextChanged(object sender, EventArgs e)
@@ -177,6 +209,40 @@ namespace TIP_ATLAS
         {
             DataCalculator.KmodClass = importClassData.Collection.KmodClass[dUpDResisatnce.Text];
             DataCalculator.CumulateChargClass = dUpDResisatnce.Text;
+            dUpDKmod_Validating(sender, new CancelEventArgs());
+        }
+        public string RoundNumeberView(double number)
+        {
+            string result;
+            if (number % 1 > 0)
+            {
+                return result = (Math.Truncate(number) + 1).ToString();
+            }
+            else { return result = number.ToString(); }
+        }
+
+        private void btn_Validate_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (((txtB.Text != "" && txtH.Text != "")||txtNed.Text != "") && dUpDKmod.Visible)
+            {
+                btn_Validate.Visible = true;
+            }
+            else
+            {
+                btn_Validate.Visible = false;
+            }
+        }
+
+        private void dUpDKmod_Validating(object sender, CancelEventArgs e)
+        {
+            dUpDKmod_Validated(sender, e);
+        }
+
+        private void dUpDKmod_Validated(object sender, EventArgs e)
+        {
+            btn_Validate.Enabled = dUpDKmod.Enabled;
+            btn_Validate.Visible = dUpDKmod.Visible;
         }
     }
+
 }
