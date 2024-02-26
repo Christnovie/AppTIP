@@ -11,7 +11,6 @@ namespace ATLAS_Models
     public class ImportClassData
     {
         private ClasseCollection collection;
-        List<WoodClass> classList = new List<WoodClass>();
         public ImportClassData()
         {
             GetSoftwoodDataValue();

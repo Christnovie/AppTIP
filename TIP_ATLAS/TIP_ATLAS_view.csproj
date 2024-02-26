@@ -60,6 +60,12 @@
     <Compile Include="ViewHome.Designer.cs">
       <DependentUpon>ViewHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewWeightMaxC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewWeightMax - Copier.Designer.cs">
+      <DependentUpon>ViewWeightMaxC.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewWeightMax.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,8 +87,14 @@
     <EmbeddedResource Include="ViewHome.resx">
       <DependentUpon>ViewHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ViewWeightMax - Copier.resx">
+      <DependentUpon>ViewWeightMaxC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewWeightMax.resx">
       <DependentUpon>ViewWeightMax.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewWeightMaxC.resx">
+      <DependentUpon>ViewWeightMaxC.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DatabaseKmod.json" />
     <None Include="DatabaseSoftwood.json" />

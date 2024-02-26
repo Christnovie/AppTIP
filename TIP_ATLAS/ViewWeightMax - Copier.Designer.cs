@@ -1,6 +1,6 @@
 ﻿namespace TIP_ATLAS
 {
-    partial class ViewWeightMax
+    partial class ViewWeightMaxC
     {
         /// <summary>
         /// Required designer variable.
@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewWeightMaxC));
             this.btnBack = new System.Windows.Forms.Button();
-            this.txt_AireMax = new System.Windows.Forms.TextBox();
             this.dUpDResitanceClass = new System.Windows.Forms.DomainUpDown();
             this.dUpDKmod = new System.Windows.Forms.DomainUpDown();
             this.dUpDResisatnce = new System.Windows.Forms.DomainUpDown();
@@ -45,26 +45,6 @@
             this.lbl_Lfz = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.grpResult = new System.Windows.Forms.GroupBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.txt_AireMax_round = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.Txt_h_Rectangle_round = new System.Windows.Forms.RichTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Txt_b_Rectangle_round = new System.Windows.Forms.RichTextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txt_Rup_F_round = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txt_Rup_Force = new System.Windows.Forms.TextBox();
-            this.Txt_b_Rectangle = new System.Windows.Forms.RichTextBox();
-            this.txt_Aire_Rup = new System.Windows.Forms.RichTextBox();
-            this.Txt_h_Rectangle = new System.Windows.Forms.RichTextBox();
-            this.txt_Aire_Rup_round = new System.Windows.Forms.RichTextBox();
             this.grpUsers = new System.Windows.Forms.GroupBox();
             this.btn_Validate = new System.Windows.Forms.Button();
             this.txtB = new System.Windows.Forms.TextBox();
@@ -121,11 +101,32 @@
             this.txt_Rec_DimSquare_round = new System.Windows.Forms.RichTextBox();
             this.txt_Rec_Aire = new System.Windows.Forms.TextBox();
             this.errorInput = new System.Windows.Forms.ErrorProvider(this.components);
-            this.grpResult.SuspendLayout();
+            this.txt_AireMax = new System.Windows.Forms.TextBox();
+            this.txt_Aire_Rup_round = new System.Windows.Forms.RichTextBox();
+            this.Txt_h_Rectangle = new System.Windows.Forms.RichTextBox();
+            this.txt_Aire_Rup = new System.Windows.Forms.RichTextBox();
+            this.Txt_b_Rectangle = new System.Windows.Forms.RichTextBox();
+            this.txt_Rup_Force = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txt_Rup_F_round = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.Txt_b_Rectangle_round = new System.Windows.Forms.RichTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Txt_h_Rectangle_round = new System.Windows.Forms.RichTextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txt_AireMax_round = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.grpResult = new System.Windows.Forms.GroupBox();
             this.grpUsers.SuspendLayout();
             this.grpResultInter.SuspendLayout();
             this.gpbRecommanded.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorInput)).BeginInit();
+            this.grpResult.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnBack
@@ -139,16 +140,6 @@
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             this.btnBack.MouseEnter += new System.EventHandler(this.btnBack_MouseEnter);
             this.btnBack.MouseLeave += new System.EventHandler(this.btnBack_MouseLeave);
-            // 
-            // txt_AireMax
-            // 
-            this.txt_AireMax.Enabled = false;
-            this.txt_AireMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_AireMax.Location = new System.Drawing.Point(93, 78);
-            this.txt_AireMax.Name = "txt_AireMax";
-            this.txt_AireMax.Size = new System.Drawing.Size(97, 21);
-            this.txt_AireMax.TabIndex = 2;
-            this.txt_AireMax.Text = "0";
             // 
             // dUpDResitanceClass
             // 
@@ -316,230 +307,9 @@
             this.label6.TabIndex = 18;
             this.label6.Text = "Ned[kN]";
             // 
-            // grpResult
-            // 
-            this.grpResult.BackColor = System.Drawing.Color.Tan;
-            this.grpResult.Controls.Add(this.label33);
-            this.grpResult.Controls.Add(this.txt_AireMax_round);
-            this.grpResult.Controls.Add(this.label17);
-            this.grpResult.Controls.Add(this.Txt_h_Rectangle_round);
-            this.grpResult.Controls.Add(this.label3);
-            this.grpResult.Controls.Add(this.Txt_b_Rectangle_round);
-            this.grpResult.Controls.Add(this.label12);
-            this.grpResult.Controls.Add(this.txt_Rup_F_round);
-            this.grpResult.Controls.Add(this.label16);
-            this.grpResult.Controls.Add(this.label1);
-            this.grpResult.Controls.Add(this.label2);
-            this.grpResult.Controls.Add(this.label15);
-            this.grpResult.Controls.Add(this.label14);
-            this.grpResult.Controls.Add(this.label13);
-            this.grpResult.Controls.Add(this.txt_Rup_Force);
-            this.grpResult.Controls.Add(this.Txt_b_Rectangle);
-            this.grpResult.Controls.Add(this.txt_Aire_Rup);
-            this.grpResult.Controls.Add(this.Txt_h_Rectangle);
-            this.grpResult.Controls.Add(this.txt_Aire_Rup_round);
-            this.grpResult.Controls.Add(this.txt_AireMax);
-            this.grpResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpResult.Location = new System.Drawing.Point(851, 44);
-            this.grpResult.Name = "grpResult";
-            this.grpResult.Size = new System.Drawing.Size(410, 265);
-            this.grpResult.TabIndex = 19;
-            this.grpResult.TabStop = false;
-            this.grpResult.Text = "Resultat au point de rupture";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(196, 81);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(46, 15);
-            this.label33.TabIndex = 41;
-            this.label33.Text = "Arrondi";
-            // 
-            // txt_AireMax_round
-            // 
-            this.txt_AireMax_round.Enabled = false;
-            this.txt_AireMax_round.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_AireMax_round.Location = new System.Drawing.Point(248, 78);
-            this.txt_AireMax_round.Name = "txt_AireMax_round";
-            this.txt_AireMax_round.Size = new System.Drawing.Size(87, 21);
-            this.txt_AireMax_round.TabIndex = 40;
-            this.txt_AireMax_round.Text = "0";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(267, 160);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(46, 15);
-            this.label17.TabIndex = 39;
-            this.label17.Text = "Arrondi";
-            // 
-            // Txt_h_Rectangle_round
-            // 
-            this.Txt_h_Rectangle_round.Enabled = false;
-            this.Txt_h_Rectangle_round.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_h_Rectangle_round.Location = new System.Drawing.Point(318, 157);
-            this.Txt_h_Rectangle_round.Name = "Txt_h_Rectangle_round";
-            this.Txt_h_Rectangle_round.Size = new System.Drawing.Size(71, 23);
-            this.Txt_h_Rectangle_round.TabIndex = 38;
-            this.Txt_h_Rectangle_round.Text = "0";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(267, 220);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 15);
-            this.label3.TabIndex = 37;
-            this.label3.Text = "Arrondi";
-            // 
-            // Txt_b_Rectangle_round
-            // 
-            this.Txt_b_Rectangle_round.Enabled = false;
-            this.Txt_b_Rectangle_round.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_b_Rectangle_round.Location = new System.Drawing.Point(318, 217);
-            this.Txt_b_Rectangle_round.Name = "Txt_b_Rectangle_round";
-            this.Txt_b_Rectangle_round.Size = new System.Drawing.Size(71, 23);
-            this.Txt_b_Rectangle_round.TabIndex = 36;
-            this.Txt_b_Rectangle_round.Text = "0";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(196, 37);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(46, 15);
-            this.label12.TabIndex = 35;
-            this.label12.Text = "Arrondi";
-            // 
-            // txt_Rup_F_round
-            // 
-            this.txt_Rup_F_round.Enabled = false;
-            this.txt_Rup_F_round.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Rup_F_round.Location = new System.Drawing.Point(248, 37);
-            this.txt_Rup_F_round.Name = "txt_Rup_F_round";
-            this.txt_Rup_F_round.Size = new System.Drawing.Size(87, 21);
-            this.txt_Rup_F_round.TabIndex = 34;
-            this.txt_Rup_F_round.Text = "0";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(49, 160);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(46, 15);
-            this.label16.TabIndex = 33;
-            this.label16.Text = "Arrondi";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 15);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Force max[kN]";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(212, 195);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 15);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "b Rectangle[mm]";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(6, 133);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(89, 15);
-            this.label15.TabIndex = 32;
-            this.label15.Text = "h-b Carré [mm]";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(210, 133);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(101, 15);
-            this.label14.TabIndex = 31;
-            this.label14.Text = "h Rectangle[mm]";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(0, 81);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(87, 15);
-            this.label13.TabIndex = 30;
-            this.label13.Text = "Aire max[Cm2]";
-            // 
-            // txt_Rup_Force
-            // 
-            this.txt_Rup_Force.Enabled = false;
-            this.txt_Rup_Force.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Rup_Force.Location = new System.Drawing.Point(93, 37);
-            this.txt_Rup_Force.Name = "txt_Rup_Force";
-            this.txt_Rup_Force.Size = new System.Drawing.Size(97, 21);
-            this.txt_Rup_Force.TabIndex = 16;
-            this.txt_Rup_Force.Text = "0";
-            // 
-            // Txt_b_Rectangle
-            // 
-            this.Txt_b_Rectangle.Enabled = false;
-            this.Txt_b_Rectangle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_b_Rectangle.Location = new System.Drawing.Point(318, 192);
-            this.Txt_b_Rectangle.Name = "Txt_b_Rectangle";
-            this.Txt_b_Rectangle.Size = new System.Drawing.Size(71, 23);
-            this.Txt_b_Rectangle.TabIndex = 14;
-            this.Txt_b_Rectangle.Text = "0";
-            // 
-            // txt_Aire_Rup
-            // 
-            this.txt_Aire_Rup.Enabled = false;
-            this.txt_Aire_Rup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Aire_Rup.Location = new System.Drawing.Point(98, 130);
-            this.txt_Aire_Rup.Name = "txt_Aire_Rup";
-            this.txt_Aire_Rup.Size = new System.Drawing.Size(71, 23);
-            this.txt_Aire_Rup.TabIndex = 13;
-            this.txt_Aire_Rup.Text = "0";
-            // 
-            // Txt_h_Rectangle
-            // 
-            this.Txt_h_Rectangle.Enabled = false;
-            this.Txt_h_Rectangle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_h_Rectangle.Location = new System.Drawing.Point(318, 130);
-            this.Txt_h_Rectangle.Name = "Txt_h_Rectangle";
-            this.Txt_h_Rectangle.Size = new System.Drawing.Size(71, 23);
-            this.Txt_h_Rectangle.TabIndex = 12;
-            this.Txt_h_Rectangle.Text = "0";
-            // 
-            // txt_Aire_Rup_round
-            // 
-            this.txt_Aire_Rup_round.Enabled = false;
-            this.txt_Aire_Rup_round.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Aire_Rup_round.Location = new System.Drawing.Point(98, 157);
-            this.txt_Aire_Rup_round.Name = "txt_Aire_Rup_round";
-            this.txt_Aire_Rup_round.Size = new System.Drawing.Size(71, 23);
-            this.txt_Aire_Rup_round.TabIndex = 11;
-            this.txt_Aire_Rup_round.Text = "0";
-            // 
             // grpUsers
             // 
-            this.grpUsers.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.grpUsers.BackColor = System.Drawing.Color.Transparent;
             this.grpUsers.Controls.Add(this.label5);
             this.grpUsers.Controls.Add(this.label6);
             this.grpUsers.Controls.Add(this.lbl_baseh);
@@ -595,7 +365,7 @@
             // 
             // grpResultInter
             // 
-            this.grpResultInter.BackColor = System.Drawing.Color.Tan;
+            this.grpResultInter.BackColor = System.Drawing.Color.Transparent;
             this.grpResultInter.Controls.Add(this.label18);
             this.grpResultInter.Controls.Add(this.label19);
             this.grpResultInter.Controls.Add(this.label20);
@@ -936,7 +706,7 @@
             // 
             // gpbRecommanded
             // 
-            this.gpbRecommanded.BackColor = System.Drawing.Color.Tan;
+            this.gpbRecommanded.BackColor = System.Drawing.Color.Transparent;
             this.gpbRecommanded.Controls.Add(this.label4);
             this.gpbRecommanded.Controls.Add(this.txt_Rec_Aire_round);
             this.gpbRecommanded.Controls.Add(this.label7);
@@ -1169,11 +939,244 @@
             // 
             this.errorInput.ContainerControl = this;
             // 
-            // ViewWeightMax
+            // txt_AireMax
+            // 
+            this.txt_AireMax.Enabled = false;
+            this.txt_AireMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_AireMax.Location = new System.Drawing.Point(93, 78);
+            this.txt_AireMax.Name = "txt_AireMax";
+            this.txt_AireMax.Size = new System.Drawing.Size(97, 21);
+            this.txt_AireMax.TabIndex = 2;
+            this.txt_AireMax.Text = "0";
+            // 
+            // txt_Aire_Rup_round
+            // 
+            this.txt_Aire_Rup_round.Enabled = false;
+            this.txt_Aire_Rup_round.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Aire_Rup_round.Location = new System.Drawing.Point(98, 157);
+            this.txt_Aire_Rup_round.Name = "txt_Aire_Rup_round";
+            this.txt_Aire_Rup_round.Size = new System.Drawing.Size(71, 23);
+            this.txt_Aire_Rup_round.TabIndex = 11;
+            this.txt_Aire_Rup_round.Text = "0";
+            // 
+            // Txt_h_Rectangle
+            // 
+            this.Txt_h_Rectangle.Enabled = false;
+            this.Txt_h_Rectangle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_h_Rectangle.Location = new System.Drawing.Point(318, 130);
+            this.Txt_h_Rectangle.Name = "Txt_h_Rectangle";
+            this.Txt_h_Rectangle.Size = new System.Drawing.Size(71, 23);
+            this.Txt_h_Rectangle.TabIndex = 12;
+            this.Txt_h_Rectangle.Text = "0";
+            // 
+            // txt_Aire_Rup
+            // 
+            this.txt_Aire_Rup.Enabled = false;
+            this.txt_Aire_Rup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Aire_Rup.Location = new System.Drawing.Point(98, 130);
+            this.txt_Aire_Rup.Name = "txt_Aire_Rup";
+            this.txt_Aire_Rup.Size = new System.Drawing.Size(71, 23);
+            this.txt_Aire_Rup.TabIndex = 13;
+            this.txt_Aire_Rup.Text = "0";
+            // 
+            // Txt_b_Rectangle
+            // 
+            this.Txt_b_Rectangle.Enabled = false;
+            this.Txt_b_Rectangle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_b_Rectangle.Location = new System.Drawing.Point(318, 192);
+            this.Txt_b_Rectangle.Name = "Txt_b_Rectangle";
+            this.Txt_b_Rectangle.Size = new System.Drawing.Size(71, 23);
+            this.Txt_b_Rectangle.TabIndex = 14;
+            this.Txt_b_Rectangle.Text = "0";
+            // 
+            // txt_Rup_Force
+            // 
+            this.txt_Rup_Force.Enabled = false;
+            this.txt_Rup_Force.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Rup_Force.Location = new System.Drawing.Point(93, 37);
+            this.txt_Rup_Force.Name = "txt_Rup_Force";
+            this.txt_Rup_Force.Size = new System.Drawing.Size(97, 21);
+            this.txt_Rup_Force.TabIndex = 16;
+            this.txt_Rup_Force.Text = "0";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(0, 81);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(87, 15);
+            this.label13.TabIndex = 30;
+            this.label13.Text = "Aire max[Cm2]";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(210, 133);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(101, 15);
+            this.label14.TabIndex = 31;
+            this.label14.Text = "h Rectangle[mm]";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(6, 133);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(89, 15);
+            this.label15.TabIndex = 32;
+            this.label15.Text = "h-b Carré [mm]";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(212, 195);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(101, 15);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "b Rectangle[mm]";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(1, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 15);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Force max[kN]";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(49, 160);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(46, 15);
+            this.label16.TabIndex = 33;
+            this.label16.Text = "Arrondi";
+            // 
+            // txt_Rup_F_round
+            // 
+            this.txt_Rup_F_round.Enabled = false;
+            this.txt_Rup_F_round.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Rup_F_round.Location = new System.Drawing.Point(248, 37);
+            this.txt_Rup_F_round.Name = "txt_Rup_F_round";
+            this.txt_Rup_F_round.Size = new System.Drawing.Size(87, 21);
+            this.txt_Rup_F_round.TabIndex = 34;
+            this.txt_Rup_F_round.Text = "0";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(196, 37);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(46, 15);
+            this.label12.TabIndex = 35;
+            this.label12.Text = "Arrondi";
+            // 
+            // Txt_b_Rectangle_round
+            // 
+            this.Txt_b_Rectangle_round.Enabled = false;
+            this.Txt_b_Rectangle_round.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_b_Rectangle_round.Location = new System.Drawing.Point(318, 217);
+            this.Txt_b_Rectangle_round.Name = "Txt_b_Rectangle_round";
+            this.Txt_b_Rectangle_round.Size = new System.Drawing.Size(71, 23);
+            this.Txt_b_Rectangle_round.TabIndex = 36;
+            this.Txt_b_Rectangle_round.Text = "0";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(267, 220);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 15);
+            this.label3.TabIndex = 37;
+            this.label3.Text = "Arrondi";
+            // 
+            // Txt_h_Rectangle_round
+            // 
+            this.Txt_h_Rectangle_round.Enabled = false;
+            this.Txt_h_Rectangle_round.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_h_Rectangle_round.Location = new System.Drawing.Point(318, 157);
+            this.Txt_h_Rectangle_round.Name = "Txt_h_Rectangle_round";
+            this.Txt_h_Rectangle_round.Size = new System.Drawing.Size(71, 23);
+            this.Txt_h_Rectangle_round.TabIndex = 38;
+            this.Txt_h_Rectangle_round.Text = "0";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(267, 160);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(46, 15);
+            this.label17.TabIndex = 39;
+            this.label17.Text = "Arrondi";
+            // 
+            // txt_AireMax_round
+            // 
+            this.txt_AireMax_round.Enabled = false;
+            this.txt_AireMax_round.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_AireMax_round.Location = new System.Drawing.Point(248, 78);
+            this.txt_AireMax_round.Name = "txt_AireMax_round";
+            this.txt_AireMax_round.Size = new System.Drawing.Size(87, 21);
+            this.txt_AireMax_round.TabIndex = 40;
+            this.txt_AireMax_round.Text = "0";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(196, 81);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(46, 15);
+            this.label33.TabIndex = 41;
+            this.label33.Text = "Arrondi";
+            // 
+            // grpResult
+            // 
+            this.grpResult.BackColor = System.Drawing.Color.Transparent;
+            this.grpResult.Controls.Add(this.label33);
+            this.grpResult.Controls.Add(this.txt_AireMax_round);
+            this.grpResult.Controls.Add(this.label17);
+            this.grpResult.Controls.Add(this.Txt_h_Rectangle_round);
+            this.grpResult.Controls.Add(this.label3);
+            this.grpResult.Controls.Add(this.Txt_b_Rectangle_round);
+            this.grpResult.Controls.Add(this.label12);
+            this.grpResult.Controls.Add(this.txt_Rup_F_round);
+            this.grpResult.Controls.Add(this.label16);
+            this.grpResult.Controls.Add(this.label1);
+            this.grpResult.Controls.Add(this.label2);
+            this.grpResult.Controls.Add(this.label15);
+            this.grpResult.Controls.Add(this.label14);
+            this.grpResult.Controls.Add(this.label13);
+            this.grpResult.Controls.Add(this.txt_Rup_Force);
+            this.grpResult.Controls.Add(this.Txt_b_Rectangle);
+            this.grpResult.Controls.Add(this.txt_Aire_Rup);
+            this.grpResult.Controls.Add(this.Txt_h_Rectangle);
+            this.grpResult.Controls.Add(this.txt_Aire_Rup_round);
+            this.grpResult.Controls.Add(this.txt_AireMax);
+            this.grpResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpResult.Location = new System.Drawing.Point(851, 44);
+            this.grpResult.Name = "grpResult";
+            this.grpResult.Size = new System.Drawing.Size(410, 265);
+            this.grpResult.TabIndex = 19;
+            this.grpResult.TabStop = false;
+            this.grpResult.Text = "Resultat au point de rupture";
+            // 
+            // ViewWeightMaxC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSlateGray;
+            this.BackColor = System.Drawing.Color.LightYellow;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1319, 624);
             this.ControlBox = false;
             this.Controls.Add(this.gpbRecommanded);
@@ -1182,11 +1185,9 @@
             this.Controls.Add(this.grpResult);
             this.Controls.Add(this.grpUsers);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ViewWeightMax";
-            this.Text = "7";
+            this.Name = "ViewWeightMaxC";
+            this.Text = "ViewWeightMax";
             this.Load += new System.EventHandler(this.ViewWeightMax_Load);
-            this.grpResult.ResumeLayout(false);
-            this.grpResult.PerformLayout();
             this.grpUsers.ResumeLayout(false);
             this.grpUsers.PerformLayout();
             this.grpResultInter.ResumeLayout(false);
@@ -1194,6 +1195,8 @@
             this.gpbRecommanded.ResumeLayout(false);
             this.gpbRecommanded.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorInput)).EndInit();
+            this.grpResult.ResumeLayout(false);
+            this.grpResult.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1201,7 +1204,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.TextBox txt_AireMax;
         private System.Windows.Forms.DomainUpDown dUpDResitanceClass;
         private System.Windows.Forms.DomainUpDown dUpDKmod;
         private System.Windows.Forms.DomainUpDown dUpDResisatnce;
@@ -1216,18 +1218,6 @@
         private System.Windows.Forms.Label lbl_Lfz;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.GroupBox grpResult;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txt_Rup_Force;
-        private System.Windows.Forms.RichTextBox Txt_b_Rectangle;
-        private System.Windows.Forms.RichTextBox txt_Aire_Rup;
-        private System.Windows.Forms.RichTextBox Txt_h_Rectangle;
-        private System.Windows.Forms.RichTextBox txt_Aire_Rup_round;
         private System.Windows.Forms.GroupBox grpUsers;
         private System.Windows.Forms.Button btn_Validate;
         private System.Windows.Forms.GroupBox grpResultInter;
@@ -1261,14 +1251,6 @@
         private System.Windows.Forms.RichTextBox txt_kcy;
         private System.Windows.Forms.RichTextBox txt_kz;
         private System.Windows.Forms.TextBox txt_oc0d;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txt_Rup_F_round;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.RichTextBox Txt_h_Rectangle_round;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RichTextBox Txt_b_Rectangle_round;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.TextBox txt_AireMax_round;
         private System.Windows.Forms.TextBox txtB;
         private System.Windows.Forms.GroupBox gpbRecommanded;
         private System.Windows.Forms.Label label4;
@@ -1292,5 +1274,26 @@
         private System.Windows.Forms.RichTextBox txt_Rec_DimSquare_round;
         private System.Windows.Forms.TextBox txt_Rec_Aire;
         private System.Windows.Forms.ErrorProvider errorInput;
+        private System.Windows.Forms.GroupBox grpResult;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.TextBox txt_AireMax_round;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.RichTextBox Txt_h_Rectangle_round;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.RichTextBox Txt_b_Rectangle_round;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txt_Rup_F_round;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txt_Rup_Force;
+        private System.Windows.Forms.RichTextBox Txt_b_Rectangle;
+        private System.Windows.Forms.RichTextBox txt_Aire_Rup;
+        private System.Windows.Forms.RichTextBox Txt_h_Rectangle;
+        private System.Windows.Forms.RichTextBox txt_Aire_Rup_round;
+        private System.Windows.Forms.TextBox txt_AireMax;
     }
 }
