@@ -8,23 +8,23 @@ namespace ATLAS_Models
 {
     public class TypeWoodClass
     {
-        public  WoodClass _C14 { get; set; }
-        public  WoodClass _C16 { get; set; }
-        public  WoodClass _C18 { get; set; }
-        public  WoodClass _C20 { get; set; }
-        public  WoodClass _C24 { get; set; }
-        public  WoodClass _C30 { get; set; }
-        public  WoodClass _C35 { get; set; }
-        public  WoodClass _C40 { get; set; }
-        public  WoodClass _C45 { get; set; }
-        public  WoodClass _C50 { get; set; }
-        public  WoodClass _D18 { get; set; }
-        public  WoodClass _D24 { get; set; }
-        public  WoodClass _D30 { get; set; }
-        public  WoodClass _D35 { get; set; }
-        public  WoodClass _D40 { get; set; }
-        public  WoodClass _D50 { get; set; }
-        public  WoodClass _D60 { get; set; }
-        public  WoodClass _D70 { get; set; }
+        public  WoodClass C14 { get; set; }
+        public  WoodClass C16 { get; set; }
+        public  WoodClass C18 { get; set; }
+        public  WoodClass C20 { get; set; }
+        public  WoodClass C24 { get; set; }
+        public  WoodClass C30 { get; set; }
+        public  WoodClass C35 { get; set; }
+        public  WoodClass C40 { get; set; }
+        public  WoodClass C45 { get; set; }
+        public  WoodClass C50 { get; set; }
+        public  WoodClass D18 { get; set; }
+        public  WoodClass D24 { get; set; }
+        public  WoodClass D30 { get; set; }
+        public  WoodClass D35 { get; set; }
+        public  WoodClass D40 { get; set; }
+        public  WoodClass D50 { get; set; }
+        public  WoodClass D60 { get; set; }
+        public  WoodClass D70 { get; set; }
     }
 }
