@@ -31,6 +31,17 @@ namespace TIP_ATLAS
             this.panel1.Controls.Add(screen);
             screen.Show();
         }
-        
+        public void ShowMaxForce()
+        {
+            ViewWeightMax screen = new ViewWeightMax(this) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            this.panel1.Controls.Add(screen);
+            screen.Show();
+        }
+        public void ShowVerification()
+        {
+            ViewWeightMax screen = new ViewWeightMax(this) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            this.panel1.Controls.Add(screen);
+            screen.Show();
+        }
     }
 }

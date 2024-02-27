@@ -87,9 +87,6 @@
     <EmbeddedResource Include="ViewHome.resx">
       <DependentUpon>ViewHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewWeightMax - Copier.resx">
-      <DependentUpon>ViewWeightMaxC.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ViewWeightMax.resx">
       <DependentUpon>ViewWeightMax.cs</DependentUpon>
     </EmbeddedResource>

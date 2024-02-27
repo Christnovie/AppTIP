@@ -39,31 +39,8 @@
             this.txtNed = new System.Windows.Forms.TextBox();
             this.txtCoef = new System.Windows.Forms.TextBox();
             this.txtLfz = new System.Windows.Forms.TextBox();
-            this.lbl_Base = new System.Windows.Forms.Label();
-            this.lbl_baseh = new System.Windows.Forms.Label();
-            this.lbl_Lfy = new System.Windows.Forms.Label();
-            this.lbl_Lfz = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.grpUsers = new System.Windows.Forms.GroupBox();
             this.btn_Validate = new System.Windows.Forms.Button();
             this.txtB = new System.Windows.Forms.TextBox();
-            this.grpResultInter = new System.Windows.Forms.GroupBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
             this.txt_Aire = new System.Windows.Forms.TextBox();
             this.txt_Verif = new System.Windows.Forms.TextBox();
             this.txt_ky = new System.Windows.Forms.RichTextBox();
@@ -77,7 +54,6 @@
             this.txt_Arely = new System.Windows.Forms.RichTextBox();
             this.txt_kcz = new System.Windows.Forms.RichTextBox();
             this.txt_kcy = new System.Windows.Forms.RichTextBox();
-            this.txt_kz = new System.Windows.Forms.RichTextBox();
             this.txt_oc0d = new System.Windows.Forms.TextBox();
             this.gpbRecommanded = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -122,8 +98,7 @@
             this.txt_AireMax_round = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
             this.grpResult = new System.Windows.Forms.GroupBox();
-            this.grpUsers.SuspendLayout();
-            this.grpResultInter.SuspendLayout();
+            this.txt_kz = new System.Windows.Forms.RichTextBox();
             this.gpbRecommanded.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorInput)).BeginInit();
             this.grpResult.SuspendLayout();
@@ -145,10 +120,10 @@
             // 
             this.dUpDResitanceClass.CausesValidation = false;
             this.dUpDResitanceClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dUpDResitanceClass.Location = new System.Drawing.Point(9, 37);
+            this.dUpDResitanceClass.Location = new System.Drawing.Point(470, 188);
             this.dUpDResitanceClass.Name = "dUpDResitanceClass";
             this.dUpDResitanceClass.ReadOnly = true;
-            this.dUpDResitanceClass.Size = new System.Drawing.Size(157, 21);
+            this.dUpDResitanceClass.Size = new System.Drawing.Size(138, 21);
             this.dUpDResitanceClass.TabIndex = 3;
             this.dUpDResitanceClass.Text = "Classe de Resistance";
             this.dUpDResitanceClass.SelectedItemChanged += new System.EventHandler(this.dUpDClassResistance_SelectedItemChanged);
@@ -162,7 +137,7 @@
             this.dUpDKmod.Items.Add("Action moyen terme");
             this.dUpDKmod.Items.Add("Action court terme");
             this.dUpDKmod.Items.Add("Action instantanée");
-            this.dUpDKmod.Location = new System.Drawing.Point(9, 129);
+            this.dUpDKmod.Location = new System.Drawing.Point(488, 249);
             this.dUpDKmod.Name = "dUpDKmod";
             this.dUpDKmod.ReadOnly = true;
             this.dUpDKmod.Size = new System.Drawing.Size(120, 21);
@@ -175,7 +150,7 @@
             // dUpDResisatnce
             // 
             this.dUpDResisatnce.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dUpDResisatnce.Location = new System.Drawing.Point(9, 86);
+            this.dUpDResisatnce.Location = new System.Drawing.Point(488, 222);
             this.dUpDResisatnce.Name = "dUpDResisatnce";
             this.dUpDResisatnce.ReadOnly = true;
             this.dUpDResisatnce.Size = new System.Drawing.Size(120, 21);
@@ -187,9 +162,10 @@
             // txtH
             // 
             this.txtH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtH.Location = new System.Drawing.Point(514, 41);
+            this.txtH.Location = new System.Drawing.Point(543, 57);
+            this.txtH.Multiline = true;
             this.txtH.Name = "txtH";
-            this.txtH.Size = new System.Drawing.Size(100, 20);
+            this.txtH.Size = new System.Drawing.Size(65, 20);
             this.txtH.TabIndex = 6;
             this.txtH.TextChanged += new System.EventHandler(this.txtH_TextChanged);
             this.txtH.Validating += new System.ComponentModel.CancelEventHandler(this.txtH_Validating);
@@ -198,9 +174,10 @@
             // 
             this.txtLfy.Enabled = false;
             this.txtLfy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLfy.Location = new System.Drawing.Point(269, 80);
+            this.txtLfy.Location = new System.Drawing.Point(543, 122);
+            this.txtLfy.Multiline = true;
             this.txtLfy.Name = "txtLfy";
-            this.txtLfy.Size = new System.Drawing.Size(100, 20);
+            this.txtLfy.Size = new System.Drawing.Size(65, 23);
             this.txtLfy.TabIndex = 7;
             this.txtLfy.Text = "50";
             this.txtLfy.TextChanged += new System.EventHandler(this.txtLfy_TextChanged);
@@ -209,9 +186,10 @@
             // txtNed
             // 
             this.txtNed.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNed.Location = new System.Drawing.Point(514, 126);
+            this.txtNed.Location = new System.Drawing.Point(543, 315);
+            this.txtNed.Multiline = true;
             this.txtNed.Name = "txtNed";
-            this.txtNed.Size = new System.Drawing.Size(100, 20);
+            this.txtNed.Size = new System.Drawing.Size(65, 24);
             this.txtNed.TabIndex = 8;
             this.txtNed.TextChanged += new System.EventHandler(this.txtNed_TextChanged);
             this.txtNed.Validating += new System.ComponentModel.CancelEventHandler(this.txtNed_Validating);
@@ -219,9 +197,10 @@
             // txtCoef
             // 
             this.txtCoef.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCoef.Location = new System.Drawing.Point(269, 123);
+            this.txtCoef.Location = new System.Drawing.Point(543, 285);
+            this.txtCoef.Multiline = true;
             this.txtCoef.Name = "txtCoef";
-            this.txtCoef.Size = new System.Drawing.Size(100, 20);
+            this.txtCoef.Size = new System.Drawing.Size(65, 24);
             this.txtCoef.TabIndex = 9;
             this.txtCoef.Text = "1,3";
             this.txtCoef.TextChanged += new System.EventHandler(this.txtCoef_TextChanged);
@@ -231,109 +210,14 @@
             // 
             this.txtLfz.Enabled = false;
             this.txtLfz.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLfz.Location = new System.Drawing.Point(514, 83);
+            this.txtLfz.Location = new System.Drawing.Point(543, 151);
+            this.txtLfz.Multiline = true;
             this.txtLfz.Name = "txtLfz";
-            this.txtLfz.Size = new System.Drawing.Size(100, 20);
+            this.txtLfz.Size = new System.Drawing.Size(65, 23);
             this.txtLfz.TabIndex = 10;
             this.txtLfz.Text = "50";
             this.txtLfz.TextChanged += new System.EventHandler(this.txtLfz_TextChanged);
             this.txtLfz.Validating += new System.ComponentModel.CancelEventHandler(this.txtLfz_Validating);
-            // 
-            // lbl_Base
-            // 
-            this.lbl_Base.AutoSize = true;
-            this.lbl_Base.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lbl_Base.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Base.Location = new System.Drawing.Point(228, 37);
-            this.lbl_Base.Name = "lbl_Base";
-            this.lbl_Base.Size = new System.Drawing.Size(35, 13);
-            this.lbl_Base.TabIndex = 13;
-            this.lbl_Base.Text = "b[mm]";
-            this.lbl_Base.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lbl_baseh
-            // 
-            this.lbl_baseh.AutoSize = true;
-            this.lbl_baseh.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lbl_baseh.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_baseh.Location = new System.Drawing.Point(465, 45);
-            this.lbl_baseh.Name = "lbl_baseh";
-            this.lbl_baseh.Size = new System.Drawing.Size(35, 13);
-            this.lbl_baseh.TabIndex = 14;
-            this.lbl_baseh.Text = "h[mm]";
-            // 
-            // lbl_Lfy
-            // 
-            this.lbl_Lfy.AutoSize = true;
-            this.lbl_Lfy.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lbl_Lfy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Lfy.Location = new System.Drawing.Point(219, 79);
-            this.lbl_Lfy.Name = "lbl_Lfy";
-            this.lbl_Lfy.Size = new System.Drawing.Size(44, 13);
-            this.lbl_Lfy.TabIndex = 15;
-            this.lbl_Lfy.Text = "Lf,y[cm]";
-            this.lbl_Lfy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lbl_Lfz
-            // 
-            this.lbl_Lfz.AutoSize = true;
-            this.lbl_Lfz.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lbl_Lfz.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Lfz.Location = new System.Drawing.Point(456, 86);
-            this.lbl_Lfz.Name = "lbl_Lfz";
-            this.lbl_Lfz.Size = new System.Drawing.Size(44, 13);
-            this.lbl_Lfz.TabIndex = 16;
-            this.lbl_Lfz.Text = "Lf,z[cm]";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(188, 129);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 13);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "Coefficient Ym";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(453, 129);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 13);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "Ned[kN]";
-            // 
-            // grpUsers
-            // 
-            this.grpUsers.BackColor = System.Drawing.Color.Transparent;
-            this.grpUsers.Controls.Add(this.label5);
-            this.grpUsers.Controls.Add(this.label6);
-            this.grpUsers.Controls.Add(this.lbl_baseh);
-            this.grpUsers.Controls.Add(this.btn_Validate);
-            this.grpUsers.Controls.Add(this.lbl_Base);
-            this.grpUsers.Controls.Add(this.lbl_Lfy);
-            this.grpUsers.Controls.Add(this.dUpDResisatnce);
-            this.grpUsers.Controls.Add(this.txtH);
-            this.grpUsers.Controls.Add(this.dUpDKmod);
-            this.grpUsers.Controls.Add(this.txtNed);
-            this.grpUsers.Controls.Add(this.dUpDResitanceClass);
-            this.grpUsers.Controls.Add(this.txtLfz);
-            this.grpUsers.Controls.Add(this.txtB);
-            this.grpUsers.Controls.Add(this.txtCoef);
-            this.grpUsers.Controls.Add(this.lbl_Lfz);
-            this.grpUsers.Controls.Add(this.txtLfy);
-            this.grpUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grpUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpUsers.Location = new System.Drawing.Point(67, 75);
-            this.grpUsers.Name = "grpUsers";
-            this.grpUsers.Size = new System.Drawing.Size(778, 204);
-            this.grpUsers.TabIndex = 20;
-            this.grpUsers.TabStop = false;
-            this.grpUsers.Text = "Données utilisateur";
             // 
             // btn_Validate
             // 
@@ -341,7 +225,7 @@
             this.btn_Validate.Enabled = false;
             this.btn_Validate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Validate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Validate.Location = new System.Drawing.Point(221, 169);
+            this.btn_Validate.Location = new System.Drawing.Point(516, 12);
             this.btn_Validate.Name = "btn_Validate";
             this.btn_Validate.Size = new System.Drawing.Size(92, 29);
             this.btn_Validate.TabIndex = 0;
@@ -356,211 +240,20 @@
             // 
             this.txtB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtB.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtB.Location = new System.Drawing.Point(269, 38);
+            this.txtB.Location = new System.Drawing.Point(543, 89);
             this.txtB.Name = "txtB";
-            this.txtB.Size = new System.Drawing.Size(100, 20);
+            this.txtB.Size = new System.Drawing.Size(65, 20);
             this.txtB.TabIndex = 12;
             this.txtB.TextChanged += new System.EventHandler(this.txtB_TextChanged);
             this.txtB.Validating += new System.ComponentModel.CancelEventHandler(this.txtB_Validating);
-            // 
-            // grpResultInter
-            // 
-            this.grpResultInter.BackColor = System.Drawing.Color.Transparent;
-            this.grpResultInter.Controls.Add(this.label18);
-            this.grpResultInter.Controls.Add(this.label19);
-            this.grpResultInter.Controls.Add(this.label20);
-            this.grpResultInter.Controls.Add(this.label21);
-            this.grpResultInter.Controls.Add(this.label22);
-            this.grpResultInter.Controls.Add(this.label23);
-            this.grpResultInter.Controls.Add(this.label24);
-            this.grpResultInter.Controls.Add(this.label25);
-            this.grpResultInter.Controls.Add(this.label26);
-            this.grpResultInter.Controls.Add(this.label27);
-            this.grpResultInter.Controls.Add(this.label28);
-            this.grpResultInter.Controls.Add(this.label29);
-            this.grpResultInter.Controls.Add(this.label30);
-            this.grpResultInter.Controls.Add(this.label31);
-            this.grpResultInter.Controls.Add(this.label32);
-            this.grpResultInter.Controls.Add(this.txt_Aire);
-            this.grpResultInter.Controls.Add(this.txt_Verif);
-            this.grpResultInter.Controls.Add(this.txt_ky);
-            this.grpResultInter.Controls.Add(this.txt_fc0d);
-            this.grpResultInter.Controls.Add(this.txt_ly);
-            this.grpResultInter.Controls.Add(this.txt_lz);
-            this.grpResultInter.Controls.Add(this.txt_kc);
-            this.grpResultInter.Controls.Add(this.txt_Arelz);
-            this.grpResultInter.Controls.Add(this.txt_Yy);
-            this.grpResultInter.Controls.Add(this.txt_Yz);
-            this.grpResultInter.Controls.Add(this.txt_Arely);
-            this.grpResultInter.Controls.Add(this.txt_kcz);
-            this.grpResultInter.Controls.Add(this.txt_kcy);
-            this.grpResultInter.Controls.Add(this.txt_kz);
-            this.grpResultInter.Controls.Add(this.txt_oc0d);
-            this.grpResultInter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpResultInter.Location = new System.Drawing.Point(67, 352);
-            this.grpResultInter.Name = "grpResultInter";
-            this.grpResultInter.Size = new System.Drawing.Size(778, 191);
-            this.grpResultInter.TabIndex = 36;
-            this.grpResultInter.TabStop = false;
-            this.grpResultInter.Text = "Resultat Intermediares";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(6, 119);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(67, 15);
-            this.label18.TabIndex = 34;
-            this.label18.Text = "Vérification";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(6, 81);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(40, 15);
-            this.label19.TabIndex = 33;
-            this.label19.Text = "σc,0,d";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(6, 37);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(63, 15);
-            this.label20.TabIndex = 20;
-            this.label20.Text = "Aire [Cm2]";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(295, 132);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(18, 15);
-            this.label21.TabIndex = 21;
-            this.label21.Text = "ky";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(262, 96);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(51, 15);
-            this.label22.TabIndex = 32;
-            this.label22.Text = "Iz [Cm4]";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(262, 60);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(50, 15);
-            this.label23.TabIndex = 31;
-            this.label23.Text = "Iy [Cm4]";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(277, 22);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(36, 15);
-            this.label24.TabIndex = 30;
-            this.label24.Text = "fc,0,d";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(459, 132);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(36, 15);
-            this.label25.TabIndex = 22;
-            this.label25.Text = "λrel,z";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(459, 98);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(35, 15);
-            this.label26.TabIndex = 23;
-            this.label26.Text = "λrel,y";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(459, 62);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(20, 15);
-            this.label27.TabIndex = 26;
-            this.label27.Text = "γz";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(632, 93);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(31, 15);
-            this.label28.TabIndex = 27;
-            this.label28.Text = "kc, z";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(459, 25);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(19, 15);
-            this.label29.TabIndex = 25;
-            this.label29.Text = "γy";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(632, 57);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(30, 15);
-            this.label30.TabIndex = 28;
-            this.label30.Text = "kc, y";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(632, 128);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(21, 15);
-            this.label31.TabIndex = 24;
-            this.label31.Text = "Kc";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(632, 27);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(19, 15);
-            this.label32.TabIndex = 29;
-            this.label32.Text = "kz";
             // 
             // txt_Aire
             // 
             this.txt_Aire.Enabled = false;
             this.txt_Aire.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Aire.Location = new System.Drawing.Point(123, 28);
+            this.txt_Aire.Location = new System.Drawing.Point(173, 434);
             this.txt_Aire.Name = "txt_Aire";
-            this.txt_Aire.Size = new System.Drawing.Size(77, 21);
+            this.txt_Aire.Size = new System.Drawing.Size(62, 21);
             this.txt_Aire.TabIndex = 16;
             this.txt_Aire.Text = "0";
             // 
@@ -568,9 +261,10 @@
             // 
             this.txt_Verif.Enabled = false;
             this.txt_Verif.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Verif.Location = new System.Drawing.Point(123, 119);
+            this.txt_Verif.Location = new System.Drawing.Point(1217, 564);
+            this.txt_Verif.Multiline = true;
             this.txt_Verif.Name = "txt_Verif";
-            this.txt_Verif.Size = new System.Drawing.Size(77, 21);
+            this.txt_Verif.Size = new System.Drawing.Size(65, 23);
             this.txt_Verif.TabIndex = 15;
             this.txt_Verif.Text = "0";
             // 
@@ -578,9 +272,9 @@
             // 
             this.txt_ky.Enabled = false;
             this.txt_ky.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ky.Location = new System.Drawing.Point(323, 127);
+            this.txt_ky.Location = new System.Drawing.Point(826, 530);
             this.txt_ky.Name = "txt_ky";
-            this.txt_ky.Size = new System.Drawing.Size(71, 23);
+            this.txt_ky.Size = new System.Drawing.Size(63, 23);
             this.txt_ky.TabIndex = 14;
             this.txt_ky.Text = "0";
             // 
@@ -588,9 +282,9 @@
             // 
             this.txt_fc0d.Enabled = false;
             this.txt_fc0d.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_fc0d.Location = new System.Drawing.Point(323, 19);
+            this.txt_fc0d.Location = new System.Drawing.Point(173, 564);
             this.txt_fc0d.Name = "txt_fc0d";
-            this.txt_fc0d.Size = new System.Drawing.Size(71, 23);
+            this.txt_fc0d.Size = new System.Drawing.Size(62, 23);
             this.txt_fc0d.TabIndex = 13;
             this.txt_fc0d.Text = "0";
             // 
@@ -598,9 +292,9 @@
             // 
             this.txt_ly.Enabled = false;
             this.txt_ly.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ly.Location = new System.Drawing.Point(323, 55);
+            this.txt_ly.Location = new System.Drawing.Point(446, 467);
             this.txt_ly.Name = "txt_ly";
-            this.txt_ly.Size = new System.Drawing.Size(71, 23);
+            this.txt_ly.Size = new System.Drawing.Size(65, 23);
             this.txt_ly.TabIndex = 12;
             this.txt_ly.Text = "0";
             // 
@@ -608,9 +302,9 @@
             // 
             this.txt_lz.Enabled = false;
             this.txt_lz.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_lz.Location = new System.Drawing.Point(323, 91);
+            this.txt_lz.Location = new System.Drawing.Point(446, 498);
             this.txt_lz.Name = "txt_lz";
-            this.txt_lz.Size = new System.Drawing.Size(71, 23);
+            this.txt_lz.Size = new System.Drawing.Size(65, 23);
             this.txt_lz.TabIndex = 11;
             this.txt_lz.Text = "0";
             // 
@@ -618,7 +312,7 @@
             // 
             this.txt_kc.Enabled = false;
             this.txt_kc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_kc.Location = new System.Drawing.Point(670, 128);
+            this.txt_kc.Location = new System.Drawing.Point(1217, 520);
             this.txt_kc.Name = "txt_kc";
             this.txt_kc.Size = new System.Drawing.Size(65, 23);
             this.txt_kc.TabIndex = 10;
@@ -628,9 +322,9 @@
             // 
             this.txt_Arelz.Enabled = false;
             this.txt_Arelz.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Arelz.Location = new System.Drawing.Point(514, 126);
+            this.txt_Arelz.Location = new System.Drawing.Point(826, 467);
             this.txt_Arelz.Name = "txt_Arelz";
-            this.txt_Arelz.Size = new System.Drawing.Size(71, 23);
+            this.txt_Arelz.Size = new System.Drawing.Size(63, 23);
             this.txt_Arelz.TabIndex = 9;
             this.txt_Arelz.Text = "0";
             // 
@@ -638,7 +332,7 @@
             // 
             this.txt_Yy.Enabled = false;
             this.txt_Yy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Yy.Location = new System.Drawing.Point(514, 19);
+            this.txt_Yy.Location = new System.Drawing.Point(446, 530);
             this.txt_Yy.Name = "txt_Yy";
             this.txt_Yy.Size = new System.Drawing.Size(71, 23);
             this.txt_Yy.TabIndex = 8;
@@ -648,7 +342,7 @@
             // 
             this.txt_Yz.Enabled = false;
             this.txt_Yz.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Yz.Location = new System.Drawing.Point(514, 55);
+            this.txt_Yz.Location = new System.Drawing.Point(446, 564);
             this.txt_Yz.Name = "txt_Yz";
             this.txt_Yz.Size = new System.Drawing.Size(71, 23);
             this.txt_Yz.TabIndex = 7;
@@ -658,9 +352,9 @@
             // 
             this.txt_Arely.Enabled = false;
             this.txt_Arely.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Arely.Location = new System.Drawing.Point(514, 91);
+            this.txt_Arely.Location = new System.Drawing.Point(826, 433);
             this.txt_Arely.Name = "txt_Arely";
-            this.txt_Arely.Size = new System.Drawing.Size(71, 23);
+            this.txt_Arely.Size = new System.Drawing.Size(63, 23);
             this.txt_Arely.TabIndex = 6;
             this.txt_Arely.Text = "0";
             // 
@@ -668,7 +362,7 @@
             // 
             this.txt_kcz.Enabled = false;
             this.txt_kcz.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_kcz.Location = new System.Drawing.Point(670, 93);
+            this.txt_kcz.Location = new System.Drawing.Point(1217, 478);
             this.txt_kcz.Name = "txt_kcz";
             this.txt_kcz.Size = new System.Drawing.Size(65, 23);
             this.txt_kcz.TabIndex = 5;
@@ -678,29 +372,20 @@
             // 
             this.txt_kcy.Enabled = false;
             this.txt_kcy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_kcy.Location = new System.Drawing.Point(670, 57);
+            this.txt_kcy.Location = new System.Drawing.Point(1217, 433);
             this.txt_kcy.Name = "txt_kcy";
             this.txt_kcy.Size = new System.Drawing.Size(65, 23);
             this.txt_kcy.TabIndex = 4;
             this.txt_kcy.Text = "0";
             // 
-            // txt_kz
-            // 
-            this.txt_kz.Enabled = false;
-            this.txt_kz.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_kz.Location = new System.Drawing.Point(670, 19);
-            this.txt_kz.Name = "txt_kz";
-            this.txt_kz.Size = new System.Drawing.Size(65, 23);
-            this.txt_kz.TabIndex = 3;
-            this.txt_kz.Text = "0";
-            // 
             // txt_oc0d
             // 
             this.txt_oc0d.Enabled = false;
             this.txt_oc0d.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_oc0d.Location = new System.Drawing.Point(123, 72);
+            this.txt_oc0d.Location = new System.Drawing.Point(173, 468);
+            this.txt_oc0d.Multiline = true;
             this.txt_oc0d.Name = "txt_oc0d";
-            this.txt_oc0d.Size = new System.Drawing.Size(77, 21);
+            this.txt_oc0d.Size = new System.Drawing.Size(62, 22);
             this.txt_oc0d.TabIndex = 2;
             this.txt_oc0d.Text = "0";
             // 
@@ -722,15 +407,12 @@
             this.gpbRecommanded.Controls.Add(this.label36);
             this.gpbRecommanded.Controls.Add(this.label37);
             this.gpbRecommanded.Controls.Add(this.txt_Rec_Force);
-            this.gpbRecommanded.Controls.Add(this.txt_Rec_BRec);
-            this.gpbRecommanded.Controls.Add(this.txt_Rec_DimSquare);
-            this.gpbRecommanded.Controls.Add(this.txt_Rec_HRec);
             this.gpbRecommanded.Controls.Add(this.txt_Rec_DimSquare_round);
             this.gpbRecommanded.Controls.Add(this.txt_Rec_Aire);
             this.gpbRecommanded.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpbRecommanded.Location = new System.Drawing.Point(851, 315);
+            this.gpbRecommanded.Location = new System.Drawing.Point(632, 129);
             this.gpbRecommanded.Name = "gpbRecommanded";
-            this.gpbRecommanded.Size = new System.Drawing.Size(410, 265);
+            this.gpbRecommanded.Size = new System.Drawing.Size(396, 265);
             this.gpbRecommanded.TabIndex = 42;
             this.gpbRecommanded.TabStop = false;
             this.gpbRecommanded.Text = "Récommandation";
@@ -889,9 +571,9 @@
             // 
             this.txt_Rec_BRec.Enabled = false;
             this.txt_Rec_BRec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Rec_BRec.Location = new System.Drawing.Point(318, 192);
+            this.txt_Rec_BRec.Location = new System.Drawing.Point(1008, 274);
             this.txt_Rec_BRec.Name = "txt_Rec_BRec";
-            this.txt_Rec_BRec.Size = new System.Drawing.Size(71, 23);
+            this.txt_Rec_BRec.Size = new System.Drawing.Size(63, 23);
             this.txt_Rec_BRec.TabIndex = 14;
             this.txt_Rec_BRec.Text = "0";
             // 
@@ -899,9 +581,9 @@
             // 
             this.txt_Rec_DimSquare.Enabled = false;
             this.txt_Rec_DimSquare.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Rec_DimSquare.Location = new System.Drawing.Point(98, 130);
+            this.txt_Rec_DimSquare.Location = new System.Drawing.Point(1008, 167);
             this.txt_Rec_DimSquare.Name = "txt_Rec_DimSquare";
-            this.txt_Rec_DimSquare.Size = new System.Drawing.Size(71, 23);
+            this.txt_Rec_DimSquare.Size = new System.Drawing.Size(63, 23);
             this.txt_Rec_DimSquare.TabIndex = 13;
             this.txt_Rec_DimSquare.Text = "0";
             // 
@@ -909,9 +591,9 @@
             // 
             this.txt_Rec_HRec.Enabled = false;
             this.txt_Rec_HRec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Rec_HRec.Location = new System.Drawing.Point(318, 130);
+            this.txt_Rec_HRec.Location = new System.Drawing.Point(1167, 274);
             this.txt_Rec_HRec.Name = "txt_Rec_HRec";
-            this.txt_Rec_HRec.Size = new System.Drawing.Size(71, 23);
+            this.txt_Rec_HRec.Size = new System.Drawing.Size(62, 23);
             this.txt_Rec_HRec.TabIndex = 12;
             this.txt_Rec_HRec.Text = "0";
             // 
@@ -963,9 +645,9 @@
             // 
             this.Txt_h_Rectangle.Enabled = false;
             this.Txt_h_Rectangle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_h_Rectangle.Location = new System.Drawing.Point(318, 130);
+            this.Txt_h_Rectangle.Location = new System.Drawing.Point(860, 274);
             this.Txt_h_Rectangle.Name = "Txt_h_Rectangle";
-            this.Txt_h_Rectangle.Size = new System.Drawing.Size(71, 23);
+            this.Txt_h_Rectangle.Size = new System.Drawing.Size(65, 23);
             this.Txt_h_Rectangle.TabIndex = 12;
             this.Txt_h_Rectangle.Text = "0";
             // 
@@ -973,9 +655,9 @@
             // 
             this.txt_Aire_Rup.Enabled = false;
             this.txt_Aire_Rup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Aire_Rup.Location = new System.Drawing.Point(98, 130);
+            this.txt_Aire_Rup.Location = new System.Drawing.Point(702, 167);
             this.txt_Aire_Rup.Name = "txt_Aire_Rup";
-            this.txt_Aire_Rup.Size = new System.Drawing.Size(71, 23);
+            this.txt_Aire_Rup.Size = new System.Drawing.Size(65, 23);
             this.txt_Aire_Rup.TabIndex = 13;
             this.txt_Aire_Rup.Text = "0";
             // 
@@ -983,9 +665,9 @@
             // 
             this.Txt_b_Rectangle.Enabled = false;
             this.Txt_b_Rectangle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_b_Rectangle.Location = new System.Drawing.Point(318, 192);
+            this.Txt_b_Rectangle.Location = new System.Drawing.Point(702, 274);
             this.Txt_b_Rectangle.Name = "Txt_b_Rectangle";
-            this.Txt_b_Rectangle.Size = new System.Drawing.Size(71, 23);
+            this.Txt_b_Rectangle.Size = new System.Drawing.Size(65, 23);
             this.Txt_b_Rectangle.TabIndex = 14;
             this.Txt_b_Rectangle.Text = "0";
             // 
@@ -993,7 +675,7 @@
             // 
             this.txt_Rup_Force.Enabled = false;
             this.txt_Rup_Force.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Rup_Force.Location = new System.Drawing.Point(93, 37);
+            this.txt_Rup_Force.Location = new System.Drawing.Point(98, 37);
             this.txt_Rup_Force.Name = "txt_Rup_Force";
             this.txt_Rup_Force.Size = new System.Drawing.Size(97, 21);
             this.txt_Rup_Force.TabIndex = 16;
@@ -1157,18 +839,25 @@
             this.grpResult.Controls.Add(this.label14);
             this.grpResult.Controls.Add(this.label13);
             this.grpResult.Controls.Add(this.txt_Rup_Force);
-            this.grpResult.Controls.Add(this.Txt_b_Rectangle);
-            this.grpResult.Controls.Add(this.txt_Aire_Rup);
-            this.grpResult.Controls.Add(this.Txt_h_Rectangle);
             this.grpResult.Controls.Add(this.txt_Aire_Rup_round);
             this.grpResult.Controls.Add(this.txt_AireMax);
             this.grpResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpResult.Location = new System.Drawing.Point(851, 44);
+            this.grpResult.Location = new System.Drawing.Point(51, 57);
             this.grpResult.Name = "grpResult";
             this.grpResult.Size = new System.Drawing.Size(410, 265);
             this.grpResult.TabIndex = 19;
             this.grpResult.TabStop = false;
             this.grpResult.Text = "Resultat au point de rupture";
+            // 
+            // txt_kz
+            // 
+            this.txt_kz.Enabled = false;
+            this.txt_kz.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_kz.Location = new System.Drawing.Point(826, 564);
+            this.txt_kz.Name = "txt_kz";
+            this.txt_kz.Size = new System.Drawing.Size(63, 23);
+            this.txt_kz.TabIndex = 3;
+            this.txt_kz.Text = "0";
             // 
             // ViewWeightMaxC
             // 
@@ -1180,24 +869,50 @@
             this.ClientSize = new System.Drawing.Size(1319, 624);
             this.ControlBox = false;
             this.Controls.Add(this.gpbRecommanded);
-            this.Controls.Add(this.grpResultInter);
             this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btn_Validate);
             this.Controls.Add(this.grpResult);
-            this.Controls.Add(this.grpUsers);
+            this.Controls.Add(this.txt_Verif);
+            this.Controls.Add(this.txtNed);
+            this.Controls.Add(this.txtH);
+            this.Controls.Add(this.txtCoef);
+            this.Controls.Add(this.txtLfz);
+            this.Controls.Add(this.dUpDResisatnce);
+            this.Controls.Add(this.dUpDKmod);
+            this.Controls.Add(this.dUpDResitanceClass);
+            this.Controls.Add(this.txtLfy);
+            this.Controls.Add(this.txtB);
+            this.Controls.Add(this.txt_kz);
+            this.Controls.Add(this.txt_Yy);
+            this.Controls.Add(this.txt_Arelz);
+            this.Controls.Add(this.txt_Yz);
+            this.Controls.Add(this.txt_ky);
+            this.Controls.Add(this.txt_Arely);
+            this.Controls.Add(this.txt_Aire);
+            this.Controls.Add(this.txt_lz);
+            this.Controls.Add(this.txt_ly);
+            this.Controls.Add(this.txt_fc0d);
+            this.Controls.Add(this.txt_Rec_BRec);
+            this.Controls.Add(this.Txt_b_Rectangle);
+            this.Controls.Add(this.txt_Rec_HRec);
+            this.Controls.Add(this.txt_Rec_DimSquare);
+            this.Controls.Add(this.txt_Aire_Rup);
+            this.Controls.Add(this.txt_kc);
+            this.Controls.Add(this.Txt_h_Rectangle);
+            this.Controls.Add(this.txt_kcz);
+            this.Controls.Add(this.txt_oc0d);
+            this.Controls.Add(this.txt_kcy);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ViewWeightMaxC";
             this.Text = "ViewWeightMax";
             this.Load += new System.EventHandler(this.ViewWeightMax_Load);
-            this.grpUsers.ResumeLayout(false);
-            this.grpUsers.PerformLayout();
-            this.grpResultInter.ResumeLayout(false);
-            this.grpResultInter.PerformLayout();
             this.gpbRecommanded.ResumeLayout(false);
             this.gpbRecommanded.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorInput)).EndInit();
             this.grpResult.ResumeLayout(false);
             this.grpResult.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1212,30 +927,7 @@
         private System.Windows.Forms.TextBox txtNed;
         private System.Windows.Forms.TextBox txtCoef;
         private System.Windows.Forms.TextBox txtLfz;
-        private System.Windows.Forms.Label lbl_Base;
-        private System.Windows.Forms.Label lbl_baseh;
-        private System.Windows.Forms.Label lbl_Lfy;
-        private System.Windows.Forms.Label lbl_Lfz;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.GroupBox grpUsers;
         private System.Windows.Forms.Button btn_Validate;
-        private System.Windows.Forms.GroupBox grpResultInter;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label32;
         private System.Windows.Forms.TextBox txt_Aire;
         private System.Windows.Forms.TextBox txt_Verif;
         private System.Windows.Forms.RichTextBox txt_ky;
@@ -1249,7 +941,6 @@
         private System.Windows.Forms.RichTextBox txt_Arely;
         private System.Windows.Forms.RichTextBox txt_kcz;
         private System.Windows.Forms.RichTextBox txt_kcy;
-        private System.Windows.Forms.RichTextBox txt_kz;
         private System.Windows.Forms.TextBox txt_oc0d;
         private System.Windows.Forms.TextBox txtB;
         private System.Windows.Forms.GroupBox gpbRecommanded;
@@ -1295,5 +986,6 @@
         private System.Windows.Forms.RichTextBox Txt_h_Rectangle;
         private System.Windows.Forms.RichTextBox txt_Aire_Rup_round;
         private System.Windows.Forms.TextBox txt_AireMax;
+        private System.Windows.Forms.RichTextBox txt_kz;
     }
 }

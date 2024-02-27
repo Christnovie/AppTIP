@@ -57,5 +57,17 @@ namespace TIP_ATLAS
             this.Close();
             canevas.ShowMaxWeightView();
         }
+
+        private void btnForce_form_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            canevas.ShowMaxForce();
+        }
+
+        private void btn_VerifForm_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            canevas.ShowVerification();
+        }
     }
 }
