@@ -9,7 +9,7 @@ namespace ATLAS_Models
     public class CompressionAxiale
     {
         private double CoefPartYm = 1.3;
-		private const double ConstBetaRextitude = 0.2;
+		private double constBetaRextitude = 0.2;
         double flamby=50; 
         double flambz=50;
         WoodClass curentlywood;
@@ -28,7 +28,8 @@ namespace ATLAS_Models
         public string ServiceClass { get { return serviceClass; } set { serviceClass = value; } }
         public string CumulateChargClass { get { return cumulateChargClass; } set { cumulateChargClass = value; } }
   		public double Flamby{get {return flamby;}set { flamby = value; }}       
-  		public double Flambz{get {return flambz;}set { flambz = value; }}       
+  		public double Flambz{get {return flambz;}set { flambz = value; }}
+        public double ConstBetaRextitude { get {return constBetaRextitude;}set { constBetaRextitude = value; }}
 		public WoodClass CurrentWood
         {
             get { return curentlywood; }

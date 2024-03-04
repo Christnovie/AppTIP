@@ -206,9 +206,9 @@ namespace TIP_ATLAS
         //Validating Data and send error
         bool ValidateData(TextBox text, CancelEventArgs e)
         {
-            Regex regex = new Regex(@"^[+-]?\d*\,\d+$|^[+-]?\d+(\,\d*)?$");
+            Regex regex = new Regex(@"^[+-]?\d*[\.,]\d+$|^[+-]?\d+([\.,]\d*)?$");
              
-            if (!regex.IsMatch(text.Text))
+            if (!regex.IsMatch(text.Text)&&text.Text!="")
             {
                 e.Cancel = true;
                 text.Focus();
@@ -217,22 +217,31 @@ namespace TIP_ATLAS
             }
             else
             {
-                errorInput.Clear();
-                return true;               
+                if (text.Text == "")
+                {
+                    errorInput.Clear();
+                    text.Text = "0";
+                    return false;
+                }
+                else
+                {
+                    errorInput.Clear();
+                    return true;
+                }               
             }
         }
         private void txtB_Validating(object sender, CancelEventArgs e)
         {
             if (ValidateData(txtB, e))
             {
-                DataCalculator.Stransb = Convert.ToDouble(txtB.Text);
+                DataCalculator.Stransb = Convert.ToDouble(txtB.Text.Replace(",", "."));
             }
         }
         private void txtH_Validating(object sender, CancelEventArgs e)
         {
             if (ValidateData(txtH, e))
             {
-                DataCalculator.Stransh = Convert.ToDouble(txtH.Text);
+                DataCalculator.Stransh = Convert.ToDouble(txtH.Text.Replace(",","."));
             }
         }
 
@@ -240,7 +249,7 @@ namespace TIP_ATLAS
         {
             if (ValidateData(txtNed, e))
             {
-                DataCalculator.NedValcal = Convert.ToDouble(txtNed.Text);
+                DataCalculator.NedValcal = Convert.ToDouble(txtNed.Text.Replace(",", "."));
             }
         }
 
@@ -248,7 +257,7 @@ namespace TIP_ATLAS
         {
             if (ValidateData(txtLfy, e))
             {
-                DataCalculator.Flamby = Convert.ToDouble(txtLfy.Text);
+                DataCalculator.Flamby = Convert.ToDouble(txtLfy.Text.Replace(",", "."));
             }
         }
 
@@ -256,14 +265,14 @@ namespace TIP_ATLAS
         {
             if (ValidateData(txtLfy, e))
             {
-                DataCalculator.CoefYM = Convert.ToDouble(txtCoef.Text);
+                DataCalculator.CoefYM = Convert.ToDouble(txtCoef.Text.Replace(",", "."));
             }
         }
         private void txtLfz_Validating(object sender, CancelEventArgs e)
         {
             if (ValidateData(txtLfz, e))
             {
-                DataCalculator.Flambz = Convert.ToDouble(txtLfz.Text);
+                DataCalculator.Flambz = Convert.ToDouble(txtLfz.Text.Replace(",", "."));
             }
         }
         private void dUpDKmod_Validating(object sender, CancelEventArgs e)

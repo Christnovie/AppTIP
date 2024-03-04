@@ -28,7 +28,7 @@ namespace ATLAS_Models
         }
         public void  GetSoftwoodDataValue()
         {
-            ClasseCollection collection = new ClasseCollection();
+            ClasseCollection collection;
             this.collection = new ClasseCollection();
             this.collection = JsonConvert.DeserializeObject<ClasseCollection>(File.ReadAllText(System.Environment.CurrentDirectory + "\\DatabaseSoftwood.json"));
             collection = JsonConvert.DeserializeObject<ClasseCollection>(File.ReadAllText( System.Environment.CurrentDirectory + "\\DatabaseKmod.json"));

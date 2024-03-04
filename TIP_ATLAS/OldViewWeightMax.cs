@@ -12,12 +12,12 @@ using System.Text.RegularExpressions;
 using ATLAS_Models;
 namespace TIP_ATLAS
 {
-    public partial class ViewWeightMaxC : Form
+    public partial class OldViewWeightMax : Form
     {
-        private CanevasMain canevas;
-        private ImportClassData importClassData;
-        private CompressionAxiale DataCalculator;
-        public ViewWeightMaxC(CanevasMain canevas)
+        private readonly CanevasMain canevas;
+        private readonly ImportClassData importClassData;
+        private readonly CompressionAxiale DataCalculator;
+        public OldViewWeightMax(CanevasMain canevas)
         {
             InitializeComponent();
             this.canevas = canevas;
@@ -155,11 +155,11 @@ namespace TIP_ATLAS
             txt_kcy.Text = DataCalculator.CoefficentFlambY.ToString();
             txt_kcz.Text = DataCalculator.CoefficentFlambZ.ToString();
             txt_kc.Text = DataCalculator.CoefficentFlamb.ToString();
-            updateCalcRecommanded();
-            updateCalcRupture();
+            UpdateCalcRecommanded();
+            UpdateCalcRupture();
         }
         //Update Result recommanded
-        public void updateCalcRecommanded()
+        public void UpdateCalcRecommanded()
         {
             txt_Rec_Force.Text = DataCalculator.CalcRecomandedForce.ToString();
             txt_Rec_Aire.Text = DataCalculator.CalcMinRecomandedAire.ToString();
@@ -173,7 +173,7 @@ namespace TIP_ATLAS
             txt_Rec_BRec_round.Text = RoundNumeberView(DataCalculator.CalcSiseRecomandedB_Rectangle);
             txt_Rec_HRec_round.Text = RoundNumeberView(DataCalculator.CalcSiseRecomandedH_Rectangle);
         }
-        public void updateCalcRupture()
+        public void UpdateCalcRupture()
         {
             txt_Rup_Force.Text = DataCalculator.CalcMaxRuputureForce.ToString();
             txt_AireMax.Text = DataCalculator.CalcMinAire.ToString();
