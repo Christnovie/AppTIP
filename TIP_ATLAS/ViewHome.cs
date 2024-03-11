@@ -7,49 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ATLAS_Models;
 
 namespace TIP_ATLAS
 {
     public partial class ViewHome : Form
     {
-        private Color btnDefaultcolor;
         private CanevasMain canevas;
         public ViewHome(CanevasMain canevas)
         {
             InitializeComponent();
             this.canevas = canevas;
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-/*
-        private void btn_Verifmode_MouseEnter(object sender, EventArgs e)
-        {
-            btnDefaultcolor = btn_Verifmode.BackColor;
-            btn_Verifmode.BackColor = Color.LightCyan;
-            btn_Verifmode.Focus();
-        }
-
-        private void btn_Verifmode_MouseLeave(object sender, EventArgs e)
-        {
-            btn_Verifmode.BackColor = Color.WhiteSmoke;
-        }
-*/
-        private void dimMax_btn_MouseEnter(object sender, EventArgs e)
-        {
-            btnDefaultcolor = dimMax_btn.BackColor;
-            dimMax_btn.BackColor = Color.LightCyan;
-            dimMax_btn.ForeColor = btnDefaultcolor;
-            dimMax_btn.Focus();
-        }
-
-        private void dimMax_btn_MouseLeave(object sender, EventArgs e)
-        {
-            dimMax_btn.BackColor = btnDefaultcolor;
-            dimMax_btn.ForeColor = Color.White;
+           
         }
 
         private void dimMax_btn_Click(object sender, EventArgs e)
@@ -68,6 +37,26 @@ namespace TIP_ATLAS
         {
             this.Close();
             canevas.ShowVerification();
+        }
+
+        private void btn_lexique_Click(object sender, EventArgs e)
+        {
+            ImportClassData.OpenPDF("Lexique.pdf");
+        }
+        private void btn_tableau_Click(object sender, EventArgs e)
+        {
+            ImportClassData.OpenPDF("TABLEAUX_DE_DONNEES.pdf");
+
+        }
+        private void btn_modeEmp_Click(object sender, EventArgs e)
+        {
+            ImportClassData.OpenPDF("Mode_d'emploi.pdf");
+
+        }
+
+        private void ViewHome_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

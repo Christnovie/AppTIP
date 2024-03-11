@@ -34,6 +34,11 @@ namespace ATLAS_Models
             collection = JsonConvert.DeserializeObject<ClasseCollection>(File.ReadAllText( System.Environment.CurrentDirectory + "\\DatabaseKmod.json"));
             this.collection.KmodClass = collection.KmodClass;
         }
+
+        public static void OpenPDF(string namefile)
+        {
+            System.Diagnostics.Process.Start(Environment.CurrentDirectory + @"\\Document\\" + namefile);
+        }
         public ClasseCollection Collection
         {
             get { return collection; }

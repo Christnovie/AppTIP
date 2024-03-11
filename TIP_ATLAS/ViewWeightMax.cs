@@ -297,6 +297,23 @@ namespace TIP_ATLAS
             }
         }
 
+        //Open help files 
+        private void btn_lexique_Click(object sender, EventArgs e)
+        {
+            ImportClassData.OpenPDF("Lexique.pdf");
+        }
+
+        private void btn_tableau_Click(object sender, EventArgs e)
+        {
+            ImportClassData.OpenPDF("TABLEAUX_DE_DONNEES.pdf");
+
+        }
+
+        private void btn_modeEmploi_Click(object sender, EventArgs e)
+        {
+            ImportClassData.OpenPDF("Mode_d'emploi.pdf");
+
+        }
     }
 
 }
