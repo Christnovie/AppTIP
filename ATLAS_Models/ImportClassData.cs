@@ -37,6 +37,7 @@ namespace ATLAS_Models
 
         public static void OpenPDF(string namefile)
         {
+            if (File.Exists(Environment.CurrentDirectory + @"\\Document\\" + namefile))
             System.Diagnostics.Process.Start(Environment.CurrentDirectory + @"\\Document\\" + namefile);
         }
         public ClasseCollection Collection

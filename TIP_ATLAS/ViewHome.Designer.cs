@@ -41,11 +41,10 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Monoton", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(58, 131);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(445, 50);
+            this.label1.Size = new System.Drawing.Size(359, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Bienvenu sur A.T.L.A.S,";
             // 
@@ -96,45 +95,60 @@
             // 
             // btn_lexique
             // 
+            this.btn_lexique.BackColor = System.Drawing.Color.White;
             this.btn_lexique.Cursor = System.Windows.Forms.Cursors.Help;
+            this.btn_lexique.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_lexique.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_lexique.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_lexique.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btn_lexique.Location = new System.Drawing.Point(847, 103);
             this.btn_lexique.Name = "btn_lexique";
             this.btn_lexique.Size = new System.Drawing.Size(89, 28);
             this.btn_lexique.TabIndex = 4;
             this.btn_lexique.Text = "Lexique";
-            this.btn_lexique.UseVisualStyleBackColor = true;
+            this.btn_lexique.UseVisualStyleBackColor = false;
             this.btn_lexique.Click += new System.EventHandler(this.btn_lexique_Click);
             // 
             // btn_tableau
             // 
+            this.btn_tableau.BackColor = System.Drawing.Color.White;
+            this.btn_tableau.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_tableau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_tableau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_tableau.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btn_tableau.Location = new System.Drawing.Point(942, 103);
             this.btn_tableau.Name = "btn_tableau";
             this.btn_tableau.Size = new System.Drawing.Size(108, 28);
             this.btn_tableau.TabIndex = 5;
             this.btn_tableau.Text = "Tableau";
-            this.btn_tableau.UseVisualStyleBackColor = true;
+            this.btn_tableau.UseVisualStyleBackColor = false;
             this.btn_tableau.Click += new System.EventHandler(this.btn_tableau_Click);
             // 
             // btn_modeEmp
             // 
+            this.btn_modeEmp.BackColor = System.Drawing.Color.White;
+            this.btn_modeEmp.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_modeEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_modeEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_modeEmp.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btn_modeEmp.Location = new System.Drawing.Point(1056, 103);
             this.btn_modeEmp.Name = "btn_modeEmp";
             this.btn_modeEmp.Size = new System.Drawing.Size(151, 28);
             this.btn_modeEmp.TabIndex = 6;
             this.btn_modeEmp.Text = "Mode d\'emploi";
-            this.btn_modeEmp.UseVisualStyleBackColor = true;
+            this.btn_modeEmp.UseVisualStyleBackColor = false;
             this.btn_modeEmp.Click += new System.EventHandler(this.btn_modeEmp_Click);
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Blue;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label2.Location = new System.Drawing.Point(991, 67);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 20);
+            this.label2.Size = new System.Drawing.Size(43, 22);
             this.label2.TabIndex = 7;
             this.label2.Text = "Aide";
             // 
@@ -159,7 +173,6 @@
             this.Name = "ViewHome";
             this.Load += new System.EventHandler(this.ViewHome_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
