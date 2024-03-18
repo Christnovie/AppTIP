@@ -69,15 +69,16 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(12, 12);
+            this.btnBack.BackColor = System.Drawing.Color.Transparent;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Location = new System.Drawing.Point(25, 25);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(115, 40);
+            this.btnBack.Size = new System.Drawing.Size(55, 25);
             this.btnBack.TabIndex = 0;
-            this.btnBack.Text = "Retour";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            this.btnBack.MouseEnter += new System.EventHandler(this.btnBack_MouseEnter);
-            this.btnBack.MouseLeave += new System.EventHandler(this.btnBack_MouseLeave);
             // 
             // dUpDResitanceClass
             // 
@@ -95,11 +96,11 @@
             // 
             this.dUpDKmod.Enabled = false;
             this.dUpDKmod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dUpDKmod.Items.Add("Action permanent");
-            this.dUpDKmod.Items.Add("Action long terme");
-            this.dUpDKmod.Items.Add("Action moyen terme");
-            this.dUpDKmod.Items.Add("Action court terme");
-            this.dUpDKmod.Items.Add("Action instantanée");
+            this.dUpDKmod.Items.Add("P");
+            this.dUpDKmod.Items.Add("LT");
+            this.dUpDKmod.Items.Add("MT");
+            this.dUpDKmod.Items.Add("CT");
+            this.dUpDKmod.Items.Add("I");
             this.dUpDKmod.Location = new System.Drawing.Point(488, 249);
             this.dUpDKmod.Name = "dUpDKmod";
             this.dUpDKmod.ReadOnly = true;
@@ -124,6 +125,7 @@
             // 
             // txtH
             // 
+            this.txtH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtH.Location = new System.Drawing.Point(543, 57);
             this.txtH.Multiline = true;
@@ -135,6 +137,7 @@
             // 
             // txtLfy
             // 
+            this.txtLfy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtLfy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLfy.Location = new System.Drawing.Point(543, 122);
             this.txtLfy.Multiline = true;
@@ -147,6 +150,7 @@
             // 
             // txtNed
             // 
+            this.txtNed.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNed.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNed.Location = new System.Drawing.Point(543, 315);
             this.txtNed.Multiline = true;
@@ -158,6 +162,7 @@
             // 
             // txtCoef
             // 
+            this.txtCoef.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCoef.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCoef.Location = new System.Drawing.Point(543, 285);
             this.txtCoef.Multiline = true;
@@ -170,6 +175,7 @@
             // 
             // txtLfz
             // 
+            this.txtLfz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtLfz.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLfz.Location = new System.Drawing.Point(543, 151);
             this.txtLfz.Multiline = true;
@@ -200,6 +206,7 @@
             // 
             // txtB
             // 
+            this.txtB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtB.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtB.Location = new System.Drawing.Point(543, 89);
@@ -211,6 +218,7 @@
             // 
             // txt_Aire
             // 
+            this.txt_Aire.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Aire.Enabled = false;
             this.txt_Aire.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Aire.Location = new System.Drawing.Point(173, 434);
@@ -221,18 +229,21 @@
             // 
             // txt_Verif
             // 
+            this.txt_Verif.BackColor = System.Drawing.Color.White;
+            this.txt_Verif.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Verif.Enabled = false;
             this.txt_Verif.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Verif.Location = new System.Drawing.Point(950, 188);
+            this.txt_Verif.Location = new System.Drawing.Point(950, 187);
             this.txt_Verif.Multiline = true;
             this.txt_Verif.Name = "txt_Verif";
-            this.txt_Verif.Size = new System.Drawing.Size(65, 23);
+            this.txt_Verif.Size = new System.Drawing.Size(65, 25);
             this.txt_Verif.TabIndex = 15;
             this.txt_Verif.Text = "0";
             this.txt_Verif.TextChanged += new System.EventHandler(this.txt_Verif_TextChanged);
             // 
             // txt_ky
             // 
+            this.txt_ky.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_ky.Enabled = false;
             this.txt_ky.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ky.Location = new System.Drawing.Point(826, 530);
@@ -243,6 +254,7 @@
             // 
             // txt_fc0d
             // 
+            this.txt_fc0d.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_fc0d.Enabled = false;
             this.txt_fc0d.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_fc0d.Location = new System.Drawing.Point(173, 564);
@@ -253,6 +265,7 @@
             // 
             // txt_ly
             // 
+            this.txt_ly.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_ly.Enabled = false;
             this.txt_ly.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ly.Location = new System.Drawing.Point(446, 467);
@@ -263,6 +276,7 @@
             // 
             // txt_lz
             // 
+            this.txt_lz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_lz.Enabled = false;
             this.txt_lz.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_lz.Location = new System.Drawing.Point(446, 498);
@@ -273,6 +287,7 @@
             // 
             // txt_kc
             // 
+            this.txt_kc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_kc.Enabled = false;
             this.txt_kc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_kc.Location = new System.Drawing.Point(1217, 520);
@@ -283,6 +298,7 @@
             // 
             // txt_Arelz
             // 
+            this.txt_Arelz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Arelz.Enabled = false;
             this.txt_Arelz.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Arelz.Location = new System.Drawing.Point(826, 467);
@@ -293,6 +309,7 @@
             // 
             // txt_Yy
             // 
+            this.txt_Yy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Yy.Enabled = false;
             this.txt_Yy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Yy.Location = new System.Drawing.Point(446, 530);
@@ -303,6 +320,7 @@
             // 
             // txt_Yz
             // 
+            this.txt_Yz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Yz.Enabled = false;
             this.txt_Yz.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Yz.Location = new System.Drawing.Point(446, 564);
@@ -313,9 +331,10 @@
             // 
             // txt_Arely
             // 
+            this.txt_Arely.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Arely.Enabled = false;
             this.txt_Arely.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Arely.Location = new System.Drawing.Point(826, 433);
+            this.txt_Arely.Location = new System.Drawing.Point(826, 434);
             this.txt_Arely.Name = "txt_Arely";
             this.txt_Arely.Size = new System.Drawing.Size(63, 21);
             this.txt_Arely.TabIndex = 6;
@@ -323,6 +342,7 @@
             // 
             // txt_kcz
             // 
+            this.txt_kcz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_kcz.Enabled = false;
             this.txt_kcz.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_kcz.Location = new System.Drawing.Point(1217, 478);
@@ -333,9 +353,10 @@
             // 
             // txt_kcy
             // 
+            this.txt_kcy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_kcy.Enabled = false;
             this.txt_kcy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_kcy.Location = new System.Drawing.Point(1217, 433);
+            this.txt_kcy.Location = new System.Drawing.Point(1217, 434);
             this.txt_kcy.Name = "txt_kcy";
             this.txt_kcy.Size = new System.Drawing.Size(65, 21);
             this.txt_kcy.TabIndex = 4;
@@ -343,6 +364,7 @@
             // 
             // txt_oc0d
             // 
+            this.txt_oc0d.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_oc0d.Enabled = false;
             this.txt_oc0d.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_oc0d.Location = new System.Drawing.Point(173, 468);
@@ -358,6 +380,7 @@
             // 
             // txt_kz
             // 
+            this.txt_kz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_kz.Enabled = false;
             this.txt_kz.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_kz.Location = new System.Drawing.Point(826, 564);
@@ -368,9 +391,10 @@
             // 
             // txt_E005
             // 
+            this.txt_E005.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_E005.Enabled = false;
             this.txt_E005.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_E005.Location = new System.Drawing.Point(446, 433);
+            this.txt_E005.Location = new System.Drawing.Point(446, 434);
             this.txt_E005.Name = "txt_E005";
             this.txt_E005.Size = new System.Drawing.Size(65, 21);
             this.txt_E005.TabIndex = 43;
@@ -378,6 +402,7 @@
             // 
             // txt_constMassiv
             // 
+            this.txt_constMassiv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_constMassiv.Enabled = false;
             this.txt_constMassiv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_constMassiv.Location = new System.Drawing.Point(826, 499);
@@ -388,6 +413,7 @@
             // 
             // txt_fcok
             // 
+            this.txt_fcok.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_fcok.Enabled = false;
             this.txt_fcok.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_fcok.Location = new System.Drawing.Point(173, 499);
@@ -398,6 +424,7 @@
             // 
             // txt_kmod
             // 
+            this.txt_kmod.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_kmod.Enabled = false;
             this.txt_kmod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_kmod.Location = new System.Drawing.Point(173, 530);

@@ -32,18 +32,6 @@ namespace TIP_ATLAS
         }
 
         //Back button event
-        private void btnBack_MouseEnter(object sender, EventArgs e)
-        {
-            btnBack.BackColor = Color.LightCyan;
-            btnBack.Focus();
-        }
-
-        private void btnBack_MouseLeave(object sender, EventArgs e)
-        {
-            btnBack.BackColor = Color.WhiteSmoke;
-
-        }
-
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -83,13 +71,6 @@ namespace TIP_ATLAS
             dUpDKmod_Validating(sender, new CancelEventArgs());
         }
 
-        private void txtNed_TextChanged(object sender, EventArgs e)
-        {
-            if (txtNed.Text.Length != 0)
-               txtNed_Validating(sender, new CancelEventArgs());
-            dUpDKmod_Validating(sender, new CancelEventArgs());
-        }
-
         private void txtLfy_TextChanged(object sender, EventArgs e)
         {
             if (txtLfy.Text.Length != 0)
@@ -109,6 +90,7 @@ namespace TIP_ATLAS
         {
             DataCalculator.KmodClass = importClassData.Collection.KmodClass[dUpDResisatnce.Text];
             DataCalculator.CumulateChargClass = dUpDResisatnce.Text;
+            DataCalculator.ServiceClass = dUpDKmod.Text;
             dUpDKmod_Validating(sender, new CancelEventArgs());
         }
         private void dUpDClassResistance_SelectedItemChanged(object sender, EventArgs e)
@@ -122,6 +104,7 @@ namespace TIP_ATLAS
         {
             DataCalculator.KmodClass = importClassData.Collection.KmodClass[dUpDResisatnce.Text];
             DataCalculator.CumulateChargClass = dUpDResisatnce.Text;
+            DataCalculator.ServiceClass = dUpDKmod.Text;
             dUpDKmod.Enabled = true;
         }
 
@@ -155,32 +138,24 @@ namespace TIP_ATLAS
             txt_kcy.Text = DataCalculator.CoefficentFlambY.ToString();
             txt_kcz.Text = DataCalculator.CoefficentFlambZ.ToString();
             txt_kc.Text = DataCalculator.CoefficentFlamb.ToString();
-            updateCalcRecommanded();
-            updateCalcRupture();
+            txt_kmod.Text = DataCalculator.Kmod.ToString();
+            txt_fcok.Text = DataCalculator.CurrentWood.fc0k.ToString();
+            txt_E005.Text = DataCalculator.CurrentWood.E005.ToString();
+            txt_constMassiv.Text = DataCalculator.ConstBetaRextitude.ToString();
+            UpdateCalcRecommanded();
+            UpdateCalcRupture();
         }
         //Update Result recommanded
-        public void updateCalcRecommanded()
+        public void UpdateCalcRecommanded()
         {
             txt_Rec_Force.Text = DataCalculator.CalcRecomandedForce.ToString();
-            txt_Rec_Aire.Text = DataCalculator.CalcMinRecomandedAire.ToString();
             txt_Rec_Force_round.Text = RoundNumeberView(DataCalculator.CalcRecomandedForce);
-            txt_Rec_Aire_round.Text = RoundNumeberView(DataCalculator.CalcMinRecomandedAire);
-            txt_Rec_DimSquare_round.Text = RoundNumeberView(DataCalculator.CalcSiseRecomandedH_B);
-            txt_Rec_BRec_round.Text = RoundNumeberView(DataCalculator.CalcSiseRecomandedB_Rectangle);
-            txt_Rec_HRec_round.Text = RoundNumeberView(DataCalculator.CalcSiseRecomandedH_Rectangle);
         }
-        public void updateCalcRupture()
+        public void UpdateCalcRupture()
         {
             txt_Rup_Force.Text = DataCalculator.CalcMaxRuputureForce.ToString();
-            txt_AireMax.Text = DataCalculator.CalcMinAire.ToString();    
-            txt_Rup_F_round.Text = RoundNumeberView(DataCalculator.CalcMaxRuputureForce);
-            txt_AireMax_round.Text = RoundNumeberView(DataCalculator.CalcMinAire);
-            txt_Aire_Rup_round.Text = RoundNumeberView(DataCalculator.CalcSiseH_B);
-            Txt_h_Rectangle_round.Text = RoundNumeberView(DataCalculator.CalcSiseRupH_Rectangle);
-            Txt_b_Rectangle_round.Text = RoundNumeberView(DataCalculator.CalcSiseRupB_Rectangle);
-
+            txt_Rup_F_round.Text = RoundNumeberView(DataCalculator.CalcMaxRuputureForce);         
         }
-
         //Take data of Class and Co on Database
         private void DownloadItem()
         {
@@ -217,31 +192,32 @@ namespace TIP_ATLAS
                 }
                 else
                 {
-                    errorInput.Clear();
-                    return true;
-                }               
+                    if (Convert.ToDouble(text.Text.Replace(".", ",")) < 5)
+                    {
+                        e.Cancel = true;                        
+                        errorInput.SetError(text, "le nombre doit etre supérieur 5");
+                        return false;
+                    }
+                    else
+                    {
+                        errorInput.Clear();
+                        return true;
+                    }
+                }             
             }
         }
         private void txtB_Validating(object sender, CancelEventArgs e)
         {
             if (ValidateData(txtB, e))
             {
-                DataCalculator.Stransb = Convert.ToDouble(txtB.Text.Replace(",", "."));
+                DataCalculator.Stransb = Convert.ToDouble(txtB.Text.Replace(".", ","));
             }
         }
         private void txtH_Validating(object sender, CancelEventArgs e)
         {
             if (ValidateData(txtH, e))
             {
-                DataCalculator.Stransh = Convert.ToDouble(txtH.Text.Replace(",","."));
-            }
-        }
-
-        private void txtNed_Validating(object sender, CancelEventArgs e)
-        {
-            if (ValidateData(txtNed, e))
-            {
-                DataCalculator.NedValcal = Convert.ToDouble(txtNed.Text.Replace(",", "."));
+                DataCalculator.Stransh = Convert.ToDouble(txtH.Text.Replace(".",","));
             }
         }
 
@@ -249,22 +225,22 @@ namespace TIP_ATLAS
         {
             if (ValidateData(txtLfy, e))
             {
-                DataCalculator.Flamby = Convert.ToDouble(txtLfy.Text.Replace(",", "."));
+                DataCalculator.Flamby = Convert.ToDouble(txtLfy.Text.Replace(".", ","));
             }
         }
 
         private void txtCoef_Validating(object sender, CancelEventArgs e)
         {
-            if (ValidateData(txtLfy, e))
+            if (ValidateData(txtCoef, e))
             {
-                DataCalculator.CoefYM = Convert.ToDouble(txtCoef.Text.Replace(",", "."));
+                DataCalculator.CoefYM = Convert.ToDouble(txtCoef.Text.Replace(".", ","));
             }
         }
         private void txtLfz_Validating(object sender, CancelEventArgs e)
         {
             if (ValidateData(txtLfz, e))
             {
-                DataCalculator.Flambz = Convert.ToDouble(txtLfz.Text.Replace(",", "."));
+                DataCalculator.Flambz = Convert.ToDouble(txtLfz.Text.Replace(".", ","));
             }
         }
         private void dUpDKmod_Validating(object sender, CancelEventArgs e)
@@ -279,7 +255,7 @@ namespace TIP_ATLAS
         }
         private void btn_Validate_MouseMove(object sender, MouseEventArgs e)
         {
-            if (((txtB.Text != "" && txtH.Text != "") || txtNed.Text != "") && dUpDKmod.Visible)
+            if ((txtB.Text != "" && txtH.Text != "") && dUpDKmod.Visible)
             {
                 btn_Validate.Visible = true;
             }

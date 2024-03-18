@@ -8,9 +8,9 @@ namespace ATLAS_Models
 {
     public class TypeResistanceKmod
     {
-        public KmodClass RES1 { get; set; }
-        public KmodClass RES2 { get; set; }
-        public KmodClass RES3 { get; set; }
+        public KmodClass CLASS1 { get; set; }
+        public KmodClass CLASS2 { get; set; }
+        public KmodClass CLASS3 { get; set; }
 
     }
 }
