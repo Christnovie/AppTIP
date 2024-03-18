@@ -187,7 +187,7 @@ namespace TIP_ATLAS
                 {
                     if (isCoef)
                     {
-                        if (Convert.ToDouble(text.Text.Replace(".", ",")) <= 0)
+                        if (Convert.ToDouble(text.Text.Replace(",",".")) <= 0)
                         {
                             e.Cancel = true;
                             errorInput.SetError(text, "le nombre doit etre supérieur 0");
@@ -201,7 +201,7 @@ namespace TIP_ATLAS
                     }
                     else
                     {
-                        if (Convert.ToDouble(text.Text.Replace(".", ",")) < 5)
+                        if (Convert.ToDouble(text.Text.Replace(",",".")) < 5)
                         {
                             e.Cancel = true;
                             errorInput.SetError(text, "le nombre doit etre supérieur 5");
@@ -220,14 +220,14 @@ namespace TIP_ATLAS
         {
             if (ValidateData(txtB, e))
             {
-                DataCalculator.Stransb = Convert.ToDouble(txtB.Text.Replace(".", ","));
+                DataCalculator.Stransb = Convert.ToDouble(txtB.Text.Replace(",","."));
             }
         }
         private void txtH_Validating(object sender, CancelEventArgs e)
         {
             if (ValidateData(txtH, e))
             {
-                DataCalculator.Stransh = Convert.ToDouble(txtH.Text.Replace(".",","));
+                DataCalculator.Stransh = Convert.ToDouble(txtH.Text.Replace(",","."));
             }
         }
 
@@ -235,7 +235,7 @@ namespace TIP_ATLAS
         {
             if (ValidateData(txtNed, e,true))
             {
-                DataCalculator.NedValcal = Convert.ToDouble(txtNed.Text.Replace(".", ","));
+                DataCalculator.NedValcal = Convert.ToDouble(txtNed.Text.Replace(",","."));
             }
         }
 
@@ -243,7 +243,7 @@ namespace TIP_ATLAS
         {
             if (ValidateData(txtLfy, e))
             {
-                DataCalculator.Flamby = Convert.ToDouble(txtLfy.Text.Replace(".", ","));
+                DataCalculator.Flamby = Convert.ToDouble(txtLfy.Text.Replace(",","."));
             }
         }
 
@@ -251,14 +251,14 @@ namespace TIP_ATLAS
         {
             if (ValidateData(txtCoef, e,true))
             {
-                DataCalculator.CoefYM = Convert.ToDouble(txtCoef.Text.Replace(".", ","));
+                DataCalculator.CoefYM = Convert.ToDouble(txtCoef.Text.Replace(",","."));
             }
         }
         private void txtLfz_Validating(object sender, CancelEventArgs e)
         {
             if (ValidateData(txtLfz, e))
             {
-                DataCalculator.Flambz = Convert.ToDouble(txtLfz.Text.Replace(".", ","));
+                DataCalculator.Flambz = Convert.ToDouble(txtLfz.Text.Replace(",","."));
             }
         }
         private void combUpDKmod_Validating(object sender, CancelEventArgs e)
@@ -305,11 +305,11 @@ namespace TIP_ATLAS
 
         private void txt_Verif_TextChanged(object sender, EventArgs e)
         {
-            if (Convert.ToDouble(txt_Verif.Text.Replace(".", ","))<=0.85)
+            if (Convert.ToDouble(txt_Verif.Text.Replace(",", "."))<=0.85)
                 txt_Verif.BackColor = Color.LightGreen;
-            else if(Convert.ToDouble(txt_Verif.Text.Replace(".", ",")) < 1 && Convert.ToDouble(txt_Verif.Text.Replace(".", ",")) > 0.85)
+            else if(Convert.ToDouble(txt_Verif.Text.Replace(",", ".")) < 1 && Convert.ToDouble(txt_Verif.Text.Replace(",", ".")) > 0.85)
                 txt_Verif.BackColor = Color.Orange;
-            else if(Convert.ToDouble(txt_Verif.Text.Replace(".", ",")) >= 1)
+            else if(Convert.ToDouble(txt_Verif.Text.Replace(",", ".")) >= 1)
                 txt_Verif.BackColor= Color.LightCoral;
             else
                 txt_Verif.BackColor = Color.White;
