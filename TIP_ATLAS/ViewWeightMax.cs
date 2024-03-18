@@ -50,19 +50,6 @@ namespace TIP_ATLAS
         {
 
         }
-        private void txtB_TextChanged(object sender, EventArgs e)
-        {
-            if (txtB.Text.Length != 0)
-                txtB_Validating(sender, new CancelEventArgs());
-            dUpDKmod_Validating(sender, new CancelEventArgs());
-        }
-
-        private void txtH_TextChanged(object sender, EventArgs e)
-        {
-            if(txtH.Text.Length !=0)
-                txtH_Validating(sender, new CancelEventArgs());
-            dUpDKmod_Validating(sender, new CancelEventArgs());
-        }
 
         private void txtCoef_TextChanged(object sender, EventArgs e)
         {
@@ -155,23 +142,16 @@ namespace TIP_ATLAS
         public void updateCalcRecommanded()
         {
             txt_Rec_DimSquare.Text = DataCalculator.CalcSiseRecomandedH_B.ToString();
+            txt_Rec_DimSquareH.Text = DataCalculator.CalcSiseRecomandedH_B.ToString();
             txt_Rec_BRec.Text = DataCalculator.CalcSiseRecomandedB_Rectangle.ToString();
             txt_Rec_HRec.Text = DataCalculator.CalcSiseRecomandedH_Rectangle.ToString();
-
-            txt_Rec_DimSquare_round.Text = RoundNumeberView(DataCalculator.CalcSiseRecomandedH_B);
-            txt_Rec_BRec_round.Text = RoundNumeberView(DataCalculator.CalcSiseRecomandedB_Rectangle);
-            txt_Rec_HRec_round.Text = RoundNumeberView(DataCalculator.CalcSiseRecomandedH_Rectangle);
         }
         public void updateCalcRupture()
         {
             txt_Aire_Rup.Text = DataCalculator.CalcSiseH_B.ToString();
+            txt_Aire_RupH.Text = DataCalculator.CalcSiseH_B.ToString();
             Txt_h_Rectangle.Text = DataCalculator.CalcSiseRupH_Rectangle.ToString();
             Txt_b_Rectangle.Text = DataCalculator.CalcSiseRupB_Rectangle.ToString();
-
-            txt_Aire_Rup_round.Text = RoundNumeberView(DataCalculator.CalcSiseH_B);
-            Txt_h_Rectangle_round.Text = RoundNumeberView(DataCalculator.CalcSiseRupH_Rectangle);
-            Txt_b_Rectangle_round.Text = RoundNumeberView(DataCalculator.CalcSiseRupB_Rectangle);
-
         }
 
         //Take data of Class and Co on Database
@@ -212,8 +192,17 @@ namespace TIP_ATLAS
                 {
                     if (isCoef)
                     {
-                        errorInput.Clear();
-                        return true;
+                        if (Convert.ToDouble(text.Text.Replace(".", ",")) <= 0)
+                        {
+                            e.Cancel = true;
+                            errorInput.SetError(text, "le nombre doit etre supérieur 0");
+                            return false;
+                        }
+                        else
+                        {
+                            errorInput.Clear();
+                            return true;
+                        }
                     }
                     else
                     {
@@ -232,24 +221,10 @@ namespace TIP_ATLAS
                 }
             }
         }
-        private void txtB_Validating(object sender, CancelEventArgs e)
-        {
-            if (ValidateData(txtB, e))
-            {
-                DataCalculator.Stransb = Convert.ToDouble(txtB.Text.Replace(".", ","));
-            }
-        }
-        private void txtH_Validating(object sender, CancelEventArgs e)
-        {
-            if (ValidateData(txtH, e))
-            {
-                DataCalculator.Stransh = Convert.ToDouble(txtH.Text.Replace(".",","));
-            }
-        }
 
         private void txtNed_Validating(object sender, CancelEventArgs e)
         {
-            if (ValidateData(txtNed, e))
+            if (ValidateData(txtNed, e,true))
             {
                 DataCalculator.NedValcal = Convert.ToDouble(txtNed.Text.Replace(".", ","));
             }
@@ -289,13 +264,15 @@ namespace TIP_ATLAS
         }
         private void btn_Validate_MouseMove(object sender, MouseEventArgs e)
         {
-            if (((txtB.Text != "" && txtH.Text != "") || txtNed.Text != "") && dUpDKmod.Visible)
+            if ((txtNed.Text != ""&&txtCoef.Text !="") && dUpDKmod.Visible)
             {
                 btn_Validate.Visible = true;
+                lblresult.ForeColor = Color.Green;
             }
             else
             {
                 btn_Validate.Visible = false;
+                lblresult.ForeColor = Color.Red;
             }
         }
 

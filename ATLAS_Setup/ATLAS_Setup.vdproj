@@ -15,6 +15,24 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_0A70E93E0FD44FBCA1873F316DBE4277"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_2C72B81C89224DAF878B150C95BFBD81"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_30E69F8B2FE24E3AB5E68C071C83281E"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_57456B3D746C6EFC2218D3D6822AEAF3"
         "OwnerKey" = "8:_A84F61AA95C84BFA448074817472BFD6"
         "MsmSig" = "8:_UNDEFINED"
@@ -27,7 +45,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_5B8138EAD1744DD39C90F5972714D514"
+        "MsmKey" = "8:_703EFDD67210437395DAB9130E4677E3"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -51,20 +69,20 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_E446CA4328F64AFE89FF8753A3CA11FA"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_F01B969F125B4BF180D1771B12D300A5"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_F2ED7EF01B4547E99315F076E98BDF02"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_8ED343DF6D60ACCB1C261B4CD24E3CD5"
+        "OwnerKey" = "8:_F01B969F125B4BF180D1771B12D300A5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -82,13 +100,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3129A75BAF17457BA04F7CBF27833A4F"
+        "OwnerKey" = "8:_8ED343DF6D60ACCB1C261B4CD24E3CD5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_F01B969F125B4BF180D1771B12D300A5"
+        "OwnerKey" = "8:_3129A75BAF17457BA04F7CBF27833A4F"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -109,6 +127,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -125,6 +151,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -154,6 +196,66 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0A70E93E0FD44FBCA1873F316DBE4277"
+            {
+            "SourcePath" = "8:..\\TIP_ATLAS\\DatabaseSoftwood.json"
+            "TargetName" = "8:DatabaseSoftwood.json"
+            "Tag" = "8:"
+            "Folder" = "8:_E3F2AC61470942E28865FE2C82FC1CBF"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2C72B81C89224DAF878B150C95BFBD81"
+            {
+            "SourcePath" = "8:..\\TIP_ATLAS\\DatabaseKmod.json"
+            "TargetName" = "8:DatabaseKmod.json"
+            "Tag" = "8:"
+            "Folder" = "8:_E3F2AC61470942E28865FE2C82FC1CBF"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_30E69F8B2FE24E3AB5E68C071C83281E"
+            {
+            "SourcePath" = "8:..\\TIP_ATLAS\\Document\\Lexique.pdf"
+            "TargetName" = "8:Lexique.pdf"
+            "Tag" = "8:"
+            "Folder" = "8:_56173E75112E4B82B7D18BC5BBD52DBD"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_57456B3D746C6EFC2218D3D6822AEAF3"
             {
             "AssemblyRegister" = "3:1"
@@ -185,12 +287,12 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5B8138EAD1744DD39C90F5972714D514"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_703EFDD67210437395DAB9130E4677E3"
             {
-            "SourcePath" = "8:..\\TIP_ATLAS\\DatabaseKmod.json"
-            "TargetName" = "8:DatabaseKmod.json"
+            "SourcePath" = "8:..\\TIP_ATLAS\\Document\\Mode_d'emploi.pdf"
+            "TargetName" = "8:Mode_d'emploi.pdf"
             "Tag" = "8:"
-            "Folder" = "8:_E3F2AC61470942E28865FE2C82FC1CBF"
+            "Folder" = "8:_56173E75112E4B82B7D18BC5BBD52DBD"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -287,12 +389,12 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F2ED7EF01B4547E99315F076E98BDF02"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E446CA4328F64AFE89FF8753A3CA11FA"
             {
-            "SourcePath" = "8:..\\TIP_ATLAS\\DatabaseSoftwood.json"
-            "TargetName" = "8:DatabaseSoftwood.json"
+            "SourcePath" = "8:..\\TIP_ATLAS\\Document\\TABLEAUX_DE_DONNEES.pdf"
+            "TargetName" = "8:TABLEAUX_DE_DONNEES.pdf"
             "Tag" = "8:"
-            "Folder" = "8:_E3F2AC61470942E28865FE2C82FC1CBF"
+            "Folder" = "8:_56173E75112E4B82B7D18BC5BBD52DBD"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -345,6 +447,17 @@
             "Property" = "8:TARGETDIR"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_56173E75112E4B82B7D18BC5BBD52DBD"
+                    {
+                    "Name" = "8:Document"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_24C3D09E8FA141F58F47819666C26F10"
+                        "Folders"
+                        {
+                        }
+                    }
                 }
             }
         }
@@ -363,15 +476,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ATLAS_Setup"
-        "ProductCode" = "8:{730C4FCA-64EB-46B6-BEFB-9FF8CB1A09E9}"
-        "PackageCode" = "8:{8A371133-5C68-4ABD-8A62-AB4FE183483D}"
+        "ProductCode" = "8:{680A9D26-4081-40ED-8F57-DD6AC8236EFA}"
+        "PackageCode" = "8:{7781CB4C-E957-46FB-8111-447FB7FABCAE}"
         "UpgradeCode" = "8:{D10BCC0E-F461-4CBE-A86E-45F19E410472}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.0.2"
         "Manufacturer" = "8:TIP Project"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

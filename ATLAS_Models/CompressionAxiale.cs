@@ -10,8 +10,8 @@ namespace ATLAS_Models
     {
         private double CoefPartYm = 1.3;
 		private double constBetaRextitude = 0.2;
-        double flamby=50; 
-        double flambz=50;
+        double flamby=0; 
+        double flambz=0;
         WoodClass curentlywood;
         double stransb=0;
         double stransh=0;

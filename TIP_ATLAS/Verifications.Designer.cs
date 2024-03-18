@@ -31,9 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Verifications));
             this.btnBack = new System.Windows.Forms.Button();
-            this.dUpDResitanceClass = new System.Windows.Forms.DomainUpDown();
-            this.dUpDKmod = new System.Windows.Forms.DomainUpDown();
-            this.dUpDResisatnce = new System.Windows.Forms.DomainUpDown();
             this.txtH = new System.Windows.Forms.TextBox();
             this.txtLfy = new System.Windows.Forms.TextBox();
             this.txtNed = new System.Windows.Forms.TextBox();
@@ -64,6 +61,10 @@
             this.btn_lexique = new System.Windows.Forms.Button();
             this.btn_tableau = new System.Windows.Forms.Button();
             this.btn_modeEmploi = new System.Windows.Forms.Button();
+            this.combUpDKmod = new System.Windows.Forms.ComboBox();
+            this.comboUpDResisatnce = new System.Windows.Forms.ComboBox();
+            this.combUpDResitanceClass = new System.Windows.Forms.ComboBox();
+            this.lblresult = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorInput)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,55 +81,11 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // dUpDResitanceClass
-            // 
-            this.dUpDResitanceClass.CausesValidation = false;
-            this.dUpDResitanceClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dUpDResitanceClass.Location = new System.Drawing.Point(470, 188);
-            this.dUpDResitanceClass.Name = "dUpDResitanceClass";
-            this.dUpDResitanceClass.ReadOnly = true;
-            this.dUpDResitanceClass.Size = new System.Drawing.Size(138, 21);
-            this.dUpDResitanceClass.TabIndex = 3;
-            this.dUpDResitanceClass.Text = "Classe de Resistance";
-            this.dUpDResitanceClass.SelectedItemChanged += new System.EventHandler(this.dUpDClassResistance_SelectedItemChanged);
-            // 
-            // dUpDKmod
-            // 
-            this.dUpDKmod.Enabled = false;
-            this.dUpDKmod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dUpDKmod.Items.Add("P");
-            this.dUpDKmod.Items.Add("LT");
-            this.dUpDKmod.Items.Add("MT");
-            this.dUpDKmod.Items.Add("CT");
-            this.dUpDKmod.Items.Add("I");
-            this.dUpDKmod.Location = new System.Drawing.Point(488, 249);
-            this.dUpDKmod.Name = "dUpDKmod";
-            this.dUpDKmod.ReadOnly = true;
-            this.dUpDKmod.Size = new System.Drawing.Size(120, 21);
-            this.dUpDKmod.TabIndex = 4;
-            this.dUpDKmod.Text = "Action d\'utilisation";
-            this.dUpDKmod.SelectedItemChanged += new System.EventHandler(this.dUpDKmod_SelectedItemChanged);
-            this.dUpDKmod.Validating += new System.ComponentModel.CancelEventHandler(this.dUpDKmod_Validating);
-            this.dUpDKmod.Validated += new System.EventHandler(this.dUpDKmod_Validated);
-            // 
-            // dUpDResisatnce
-            // 
-            this.dUpDResisatnce.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dUpDResisatnce.Location = new System.Drawing.Point(488, 222);
-            this.dUpDResisatnce.Name = "dUpDResisatnce";
-            this.dUpDResisatnce.ReadOnly = true;
-            this.dUpDResisatnce.Size = new System.Drawing.Size(120, 21);
-            this.dUpDResisatnce.TabIndex = 5;
-            this.dUpDResisatnce.Text = "Resistance";
-            this.dUpDResisatnce.Wrap = true;
-            this.dUpDResisatnce.SelectedItemChanged += new System.EventHandler(this.dUpDResisatnce_SelectedItemChanged);
-            // 
             // txtH
             // 
             this.txtH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtH.Location = new System.Drawing.Point(543, 57);
-            this.txtH.Multiline = true;
             this.txtH.Name = "txtH";
             this.txtH.Size = new System.Drawing.Size(65, 20);
             this.txtH.TabIndex = 6;
@@ -144,7 +101,6 @@
             this.txtLfy.Name = "txtLfy";
             this.txtLfy.Size = new System.Drawing.Size(65, 23);
             this.txtLfy.TabIndex = 7;
-            this.txtLfy.Text = "50";
             this.txtLfy.TextChanged += new System.EventHandler(this.txtLfy_TextChanged);
             this.txtLfy.Validating += new System.ComponentModel.CancelEventHandler(this.txtLfy_Validating);
             // 
@@ -152,10 +108,9 @@
             // 
             this.txtNed.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNed.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNed.Location = new System.Drawing.Point(543, 315);
-            this.txtNed.Multiline = true;
+            this.txtNed.Location = new System.Drawing.Point(543, 318);
             this.txtNed.Name = "txtNed";
-            this.txtNed.Size = new System.Drawing.Size(65, 24);
+            this.txtNed.Size = new System.Drawing.Size(65, 20);
             this.txtNed.TabIndex = 8;
             this.txtNed.TextChanged += new System.EventHandler(this.txtNed_TextChanged);
             this.txtNed.Validating += new System.ComponentModel.CancelEventHandler(this.txtNed_Validating);
@@ -165,9 +120,8 @@
             this.txtCoef.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCoef.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCoef.Location = new System.Drawing.Point(543, 285);
-            this.txtCoef.Multiline = true;
             this.txtCoef.Name = "txtCoef";
-            this.txtCoef.Size = new System.Drawing.Size(65, 24);
+            this.txtCoef.Size = new System.Drawing.Size(65, 20);
             this.txtCoef.TabIndex = 9;
             this.txtCoef.Text = "1,3";
             this.txtCoef.TextChanged += new System.EventHandler(this.txtCoef_TextChanged);
@@ -182,22 +136,23 @@
             this.txtLfz.Name = "txtLfz";
             this.txtLfz.Size = new System.Drawing.Size(65, 23);
             this.txtLfz.TabIndex = 10;
-            this.txtLfz.Text = "50";
             this.txtLfz.TextChanged += new System.EventHandler(this.txtLfz_TextChanged);
             this.txtLfz.Validating += new System.ComponentModel.CancelEventHandler(this.txtLfz_Validating);
             // 
             // btn_Validate
             // 
-            this.btn_Validate.BackColor = System.Drawing.Color.Green;
+            this.btn_Validate.BackColor = System.Drawing.Color.Transparent;
             this.btn_Validate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Validate.Enabled = false;
+            this.btn_Validate.FlatAppearance.BorderSize = 0;
+            this.btn_Validate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_Validate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_Validate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Validate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Validate.Location = new System.Drawing.Point(419, 29);
+            this.btn_Validate.Location = new System.Drawing.Point(118, 344);
             this.btn_Validate.Name = "btn_Validate";
-            this.btn_Validate.Size = new System.Drawing.Size(92, 29);
+            this.btn_Validate.Size = new System.Drawing.Size(432, 57);
             this.btn_Validate.TabIndex = 0;
-            this.btn_Validate.Text = "Valider";
             this.btn_Validate.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_Validate.UseVisualStyleBackColor = false;
             this.btn_Validate.Visible = false;
@@ -475,6 +430,80 @@
             this.btn_modeEmploi.UseVisualStyleBackColor = false;
             this.btn_modeEmploi.Click += new System.EventHandler(this.btn_modeEmploi_Click);
             // 
+            // combUpDKmod
+            // 
+            this.combUpDKmod.AutoCompleteCustomSource.AddRange(new string[] {
+            "P",
+            "LT",
+            "MT",
+            "CT",
+            "I"});
+            this.combUpDKmod.DropDownHeight = 100;
+            this.combUpDKmod.Enabled = false;
+            this.combUpDKmod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combUpDKmod.FormattingEnabled = true;
+            this.combUpDKmod.IntegralHeight = false;
+            this.combUpDKmod.Items.AddRange(new object[] {
+            "P",
+            "LT",
+            "MT",
+            "CT",
+            "I"});
+            this.combUpDKmod.Location = new System.Drawing.Point(543, 249);
+            this.combUpDKmod.Name = "combUpDKmod";
+            this.combUpDKmod.Size = new System.Drawing.Size(65, 23);
+            this.combUpDKmod.TabIndex = 50;
+            this.combUpDKmod.SelectedIndexChanged += new System.EventHandler(this.combUpDKmod_SelectedIndexChanged);
+            this.combUpDKmod.Validated += new System.EventHandler(this.combUpDKmod_Validated);
+            // 
+            // comboUpDResisatnce
+            // 
+            this.comboUpDResisatnce.AutoCompleteCustomSource.AddRange(new string[] {
+            "P",
+            "LT",
+            "MT",
+            "CT",
+            "I"});
+            this.comboUpDResisatnce.DropDownHeight = 100;
+            this.comboUpDResisatnce.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboUpDResisatnce.FormattingEnabled = true;
+            this.comboUpDResisatnce.IntegralHeight = false;
+            this.comboUpDResisatnce.Location = new System.Drawing.Point(543, 220);
+            this.comboUpDResisatnce.Name = "comboUpDResisatnce";
+            this.comboUpDResisatnce.Size = new System.Drawing.Size(65, 23);
+            this.comboUpDResisatnce.TabIndex = 51;
+            this.comboUpDResisatnce.SelectedIndexChanged += new System.EventHandler(this.comboUpDResisatnce_SelectedIndexChanged);
+            // 
+            // combUpDResitanceClass
+            // 
+            this.combUpDResitanceClass.AutoCompleteCustomSource.AddRange(new string[] {
+            "P",
+            "LT",
+            "MT",
+            "CT",
+            "I"});
+            this.combUpDResitanceClass.DropDownHeight = 100;
+            this.combUpDResitanceClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combUpDResitanceClass.FormattingEnabled = true;
+            this.combUpDResitanceClass.IntegralHeight = false;
+            this.combUpDResitanceClass.Location = new System.Drawing.Point(543, 186);
+            this.combUpDResitanceClass.Name = "combUpDResitanceClass";
+            this.combUpDResitanceClass.Size = new System.Drawing.Size(65, 23);
+            this.combUpDResitanceClass.TabIndex = 52;
+            this.combUpDResitanceClass.SelectedIndexChanged += new System.EventHandler(this.combUpDResitanceClass_SelectedIndexChanged);
+            // 
+            // lblresult
+            // 
+            this.lblresult.AutoSize = true;
+            this.lblresult.BackColor = System.Drawing.Color.White;
+            this.lblresult.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblresult.ForeColor = System.Drawing.Color.Red;
+            this.lblresult.Location = new System.Drawing.Point(365, 367);
+            this.lblresult.Name = "lblresult";
+            this.lblresult.Size = new System.Drawing.Size(146, 15);
+            this.lblresult.TabIndex = 53;
+            this.lblresult.Text = "<Appuyer sur les flèches>";
+            // 
             // Verifications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -484,6 +513,10 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1319, 624);
             this.ControlBox = false;
+            this.Controls.Add(this.lblresult);
+            this.Controls.Add(this.combUpDResitanceClass);
+            this.Controls.Add(this.comboUpDResisatnce);
+            this.Controls.Add(this.combUpDKmod);
             this.Controls.Add(this.btn_modeEmploi);
             this.Controls.Add(this.btn_tableau);
             this.Controls.Add(this.btn_lexique);
@@ -498,9 +531,6 @@
             this.Controls.Add(this.txtH);
             this.Controls.Add(this.txtCoef);
             this.Controls.Add(this.txtLfz);
-            this.Controls.Add(this.dUpDResisatnce);
-            this.Controls.Add(this.dUpDKmod);
-            this.Controls.Add(this.dUpDResitanceClass);
             this.Controls.Add(this.txtLfy);
             this.Controls.Add(this.txtB);
             this.Controls.Add(this.txt_kz);
@@ -530,9 +560,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.DomainUpDown dUpDResitanceClass;
-        private System.Windows.Forms.DomainUpDown dUpDKmod;
-        private System.Windows.Forms.DomainUpDown dUpDResisatnce;
         private System.Windows.Forms.TextBox txtH;
         private System.Windows.Forms.TextBox txtLfy;
         private System.Windows.Forms.TextBox txtNed;
@@ -563,5 +590,9 @@
         private System.Windows.Forms.Button btn_tableau;
         private System.Windows.Forms.Button btn_lexique;
         private System.Windows.Forms.Button btn_modeEmploi;
+        private System.Windows.Forms.ComboBox combUpDKmod;
+        private System.Windows.Forms.ComboBox combUpDResitanceClass;
+        private System.Windows.Forms.ComboBox comboUpDResisatnce;
+        private System.Windows.Forms.Label lblresult;
     }
 }

@@ -54,69 +54,65 @@ namespace TIP_ATLAS
         {
             if (txtB.Text.Length != 0)
                 txtB_Validating(sender, new CancelEventArgs());
-            dUpDKmod_Validating(sender, new CancelEventArgs());
+            combUpDKmod_Validating(sender, new CancelEventArgs());
         }
 
         private void txtH_TextChanged(object sender, EventArgs e)
         {
             if(txtH.Text.Length !=0)
                 txtH_Validating(sender, new CancelEventArgs());
-            dUpDKmod_Validating(sender, new CancelEventArgs());
+            combUpDKmod_Validating(sender, new CancelEventArgs());
         }
 
         private void txtCoef_TextChanged(object sender, EventArgs e)
         {
             if (txtCoef.Text.Length != 0)
                 txtCoef_Validating(sender, new CancelEventArgs());
-            dUpDKmod_Validating(sender, new CancelEventArgs());
+            combUpDKmod_Validating(sender, new CancelEventArgs());
         }
 
         private void txtNed_TextChanged(object sender, EventArgs e)
         {
             if (txtNed.Text.Length != 0)
                txtNed_Validating(sender, new CancelEventArgs());
-            dUpDKmod_Validating(sender, new CancelEventArgs());
+            combUpDKmod_Validating(sender, new CancelEventArgs());
         }
 
         private void txtLfy_TextChanged(object sender, EventArgs e)
         {
             if (txtLfy.Text.Length != 0)
                 txtLfy_Validating(sender, new CancelEventArgs());
-            dUpDKmod_Validating(sender, new CancelEventArgs());
+            combUpDKmod_Validating(sender, new CancelEventArgs());
         }
 
         private void txtLfz_TextChanged(object sender, EventArgs e)
         {
             if (txtLfz.Text.Length != 0)
                 txtLfz_Validating(sender, new CancelEventArgs());
-            dUpDKmod_Validating(sender, new CancelEventArgs());
+            combUpDKmod_Validating(sender, new CancelEventArgs());
+        }
+        private void combUpDKmod_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataCalculator.KmodClass = importClassData.Collection.KmodClass[comboUpDResisatnce.Text];
+            DataCalculator.CumulateChargClass = comboUpDResisatnce.Text;
+            DataCalculator.ServiceClass = combUpDKmod.Text;
+            combUpDKmod_Validating(sender, new CancelEventArgs());
         }
 
-        // Selected item Changed in up-down
-        private void dUpDKmod_SelectedItemChanged(object sender, EventArgs e)
-        {
-            DataCalculator.KmodClass = importClassData.Collection.KmodClass[dUpDResisatnce.Text];
-            DataCalculator.CumulateChargClass = dUpDResisatnce.Text;
-            DataCalculator.ServiceClass = dUpDKmod.Text;
-            dUpDKmod_Validating(sender, new CancelEventArgs());
-        }
-        private void dUpDClassResistance_SelectedItemChanged(object sender, EventArgs e)
+        private void combUpDResitanceClass_SelectedIndexChanged(object sender, EventArgs e)
         {
             WoodClass result;
-            result = ImportClassData.GetSoftwoodDataValueTarget(importClassData.Collection, dUpDResitanceClass.Text);
+            result = ImportClassData.GetSoftwoodDataValueTarget(importClassData.Collection, combUpDResitanceClass.Text);
             DataCalculator.CurrentWood = result;
         }
 
-        private void dUpDResisatnce_SelectedItemChanged(object sender, EventArgs e)
+        private void comboUpDResisatnce_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataCalculator.KmodClass = importClassData.Collection.KmodClass[dUpDResisatnce.Text];
-            DataCalculator.CumulateChargClass = dUpDResisatnce.Text;
-            DataCalculator.ServiceClass = dUpDKmod.Text;
-            dUpDKmod.Enabled = true;
+            DataCalculator.KmodClass = importClassData.Collection.KmodClass[comboUpDResisatnce.Text];
+            DataCalculator.CumulateChargClass = comboUpDResisatnce.Text;
+            DataCalculator.ServiceClass = combUpDKmod.Text;
+            combUpDKmod.Enabled = true;
         }
-
-
-
         //Round number in the superior integer number
         public string RoundNumeberView(double number)
         {
@@ -158,17 +154,17 @@ namespace TIP_ATLAS
         {
             foreach (string wood in importClassData.Collection.CollectionWood.Keys)
             {
-                dUpDResitanceClass.Items.Add(wood);
+                combUpDResitanceClass.Items.Add(wood);
             }
             foreach (string wood in importClassData.Collection.KmodClass.Keys)
             {
-                dUpDResisatnce.Items.Add(wood);
+                comboUpDResisatnce.Items.Add(wood);
             }
 
         }
 
         //Validating Data and send error
-        bool ValidateData(TextBox text, CancelEventArgs e)
+        bool ValidateData(TextBox text, CancelEventArgs e, bool isCoef = false)
         {
             Regex regex = new Regex(@"^[+-]?\d*[\.,]\d+$|^[+-]?\d+([\.,]\d*)?$");
              
@@ -189,16 +185,33 @@ namespace TIP_ATLAS
                 }
                 else
                 {
-                    if (Convert.ToDouble(text.Text.Replace(".", ",")) < 5)
+                    if (isCoef)
                     {
-                        e.Cancel = true;
-                        errorInput.SetError(text, "le nombre doit etre supérieur 5");
-                        return false;
+                        if (Convert.ToDouble(text.Text.Replace(".", ",")) <= 0)
+                        {
+                            e.Cancel = true;
+                            errorInput.SetError(text, "le nombre doit etre supérieur 0");
+                            return false;
+                        }
+                        else
+                        {
+                            errorInput.Clear();
+                            return true;
+                        }
                     }
                     else
                     {
-                        errorInput.Clear();
-                        return true;
+                        if (Convert.ToDouble(text.Text.Replace(".", ",")) < 5)
+                        {
+                            e.Cancel = true;
+                            errorInput.SetError(text, "le nombre doit etre supérieur 5");
+                            return false;
+                        }
+                        else
+                        {
+                            errorInput.Clear();
+                            return true;
+                        }
                     }
                 }
             }
@@ -220,7 +233,7 @@ namespace TIP_ATLAS
 
         private void txtNed_Validating(object sender, CancelEventArgs e)
         {
-            if (ValidateData(txtNed, e))
+            if (ValidateData(txtNed, e,true))
             {
                 DataCalculator.NedValcal = Convert.ToDouble(txtNed.Text.Replace(".", ","));
             }
@@ -236,7 +249,7 @@ namespace TIP_ATLAS
 
         private void txtCoef_Validating(object sender, CancelEventArgs e)
         {
-            if (ValidateData(txtCoef, e))
+            if (ValidateData(txtCoef, e,true))
             {
                 DataCalculator.CoefYM = Convert.ToDouble(txtCoef.Text.Replace(".", ","));
             }
@@ -248,25 +261,27 @@ namespace TIP_ATLAS
                 DataCalculator.Flambz = Convert.ToDouble(txtLfz.Text.Replace(".", ","));
             }
         }
-        private void dUpDKmod_Validating(object sender, CancelEventArgs e)
+        private void combUpDKmod_Validating(object sender, CancelEventArgs e)
         {
-            dUpDKmod_Validated(sender, e);
+            combUpDKmod_Validated(sender, e);
         }
 
-        private void dUpDKmod_Validated(object sender, EventArgs e)
+        private void combUpDKmod_Validated(object sender, EventArgs e)
         {
-            btn_Validate.Enabled = dUpDKmod.Enabled;
-            btn_Validate.Visible = dUpDKmod.Visible;
+            btn_Validate.Enabled = combUpDKmod.Enabled;
+            btn_Validate.Visible = combUpDKmod.Visible;
         }
         private void btn_Validate_MouseMove(object sender, MouseEventArgs e)
         {
-            if (((txtB.Text != "" && txtH.Text != "") || txtNed.Text != "") && dUpDKmod.Visible)
+            if (((txtB.Text != "" && txtH.Text != "") && txtNed.Text != "") && combUpDKmod.Visible)
             {
                 btn_Validate.Visible = true;
+                lblresult.ForeColor = Color.Green;
             }
             else
             {
                 btn_Validate.Visible = false;
+                lblresult.ForeColor = Color.Red;
             }
         }
 
@@ -299,6 +314,8 @@ namespace TIP_ATLAS
             else
                 txt_Verif.BackColor = Color.White;
         }
+
+
     }
 
 }

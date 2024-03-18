@@ -28,7 +28,7 @@ namespace TIP_ATLAS
 
         private void ViewWeightMax_Load(object sender, EventArgs e)
         {
-            
+            btn_Validate.Focus();
         }
 
         //Back button event
@@ -148,13 +148,11 @@ namespace TIP_ATLAS
         //Update Result recommanded
         public void UpdateCalcRecommanded()
         {
-            txt_Rec_Force.Text = DataCalculator.CalcRecomandedForce.ToString();
-            txt_Rec_Force_round.Text = RoundNumeberView(DataCalculator.CalcRecomandedForce);
+            txt_Rec_Force.Text = DataCalculator.CalcRecomandedForce.ToString();  
         }
         public void UpdateCalcRupture()
         {
             txt_Rup_Force.Text = DataCalculator.CalcMaxRuputureForce.ToString();
-            txt_Rup_F_round.Text = RoundNumeberView(DataCalculator.CalcMaxRuputureForce);         
         }
         //Take data of Class and Co on Database
         private void DownloadItem()
@@ -171,7 +169,7 @@ namespace TIP_ATLAS
         }
 
         //Validating Data and send error
-        bool ValidateData(TextBox text, CancelEventArgs e)
+        bool ValidateData(TextBox text, CancelEventArgs e, bool isCoef = false)
         {
             Regex regex = new Regex(@"^[+-]?\d*[\.,]\d+$|^[+-]?\d+([\.,]\d*)?$");
              
@@ -192,16 +190,33 @@ namespace TIP_ATLAS
                 }
                 else
                 {
-                    if (Convert.ToDouble(text.Text.Replace(".", ",")) < 5)
+                    if (isCoef)
                     {
-                        e.Cancel = true;                        
-                        errorInput.SetError(text, "le nombre doit etre supérieur 5");
-                        return false;
+                        if (Convert.ToDouble(text.Text.Replace(".", ",")) <= 0)
+                        {
+                            e.Cancel = true;
+                            errorInput.SetError(text, "le nombre doit etre supérieur 0");
+                            return false;
+                        }
+                        else
+                        {
+                            errorInput.Clear();
+                            return true;
+                        }
                     }
                     else
                     {
-                        errorInput.Clear();
-                        return true;
+                        if (Convert.ToDouble(text.Text.Replace(".", ",")) < 5)
+                        {
+                            e.Cancel = true;
+                            errorInput.SetError(text, "le nombre doit etre supérieur 5");
+                            return false;
+                        }
+                        else
+                        {
+                            errorInput.Clear();
+                            return true;
+                        }
                     }
                 }             
             }
@@ -231,7 +246,7 @@ namespace TIP_ATLAS
 
         private void txtCoef_Validating(object sender, CancelEventArgs e)
         {
-            if (ValidateData(txtCoef, e))
+            if (ValidateData(txtCoef, e, true))
             {
                 DataCalculator.CoefYM = Convert.ToDouble(txtCoef.Text.Replace(".", ","));
             }
@@ -258,10 +273,12 @@ namespace TIP_ATLAS
             if ((txtB.Text != "" && txtH.Text != "") && dUpDKmod.Visible)
             {
                 btn_Validate.Visible = true;
+                lblresult.ForeColor = Color.Green;
             }
             else
             {
                 btn_Validate.Visible = false;
+                lblresult.ForeColor = Color.Red;
             }
         }
 
@@ -281,6 +298,14 @@ namespace TIP_ATLAS
         {
             ImportClassData.OpenPDF("Mode_d'emploi.pdf");
 
+        }
+
+        private void ForceMax_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+                UpdateCalc();
+            }
         }
     }
 

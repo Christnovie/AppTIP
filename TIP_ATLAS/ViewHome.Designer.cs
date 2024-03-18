@@ -42,7 +42,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(58, 131);
+            this.label1.Location = new System.Drawing.Point(94, 134);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(359, 37);
             this.label1.TabIndex = 0;
@@ -53,13 +53,13 @@
             this.dimMax_btn.BackColor = System.Drawing.SystemColors.GrayText;
             this.dimMax_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.dimMax_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.dimMax_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dimMax_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dimMax_btn.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.dimMax_btn.Location = new System.Drawing.Point(126, 215);
             this.dimMax_btn.Name = "dimMax_btn";
-            this.dimMax_btn.Size = new System.Drawing.Size(169, 69);
+            this.dimMax_btn.Size = new System.Drawing.Size(254, 69);
             this.dimMax_btn.TabIndex = 1;
-            this.dimMax_btn.Text = "Dimention Max";
+            this.dimMax_btn.Text = "CALCUL DE LA TAILLE EN FONCTION DE LA RESISTANCE";
             this.dimMax_btn.UseVisualStyleBackColor = false;
             this.dimMax_btn.Click += new System.EventHandler(this.dimMax_btn_Click);
             // 
@@ -68,13 +68,13 @@
             this.btn_VerifForm.BackColor = System.Drawing.SystemColors.GrayText;
             this.btn_VerifForm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btn_VerifForm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btn_VerifForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_VerifForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_VerifForm.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btn_VerifForm.Location = new System.Drawing.Point(126, 290);
             this.btn_VerifForm.Name = "btn_VerifForm";
-            this.btn_VerifForm.Size = new System.Drawing.Size(169, 69);
+            this.btn_VerifForm.Size = new System.Drawing.Size(254, 69);
             this.btn_VerifForm.TabIndex = 2;
-            this.btn_VerifForm.Text = "Verifications";
+            this.btn_VerifForm.Text = "VERIFICATION DE LA RESISTANCE A LA COMPRESSION";
             this.btn_VerifForm.UseVisualStyleBackColor = false;
             this.btn_VerifForm.Click += new System.EventHandler(this.btn_VerifForm_Click);
             // 
@@ -83,13 +83,13 @@
             this.btnForce_form.BackColor = System.Drawing.SystemColors.GrayText;
             this.btnForce_form.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnForce_form.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnForce_form.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnForce_form.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnForce_form.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnForce_form.Location = new System.Drawing.Point(126, 375);
             this.btnForce_form.Name = "btnForce_form";
-            this.btnForce_form.Size = new System.Drawing.Size(169, 69);
+            this.btnForce_form.Size = new System.Drawing.Size(254, 69);
             this.btnForce_form.TabIndex = 3;
-            this.btnForce_form.Text = "Forces";
+            this.btnForce_form.Text = "CALCUL DE LA RESISTANCE EN FONCTION DE LA TAILLE";
             this.btnForce_form.UseVisualStyleBackColor = false;
             this.btnForce_form.Click += new System.EventHandler(this.btnForce_form_Click);
             // 

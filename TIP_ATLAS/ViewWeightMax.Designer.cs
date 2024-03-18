@@ -31,16 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewWeightMax));
             this.btnBack = new System.Windows.Forms.Button();
-            this.dUpDResitanceClass = new System.Windows.Forms.DomainUpDown();
-            this.dUpDKmod = new System.Windows.Forms.DomainUpDown();
-            this.dUpDResisatnce = new System.Windows.Forms.DomainUpDown();
-            this.txtH = new System.Windows.Forms.TextBox();
+            this.dUpDResitanceClass = new System.Windows.Forms.ComboBox();
+            this.dUpDKmod = new System.Windows.Forms.ComboBox();
+            this.dUpDResisatnce = new System.Windows.Forms.ComboBox();
             this.txtLfy = new System.Windows.Forms.TextBox();
             this.txtNed = new System.Windows.Forms.TextBox();
             this.txtCoef = new System.Windows.Forms.TextBox();
             this.txtLfz = new System.Windows.Forms.TextBox();
             this.btn_Validate = new System.Windows.Forms.Button();
-            this.txtB = new System.Windows.Forms.TextBox();
             this.txt_Aire = new System.Windows.Forms.TextBox();
             this.txt_Verif = new System.Windows.Forms.TextBox();
             this.txt_ky = new System.Windows.Forms.TextBox();
@@ -55,19 +53,13 @@
             this.txt_kcz = new System.Windows.Forms.TextBox();
             this.txt_kcy = new System.Windows.Forms.TextBox();
             this.txt_oc0d = new System.Windows.Forms.TextBox();
-            this.txt_Rec_HRec_round = new System.Windows.Forms.TextBox();
-            this.txt_Rec_BRec_round = new System.Windows.Forms.TextBox();
-            this.txt_Rec_DimSquare_round = new System.Windows.Forms.TextBox();
             this.txt_Rec_BRec = new System.Windows.Forms.TextBox();
             this.txt_Rec_DimSquare = new System.Windows.Forms.TextBox();
             this.txt_Rec_HRec = new System.Windows.Forms.TextBox();
             this.errorInput = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txt_Aire_Rup_round = new System.Windows.Forms.TextBox();
             this.Txt_h_Rectangle = new System.Windows.Forms.TextBox();
             this.txt_Aire_Rup = new System.Windows.Forms.TextBox();
             this.Txt_b_Rectangle = new System.Windows.Forms.TextBox();
-            this.Txt_b_Rectangle_round = new System.Windows.Forms.TextBox();
-            this.Txt_h_Rectangle_round = new System.Windows.Forms.TextBox();
             this.txt_kz = new System.Windows.Forms.TextBox();
             this.txt_E005 = new System.Windows.Forms.TextBox();
             this.txt_constMassiv = new System.Windows.Forms.TextBox();
@@ -76,8 +68,9 @@
             this.btn_lexique = new System.Windows.Forms.Button();
             this.btn_tableau = new System.Windows.Forms.Button();
             this.btn_modeEmploi = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_Aire_RupH = new System.Windows.Forms.TextBox();
+            this.txt_Rec_DimSquareH = new System.Windows.Forms.TextBox();
+            this.lblresult = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorInput)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,55 +92,38 @@
             // 
             this.dUpDResitanceClass.CausesValidation = false;
             this.dUpDResitanceClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dUpDResitanceClass.Location = new System.Drawing.Point(470, 188);
+            this.dUpDResitanceClass.Location = new System.Drawing.Point(543, 184);
             this.dUpDResitanceClass.Name = "dUpDResitanceClass";
-            this.dUpDResitanceClass.ReadOnly = true;
-            this.dUpDResitanceClass.Size = new System.Drawing.Size(138, 21);
+            this.dUpDResitanceClass.Size = new System.Drawing.Size(65, 23);
             this.dUpDResitanceClass.TabIndex = 3;
-            this.dUpDResitanceClass.Text = "Classe de Resistance";
-            this.dUpDResitanceClass.SelectedItemChanged += new System.EventHandler(this.dUpDClassResistance_SelectedItemChanged);
+            this.dUpDResitanceClass.SelectedIndexChanged += new System.EventHandler(this.dUpDClassResistance_SelectedItemChanged);
             // 
             // dUpDKmod
             // 
             this.dUpDKmod.Enabled = false;
             this.dUpDKmod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dUpDKmod.Items.Add("P");
-            this.dUpDKmod.Items.Add("LT");
-            this.dUpDKmod.Items.Add("MT");
-            this.dUpDKmod.Items.Add("CT");
-            this.dUpDKmod.Items.Add("I");
-            this.dUpDKmod.Location = new System.Drawing.Point(488, 249);
+            this.dUpDKmod.Items.AddRange(new object[] {
+            "P",
+            "LT",
+            "MT",
+            "CT",
+            "I"});
+            this.dUpDKmod.Location = new System.Drawing.Point(543, 249);
             this.dUpDKmod.Name = "dUpDKmod";
-            this.dUpDKmod.ReadOnly = true;
-            this.dUpDKmod.Size = new System.Drawing.Size(120, 21);
+            this.dUpDKmod.Size = new System.Drawing.Size(65, 23);
             this.dUpDKmod.TabIndex = 4;
-            this.dUpDKmod.Text = "Action d\'utilisation";
-            this.dUpDKmod.SelectedItemChanged += new System.EventHandler(this.dUpDKmod_SelectedItemChanged);
+            this.dUpDKmod.SelectedIndexChanged += new System.EventHandler(this.dUpDKmod_SelectedItemChanged);
             this.dUpDKmod.Validating += new System.ComponentModel.CancelEventHandler(this.dUpDKmod_Validating);
             this.dUpDKmod.Validated += new System.EventHandler(this.dUpDKmod_Validated);
             // 
             // dUpDResisatnce
             // 
             this.dUpDResisatnce.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dUpDResisatnce.Location = new System.Drawing.Point(488, 222);
+            this.dUpDResisatnce.Location = new System.Drawing.Point(543, 219);
             this.dUpDResisatnce.Name = "dUpDResisatnce";
-            this.dUpDResisatnce.ReadOnly = true;
-            this.dUpDResisatnce.Size = new System.Drawing.Size(120, 21);
+            this.dUpDResisatnce.Size = new System.Drawing.Size(65, 23);
             this.dUpDResisatnce.TabIndex = 5;
-            this.dUpDResisatnce.Text = "Resistance";
-            this.dUpDResisatnce.Wrap = true;
-            this.dUpDResisatnce.SelectedItemChanged += new System.EventHandler(this.dUpDResisatnce_SelectedItemChanged);
-            // 
-            // txtH
-            // 
-            this.txtH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtH.Location = new System.Drawing.Point(543, 57);
-            this.txtH.Multiline = true;
-            this.txtH.Name = "txtH";
-            this.txtH.Size = new System.Drawing.Size(65, 20);
-            this.txtH.TabIndex = 6;
-            this.txtH.TextChanged += new System.EventHandler(this.txtH_TextChanged);
-            this.txtH.Validating += new System.ComponentModel.CancelEventHandler(this.txtH_Validating);
+            this.dUpDResisatnce.SelectedIndexChanged += new System.EventHandler(this.dUpDResisatnce_SelectedItemChanged);
             // 
             // txtLfy
             // 
@@ -157,7 +133,6 @@
             this.txtLfy.Name = "txtLfy";
             this.txtLfy.Size = new System.Drawing.Size(65, 23);
             this.txtLfy.TabIndex = 7;
-            this.txtLfy.Text = "50";
             this.txtLfy.TextChanged += new System.EventHandler(this.txtLfy_TextChanged);
             this.txtLfy.Validating += new System.ComponentModel.CancelEventHandler(this.txtLfy_Validating);
             // 
@@ -192,38 +167,29 @@
             this.txtLfz.Name = "txtLfz";
             this.txtLfz.Size = new System.Drawing.Size(65, 23);
             this.txtLfz.TabIndex = 10;
-            this.txtLfz.Text = "50";
             this.txtLfz.TextChanged += new System.EventHandler(this.txtLfz_TextChanged);
             this.txtLfz.Validating += new System.ComponentModel.CancelEventHandler(this.txtLfz_Validating);
             // 
             // btn_Validate
             // 
-            this.btn_Validate.BackColor = System.Drawing.Color.Green;
+            this.btn_Validate.BackColor = System.Drawing.Color.Transparent;
             this.btn_Validate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Validate.Enabled = false;
+            this.btn_Validate.FlatAppearance.BorderSize = 0;
+            this.btn_Validate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_Validate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_Validate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Validate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Validate.Location = new System.Drawing.Point(419, 29);
+            this.btn_Validate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Validate.Location = new System.Drawing.Point(118, 344);
+            this.btn_Validate.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Validate.Name = "btn_Validate";
-            this.btn_Validate.Size = new System.Drawing.Size(92, 29);
+            this.btn_Validate.Size = new System.Drawing.Size(431, 54);
             this.btn_Validate.TabIndex = 0;
-            this.btn_Validate.Text = "Valider";
-            this.btn_Validate.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_Validate.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btn_Validate.UseVisualStyleBackColor = false;
             this.btn_Validate.Visible = false;
             this.btn_Validate.Click += new System.EventHandler(this.btn_Validate_Click);
             this.btn_Validate.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_Validate_MouseMove);
-            // 
-            // txtB
-            // 
-            this.txtB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtB.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtB.Location = new System.Drawing.Point(543, 89);
-            this.txtB.Name = "txtB";
-            this.txtB.Size = new System.Drawing.Size(65, 20);
-            this.txtB.TabIndex = 12;
-            this.txtB.TextChanged += new System.EventHandler(this.txtB_TextChanged);
-            this.txtB.Validating += new System.ComponentModel.CancelEventHandler(this.txtB_Validating);
             // 
             // txt_Aire
             // 
@@ -250,7 +216,7 @@
             // 
             this.txt_ky.Enabled = false;
             this.txt_ky.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ky.Location = new System.Drawing.Point(826, 530);
+            this.txt_ky.Location = new System.Drawing.Point(826, 532);
             this.txt_ky.Name = "txt_ky";
             this.txt_ky.Size = new System.Drawing.Size(63, 21);
             this.txt_ky.TabIndex = 14;
@@ -290,7 +256,7 @@
             // 
             this.txt_kc.Enabled = false;
             this.txt_kc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_kc.Location = new System.Drawing.Point(1217, 520);
+            this.txt_kc.Location = new System.Drawing.Point(1217, 521);
             this.txt_kc.Name = "txt_kc";
             this.txt_kc.Size = new System.Drawing.Size(65, 21);
             this.txt_kc.TabIndex = 10;
@@ -310,7 +276,7 @@
             // 
             this.txt_Yy.Enabled = false;
             this.txt_Yy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Yy.Location = new System.Drawing.Point(446, 530);
+            this.txt_Yy.Location = new System.Drawing.Point(446, 532);
             this.txt_Yy.Name = "txt_Yy";
             this.txt_Yy.Size = new System.Drawing.Size(65, 21);
             this.txt_Yy.TabIndex = 8;
@@ -367,36 +333,6 @@
             this.txt_oc0d.TabIndex = 2;
             this.txt_oc0d.Text = "0";
             // 
-            // txt_Rec_HRec_round
-            // 
-            this.txt_Rec_HRec_round.Enabled = false;
-            this.txt_Rec_HRec_round.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Rec_HRec_round.Location = new System.Drawing.Point(1184, 301);
-            this.txt_Rec_HRec_round.Name = "txt_Rec_HRec_round";
-            this.txt_Rec_HRec_round.Size = new System.Drawing.Size(71, 21);
-            this.txt_Rec_HRec_round.TabIndex = 38;
-            this.txt_Rec_HRec_round.Text = "0";
-            // 
-            // txt_Rec_BRec_round
-            // 
-            this.txt_Rec_BRec_round.Enabled = false;
-            this.txt_Rec_BRec_round.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Rec_BRec_round.Location = new System.Drawing.Point(1043, 313);
-            this.txt_Rec_BRec_round.Name = "txt_Rec_BRec_round";
-            this.txt_Rec_BRec_round.Size = new System.Drawing.Size(71, 21);
-            this.txt_Rec_BRec_round.TabIndex = 36;
-            this.txt_Rec_BRec_round.Text = "0";
-            // 
-            // txt_Rec_DimSquare_round
-            // 
-            this.txt_Rec_DimSquare_round.Enabled = false;
-            this.txt_Rec_DimSquare_round.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Rec_DimSquare_round.Location = new System.Drawing.Point(1099, 205);
-            this.txt_Rec_DimSquare_round.Name = "txt_Rec_DimSquare_round";
-            this.txt_Rec_DimSquare_round.Size = new System.Drawing.Size(71, 21);
-            this.txt_Rec_DimSquare_round.TabIndex = 11;
-            this.txt_Rec_DimSquare_round.Text = "0";
-            // 
             // txt_Rec_BRec
             // 
             this.txt_Rec_BRec.Enabled = false;
@@ -431,16 +367,6 @@
             // 
             this.errorInput.ContainerControl = this;
             // 
-            // txt_Aire_Rup_round
-            // 
-            this.txt_Aire_Rup_round.Enabled = false;
-            this.txt_Aire_Rup_round.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Aire_Rup_round.Location = new System.Drawing.Point(860, 205);
-            this.txt_Aire_Rup_round.Name = "txt_Aire_Rup_round";
-            this.txt_Aire_Rup_round.Size = new System.Drawing.Size(71, 21);
-            this.txt_Aire_Rup_round.TabIndex = 11;
-            this.txt_Aire_Rup_round.Text = "0";
-            // 
             // Txt_h_Rectangle
             // 
             this.Txt_h_Rectangle.Enabled = false;
@@ -470,26 +396,6 @@
             this.Txt_b_Rectangle.Size = new System.Drawing.Size(65, 21);
             this.Txt_b_Rectangle.TabIndex = 14;
             this.Txt_b_Rectangle.Text = "0";
-            // 
-            // Txt_b_Rectangle_round
-            // 
-            this.Txt_b_Rectangle_round.Enabled = false;
-            this.Txt_b_Rectangle_round.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_b_Rectangle_round.Location = new System.Drawing.Point(702, 301);
-            this.Txt_b_Rectangle_round.Name = "Txt_b_Rectangle_round";
-            this.Txt_b_Rectangle_round.Size = new System.Drawing.Size(71, 21);
-            this.Txt_b_Rectangle_round.TabIndex = 36;
-            this.Txt_b_Rectangle_round.Text = "0";
-            // 
-            // Txt_h_Rectangle_round
-            // 
-            this.Txt_h_Rectangle_round.Enabled = false;
-            this.Txt_h_Rectangle_round.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_h_Rectangle_round.Location = new System.Drawing.Point(860, 301);
-            this.Txt_h_Rectangle_round.Name = "Txt_h_Rectangle_round";
-            this.Txt_h_Rectangle_round.Size = new System.Drawing.Size(71, 21);
-            this.Txt_h_Rectangle_round.TabIndex = 38;
-            this.Txt_h_Rectangle_round.Text = "0";
             // 
             // txt_kz
             // 
@@ -535,7 +441,7 @@
             // 
             this.txt_kmod.Enabled = false;
             this.txt_kmod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_kmod.Location = new System.Drawing.Point(173, 530);
+            this.txt_kmod.Location = new System.Drawing.Point(173, 532);
             this.txt_kmod.Name = "txt_kmod";
             this.txt_kmod.Size = new System.Drawing.Size(62, 21);
             this.txt_kmod.TabIndex = 46;
@@ -583,25 +489,37 @@
             this.btn_modeEmploi.UseVisualStyleBackColor = false;
             this.btn_modeEmploi.Click += new System.EventHandler(this.btn_modeEmploi_Click);
             // 
-            // textBox1
+            // txt_Aire_RupH
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(860, 167);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(65, 21);
-            this.textBox1.TabIndex = 50;
-            this.textBox1.Text = "0";
+            this.txt_Aire_RupH.Enabled = false;
+            this.txt_Aire_RupH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Aire_RupH.Location = new System.Drawing.Point(860, 167);
+            this.txt_Aire_RupH.Name = "txt_Aire_RupH";
+            this.txt_Aire_RupH.Size = new System.Drawing.Size(65, 21);
+            this.txt_Aire_RupH.TabIndex = 50;
+            this.txt_Aire_RupH.Text = "0";
             // 
-            // textBox2
+            // txt_Rec_DimSquareH
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(1167, 167);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(65, 21);
-            this.textBox2.TabIndex = 51;
-            this.textBox2.Text = "0";
+            this.txt_Rec_DimSquareH.Enabled = false;
+            this.txt_Rec_DimSquareH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Rec_DimSquareH.Location = new System.Drawing.Point(1167, 167);
+            this.txt_Rec_DimSquareH.Name = "txt_Rec_DimSquareH";
+            this.txt_Rec_DimSquareH.Size = new System.Drawing.Size(65, 21);
+            this.txt_Rec_DimSquareH.TabIndex = 51;
+            this.txt_Rec_DimSquareH.Text = "0";
+            // 
+            // lblresult
+            // 
+            this.lblresult.AutoSize = true;
+            this.lblresult.BackColor = System.Drawing.Color.White;
+            this.lblresult.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblresult.ForeColor = System.Drawing.Color.Red;
+            this.lblresult.Location = new System.Drawing.Point(362, 365);
+            this.lblresult.Name = "lblresult";
+            this.lblresult.Size = new System.Drawing.Size(146, 15);
+            this.lblresult.TabIndex = 52;
+            this.lblresult.Text = "<Appuyer sur les flèches>";
             // 
             // ViewWeightMax
             // 
@@ -612,13 +530,10 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1319, 624);
             this.ControlBox = false;
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lblresult);
+            this.Controls.Add(this.txt_Rec_DimSquareH);
+            this.Controls.Add(this.txt_Aire_RupH);
             this.Controls.Add(this.btn_modeEmploi);
-            this.Controls.Add(this.txt_Rec_HRec_round);
-            this.Controls.Add(this.Txt_h_Rectangle_round);
-            this.Controls.Add(this.Txt_b_Rectangle_round);
-            this.Controls.Add(this.txt_Rec_BRec_round);
             this.Controls.Add(this.btn_tableau);
             this.Controls.Add(this.btn_lexique);
             this.Controls.Add(this.txt_kmod);
@@ -626,19 +541,15 @@
             this.Controls.Add(this.txt_constMassiv);
             this.Controls.Add(this.txt_E005);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.txt_Aire_Rup_round);
             this.Controls.Add(this.btn_Validate);
-            this.Controls.Add(this.txt_Rec_DimSquare_round);
             this.Controls.Add(this.txt_Verif);
             this.Controls.Add(this.txtNed);
-            this.Controls.Add(this.txtH);
             this.Controls.Add(this.txtCoef);
             this.Controls.Add(this.txtLfz);
             this.Controls.Add(this.dUpDResisatnce);
             this.Controls.Add(this.dUpDKmod);
             this.Controls.Add(this.dUpDResitanceClass);
             this.Controls.Add(this.txtLfy);
-            this.Controls.Add(this.txtB);
             this.Controls.Add(this.txt_kz);
             this.Controls.Add(this.txt_Yy);
             this.Controls.Add(this.txt_Arelz);
@@ -672,10 +583,9 @@
         #endregion
 
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.DomainUpDown dUpDResitanceClass;
-        private System.Windows.Forms.DomainUpDown dUpDKmod;
-        private System.Windows.Forms.DomainUpDown dUpDResisatnce;
-        private System.Windows.Forms.TextBox txtH;
+        private System.Windows.Forms.ComboBox dUpDResitanceClass;
+        private System.Windows.Forms.ComboBox dUpDKmod;
+        private System.Windows.Forms.ComboBox dUpDResisatnce;
         private System.Windows.Forms.TextBox txtLfy;
         private System.Windows.Forms.TextBox txtNed;
         private System.Windows.Forms.TextBox txtCoef;
@@ -695,20 +605,13 @@
         private System.Windows.Forms.TextBox txt_kcz;
         private System.Windows.Forms.TextBox txt_kcy;
         private System.Windows.Forms.TextBox txt_oc0d;
-        private System.Windows.Forms.TextBox txtB;
-        private System.Windows.Forms.TextBox txt_Rec_HRec_round;
-        private System.Windows.Forms.TextBox txt_Rec_BRec_round;
         private System.Windows.Forms.TextBox txt_Rec_BRec;
         private System.Windows.Forms.TextBox txt_Rec_DimSquare;
         private System.Windows.Forms.TextBox txt_Rec_HRec;
-        private System.Windows.Forms.TextBox txt_Rec_DimSquare_round;
         private System.Windows.Forms.ErrorProvider errorInput;
-        private System.Windows.Forms.TextBox Txt_h_Rectangle_round;
-        private System.Windows.Forms.TextBox Txt_b_Rectangle_round;
         private System.Windows.Forms.TextBox Txt_b_Rectangle;
         private System.Windows.Forms.TextBox txt_Aire_Rup;
         private System.Windows.Forms.TextBox Txt_h_Rectangle;
-        private System.Windows.Forms.TextBox txt_Aire_Rup_round;
         private System.Windows.Forms.TextBox txt_kz;
         private System.Windows.Forms.TextBox txt_kmod;
         private System.Windows.Forms.TextBox txt_fcok;
@@ -717,7 +620,8 @@
         private System.Windows.Forms.Button btn_tableau;
         private System.Windows.Forms.Button btn_lexique;
         private System.Windows.Forms.Button btn_modeEmploi;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_Rec_DimSquareH;
+        private System.Windows.Forms.TextBox txt_Aire_RupH;
+        private System.Windows.Forms.Label lblresult;
     }
 }
